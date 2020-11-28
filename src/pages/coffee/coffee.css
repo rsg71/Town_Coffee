@@ -1,0 +1,8 @@
+.coffeeJumbotron {
+    /* background-color: red !important; */
+    height:150px;
+    width:100%;
+    object-fit:cover;
+    object-position:top left;
+    
+}
