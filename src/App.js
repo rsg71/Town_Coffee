@@ -10,7 +10,7 @@ import Subscriptions from "./pages/subscriptions/subscriptions";
 import Homepage from "./pages/homepage/homepage";
 
 import Navbar from "./components/Navbar/Navbar";
-
+import Footer from "./components/Footer/Footer"
 
 function App() {
   return (
@@ -25,7 +25,9 @@ function App() {
         <Route exact path="/contactus" component={Contact_us}/>
         <Route exact path="/givingback" component={Giving_back}/>
         <Route exact path="/subscriptions" component={Subscriptions}/>
-        
+        <Footer/>
+
+
       </Router>
     </>
 

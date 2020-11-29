@@ -1,13 +1,82 @@
 import React from "react";
+import { Container, Row, Col } from "react-bootstrap";
 
-function Footer () {
-    return(
+const styles = {
+    listItems: {
+        listStyleType: "none"
+    },
+    listItemTitle: {
+        fontSize: "1.1em"
+    },
+    backgroundColor: {
+        background: "black",
+        color: "whitesmoke"
+    },
+    column: {
+        textAlign: "center"
+    }
+}
+
+
+function Footer() {
+    return (
         <>
-            <ul>
-                <li>Terms of use </li>
-                <li>Privacy Policy</li>
-                <li>Cookies</li>
-            </ul>
+            <Container fluid style={styles.backgroundColor}>
+            <br/>
+
+                <Row>
+                    <Col style={styles.column}>
+                        <ul style={styles.listItems}>
+                            <li style={styles.listItemTitle}>Shop</li>
+                            <li>Coffee</li>
+                            <li>Subscriptions</li>
+                            <li></li>
+                        </ul>
+                    </Col>
+
+                    <Col style={styles.column}>
+                        <ul style={styles.listItems}>
+                            <li style={styles.listItemTitle}>Support</li>
+                            <li>FAQs</li>
+                            <li>Email Us</li>
+                            <li>Phone: 215-696-9338</li>
+                            <li>Mon - Fri 9-5PM EST </li>
+                            <li>Location</li>
+                        </ul>
+                    </Col>
+
+                    <Col style={styles.column}>
+                        <ul style={styles.listItems}>
+                            <li style={styles.listItemTitle}>Our Policies</li>
+                            <li>Terms of Sale</li>
+                            <li>Terms of Use</li>
+                            <li>Privacy Policy</li>
+                            <li>Cookies</li>
+                        </ul>
+                    </Col>
+                    <Col>
+                        <ul style={styles.listItems}>
+                            <li style={styles.listItemTitle}>Follow Us</li>
+                            <li><i class="fab fa-instagram"></i></li>
+                            <li><i class="fab fa-facebook"></i></li>
+                            <li><i class="fab fa-twitter"></i></li>
+                        </ul>
+                    </Col>
+                </Row>
+                <hr/>
+
+                <br/>
+                <br/>
+
+                <Row>
+                    <Col>
+                        <p className="text-muted">&copy; 2020 Town Coffee Co.</p>
+                    </Col>
+                   
+                </Row>
+
+            </Container>
+
         </>
     )
 }
