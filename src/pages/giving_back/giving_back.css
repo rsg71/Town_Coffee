@@ -1,0 +1,16 @@
+#givingBackOnePercentImg {
+    max-width:50%;
+    text-align:center;
+}
+
+#bCorpLogo {
+    height:170px;
+    object-fit:cover;
+    object-position:top left;
+}
+
+
+
+.centerImg {
+    text-align: center;
+}

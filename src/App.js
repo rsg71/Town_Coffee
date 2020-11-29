@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import AboutUs from "./pages/about_us/about_us";
-import Coffee from "./pages/coffee/coffee";
+import Coffee from "./pages/coffee/coffee.js";
 import Certifications from "./pages/certifications/certifications";
 import Contact_us from "./pages/contact_us/contact_us";
 import Giving_back from "./pages/giving_back/giving_back";
