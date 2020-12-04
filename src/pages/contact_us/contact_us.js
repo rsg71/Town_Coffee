@@ -1,27 +1,40 @@
 import React from "react";
 import { Container, Row, Col, Button, Form } from "react-bootstrap";
+import CoffeeBanner from "../../components/CoffeeBanner/CoffeeBanner"
 
 const styles = {
     listStyle: {
         listStyleType: "none"
+    },
+    colStyle: {
+        backgroundColor: "whitesmoke",
+        marginRight: 10,
+        marginLeft: 10
+    },
+    bottomRow: {
+        marginBottom:"15em"
     }
 }
 
 function contacUs() {
     return (
         <>
-            <img src="/imgs/coffee_white.jpg" className="coffeeJumbotron" alt="coffee background" />
+            <CoffeeBanner />
+
 
             <Container>
+                <br />
                 <h1>---------- Contact Us ----------</h1>
-
+                <br />
+                <br />
+                <br />
                 <Row>
-                    <Col>
+                    <Col style={styles.colStyle} >
                         <h2>Town Coffee Company</h2>
                         <p>215-696-9338</p>
                         <p>towncoffeecompany@gmail.com</p>
                     </Col>
-                    <Col>
+                    <Col style={styles.colStyle}>
                         <h2>Follow us:</h2>
                         <ul style={styles.listStyle}>
                             <li>Instagram <i class="fab fa-instagram"></i></li>
@@ -31,7 +44,7 @@ function contacUs() {
                         </ul>
 
                     </Col>
-                    <Col>
+                    <Col style={styles.colStyle}>
                         <h2>Located:</h2>
 
                         <p>1300 Bethlehem Pike 2-3</p>
@@ -39,11 +52,12 @@ function contacUs() {
                         <p>19031</p>
                     </Col>
 
-                    
+
                 </Row>
                 <br />
                 <br />
-                <Row>
+                <br />
+                <Row style={styles.bottomRow}>
                     <Col>
                         <h2>Get on the list!</h2>
                         <p>Join our mailing list for special product announcements, news and offers</p>
@@ -59,7 +73,7 @@ function contacUs() {
                             <Form.Control
                                 className="mb-2 mr-sm-2"
                                 id="inlineFormInputName2"
-                                placeholder="Jane Doe"/>
+                                placeholder="Jane Doe" />
                             <Button type="submit" className="mb-2">
                                 Submit
                             </Button>

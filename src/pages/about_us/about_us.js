@@ -1,32 +1,38 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-
+import CoffeeBanner from "../../components/CoffeeBanner/CoffeeBanner"
 
 
 const styles = {
     backgroundStyleLight: {
-        backgroundColor: "whitesmoke"
-    },
-    backgroundStyleDark: {
-        backgroundColor: "grey"
+        backgroundColor: "whitesmoke",
+        padding: 20
     },
     center: {
         textAlign: "center",
-        // objectFit:"cover",
-        // objectPosition: "top left",
+        objectFit:"cover",
+        objectPosition: "top left",
         height: "200"
+    },
+    townCoffeeLogo: {
+        height: "300px",
+        maxWidth: "400px"
+    },
+    alignCenter: {
+        textAlign: "center"
     }
+
 }
 
 
 function aboutUs() {
     return (
         <>
-            <img src="/imgs/coffee_white.jpg" className="coffeeJumbotron" alt="coffee background"/>
+           <CoffeeBanner/>
 
             <Container>
+            <br/>
                 <h1>About Us</h1>
-                <br/>
                 <br/>
 
                 <Row>
@@ -38,12 +44,13 @@ function aboutUs() {
                 <br/>
 
                 <Row>
-                    <Col style={styles.backgroundStyleLight}>
+                    <Col sm={6} style={styles.backgroundStyleLight}>
                         <h2>---------- Town Coffee ----------</h2>
 
                         <p> We are Town Coffee Company. A true small business sourcing the best coffee it could find and delivering that to doorsteps. Customers are the same people that changed their habits from big businesses to small business. To help people stay open, help people stay employed. Under much closer review now is how does a company behave. How do they treat their shareholders - everyone in the supply chain, their employees and their customers looking deeper and committing their purchasing to the gropus that behave ethically and responsibly. </p>
                     </Col>
-                    <Col>
+                    <Col sm={6} style={styles.alignCenter}>
+                    <img src="/imgs/logo.png" alt="coffee cup" style={styles.townCoffeeLogo}></img>
                     </Col>
                 </Row>
             <br/>
@@ -60,10 +67,10 @@ function aboutUs() {
                 <br/>
 
                 <Row>
-                    <Col style={styles.center}>
+                    <Col sm={6} style={styles.center}>
                     <img src="/imgs/b-corp-logo.png" alt="b corp logo"></img>
                     </Col>
-                    <Col style={styles.backgroundStyleLight}>
+                    <Col sm={6} style={styles.backgroundStyleLight}>
                         <h2> ------- B Corporation Pending -------</h2>
 
                         <p>A startup does not often begin by committing to be a Certified B Corporation. We did. We believe in and are aligned with the values and principles of a B Corp and are willing to make that pledge publicly. And transparently. Every decision made will consider the impacts on our stakeholders. I have yet to see Big Coffee work to this extent to be a part of the paradigm change that consumers have asked for.</p>
@@ -75,7 +82,7 @@ function aboutUs() {
                 <br/>
 
                 <Row>
-                    <Col style={styles.backgroundStyleLight}>
+                    <Col sm={12} style={styles.backgroundStyleLight}>
                         <h2> ---------- Limited Quantities ----------</h2>
 
                         <p>As a new small business the decisions we make early </p>

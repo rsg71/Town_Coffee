@@ -1,17 +1,16 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import "./Footer.css"
 
 const styles = {
     listItems: {
         listStyleType: "none"
     },
     listItemTitle: {
-        fontSize: "1.1em"
+        fontSize: "1.2em",
+        color: "white"
     },
-    backgroundColor: {
-        background: "black",
-        color: "whitesmoke"
-    },
+   
     column: {
         textAlign: "center"
     }
@@ -21,7 +20,7 @@ const styles = {
 function Footer() {
     return (
         <>
-            <Container fluid style={styles.backgroundColor}>
+            <Container fluid className="Container">
             <br/>
 
                 <Row>
@@ -40,7 +39,6 @@ function Footer() {
                             <li>FAQs</li>
                             <li>Email Us</li>
                             <li>Phone: 215-696-9338</li>
-                            <li>Mon - Fri 9-5PM EST </li>
                             <li>Location</li>
                         </ul>
                     </Col>
@@ -57,9 +55,9 @@ function Footer() {
                     <Col>
                         <ul style={styles.listItems}>
                             <li style={styles.listItemTitle}>Follow Us</li>
-                            <li><i class="fab fa-instagram"></i></li>
-                            <li><i class="fab fa-facebook"></i></li>
-                            <li><i class="fab fa-twitter"></i></li>
+                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
                         </ul>
                     </Col>
                 </Row>
@@ -68,10 +66,11 @@ function Footer() {
                 <br/>
                 <br/>
 
-                <Row>
-                    <Col>
+                <Row className="footerBottom">
+                    <Col style={styles.column}>
                         <p className="text-muted">&copy; 2020 Town Coffee Co.</p>
                     </Col>
+                   
                    
                 </Row>
 

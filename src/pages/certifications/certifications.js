@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import CoffeeBanner from "../../components/CoffeeBanner/CoffeeBanner"
 
 const styles = {
     background: {
@@ -11,7 +12,7 @@ const styles = {
 function certifications() {
     return (
         <>
-            <img src="/imgs/coffee_white.jpg" className="coffeeJumbotron" alt="coffee background" />
+            <CoffeeBanner/>
 
             <Container>
                 <br/>

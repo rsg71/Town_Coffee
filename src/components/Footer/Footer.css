@@ -1,0 +1,10 @@
+.Container{
+    background-color: black;
+    color: rgb(112, 109, 109)
+}
+
+
+.footerBottom i {
+    font-size: 2em;
+    margin: 0 10px;
+}
