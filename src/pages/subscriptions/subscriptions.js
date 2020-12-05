@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import CoffeeBanner from "../../components/CoffeeBanner/CoffeeBanner"
+import Subscription_FAQ from "../../components/Subscription_FAQ/Subscription_FAQ"
 
 const styles = {
     margin: {
@@ -38,6 +39,14 @@ function aboutUs() {
                 </Col>
             </Row>
                 
+            <br/>
+            <br/>
+            <Row>
+                <Col>
+                <Subscription_FAQ/>
+                </Col>
+            </Row>
+
             </Container>
         </>
     )

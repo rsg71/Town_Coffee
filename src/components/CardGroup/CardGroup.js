@@ -12,7 +12,7 @@ function CardGroup () {
                                     <Card.Text>
                                         Whole bean blend sourced sustainably in Mexico
                                     </Card.Text>
-                                    <Button>Shop</Button>
+                                    <Button>Shop Now</Button>
                                 </Card.Body>
                                 <Card.Footer>
                                 <small className="text-muted"><strong>$14.99</strong></small>
@@ -25,7 +25,7 @@ function CardGroup () {
                                     <Card.Text>
                                     Whole bean blend sourced sustainably in Mexico
                                     </Card.Text>
-                                    <Button>Shop</Button>
+                                    <Button>Shop Now</Button>
                                 </Card.Body>
                                 <Card.Footer>
                                     <small className="text-muted"><strong>$14.99</strong></small>
@@ -38,7 +38,7 @@ function CardGroup () {
                                     <Card.Text>
                                     Whole bean blend sourced sustainably in Mexico
                                     </Card.Text>
-                                    <Button>Shop</Button>
+                                    <Button>Shop Now</Button>
                                 </Card.Body>
                                 <Card.Footer>
                                 <small className="text-muted"><strong>$14.99</strong></small>

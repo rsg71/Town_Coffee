@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col, Button, Form } from "react-bootstrap";
+import { Container, Row, Col, Button, Form, Jumbotron } from "react-bootstrap";
 import CoffeeBanner from "../../components/CoffeeBanner/CoffeeBanner"
 
 const styles = {
@@ -19,6 +19,8 @@ const styles = {
 function contacUs() {
     return (
         <>
+
+
             <CoffeeBanner />
 
 
@@ -73,7 +75,7 @@ function contacUs() {
                             <Form.Control
                                 className="mb-2 mr-sm-2"
                                 id="inlineFormInputName2"
-                                placeholder="Jane Doe" />
+                                placeholder="Email address" />
                             <Button type="submit" className="mb-2">
                                 Submit
                             </Button>

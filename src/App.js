@@ -9,7 +9,7 @@ import Giving_back from "./pages/giving_back/giving_back";
 import Subscriptions from "./pages/subscriptions/subscriptions";
 import Homepage from "./pages/homepage/homepage";
 
-import Navbar from "./components/Navbar/Navbar";
+import NavigationBar from "./components/NavigationBar/NavigationBar"
 import Footer from "./components/Footer/Footer"
 
 
@@ -18,7 +18,7 @@ function App() {
     <>
       <Router>
 
-        <Navbar />
+        <NavigationBar />
         <Route exact path="/" component={Homepage}/>
         <Route exact path="/coffee" component={Coffee}/>
         <Route exact path="/aboutus" component={AboutUs}/>
