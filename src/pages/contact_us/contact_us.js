@@ -1,22 +1,49 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+
 import { Container, Row, Col, Button, Form, Jumbotron } from "react-bootstrap";
-import CoffeeBanner from "../../components/CoffeeBanner/CoffeeBanner"
+import CoffeeBanner from "../../components/coffeeBanner/CoffeeBanner"
+import ContactUsColumns from "../../components/contactUsColumns/ContactUsColumns"
 
 const styles = {
     listStyle: {
-        listStyleType: "none"
+        listStyleType: "none",
+
     },
     colStyle: {
-        backgroundColor: "whitesmoke",
+        backgroundColor: "#1E3932",
+        color: "white",
         marginRight: 10,
-        marginLeft: 10
+        marginLeft: 10,
+        padding:"20px",
+        marginBottom: "5px",
     },
     bottomRow: {
-        marginBottom:"15em"
+        marginTop: "4em",
+        marginBottom: "15em"
+    },
+    h1: {
+        textAlign: "center"
+    },
+    contactUsParagraphLineHeight: {
+        lineHeight: "1rem"
     }
+
 }
 
-function contacUs() {
+function ContacUs() {
+
+
+    const [formState, setFormState] = useState({
+        name: "",
+        category: "",
+        message: ""
+    })
+
+
+    useEffect(() => {
+        document.title = "Contact Us | Town Coffee Company"
+    }, []);
+
     return (
         <>
 
@@ -26,46 +53,57 @@ function contacUs() {
 
             <Container>
                 <br />
-                <h1>---------- Contact Us ----------</h1>
+                <h1 style={styles.h1}>Contact Us</h1>
+                <br />
+                <br />
+                <ContactUsColumns/> 
                 <br />
                 <br />
                 <br />
+
                 <Row>
-                    <Col style={styles.colStyle} >
-                        <h2>Town Coffee Company</h2>
-                        <p>215-696-9338</p>
-                        <p>towncoffeecompany@gmail.com</p>
+                    <Col>
+                        <Form  action="https://formspree.io/f/mdopwono" method="POST">
+                            <h2>Email Us</h2>
+                            <Form.Group controlId="exampleForm.ControlInput1">
+                                <Form.Label>Your email:</Form.Label>
+                                <Form.Control type="email" placeholder="name@example.com" name="_replyto" required/>
+                            </Form.Group>
+                            <Form.Group controlId="exampleForm.ControlSelect1">
+                                <Form.Label>Your question pertains to:</Form.Label>
+                                <Form.Control as="select" name="Message category">
+                                    <option>Subscriptions</option>
+                                    <option>Shipping</option>
+                                    <option>New Coffee flavors</option>
+                                    <option>Comments/Feedback</option>
+                                    <option>General inquiry</option>
+                                </Form.Control>
+                            </Form.Group>
+
+                            <Form.Group controlId="exampleForm.ControlTextarea1">
+                                <Form.Label>Message:</Form.Label>
+                                <Form.Control as="textarea" rows={3} name="message" required/>
+                            </Form.Group>
+                            <Button variant="primary" type="submit" onClick={()=> setFormState({name: "", category: "", message: ""})}>
+                                Submit
+                            </Button>
+                        </Form>
                     </Col>
-                    <Col style={styles.colStyle}>
-                        <h2>Follow us:</h2>
-                        <ul style={styles.listStyle}>
-                            <li>Instagram <i class="fab fa-instagram"></i></li>
-                            <li>Facebook <i class="fab fa-facebook-square"></i></li>
-                            <li>Twitter <i class="fab fa-twitter-square"></i></li>
-                            <li>Whatsapp <i class="fab fa-whatsapp-square"></i></li>
-                        </ul>
-
-                    </Col>
-                    <Col style={styles.colStyle}>
-                        <h2>Located:</h2>
-
-                        <p>1300 Bethlehem Pike 2-3</p>
-                        <p>Flourtown, Pennsylvania</p>
-                        <p>19031</p>
-                    </Col>
-
-
                 </Row>
-                <br />
-                <br />
-                <br />
+
+                <Row>
+                    <Col>
+                        
+                    </Col>
+                </Row>
+
+
+
                 <Row style={styles.bottomRow}>
                     <Col>
                         <h2>Get on the list!</h2>
                         <p>Join our mailing list for special product announcements, news and offers</p>
                     </Col>
-
-
                     <Col>
                         <h4>Join our mailing list for new deals, exclusive offers, and more:</h4>
                         <Form inline>
@@ -82,9 +120,10 @@ function contacUs() {
                         </Form>
                     </Col>
                 </Row>
+
             </Container>
         </>
     )
 }
 
-export default contacUs;
+export default ContacUs;

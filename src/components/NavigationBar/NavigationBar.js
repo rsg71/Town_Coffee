@@ -11,7 +11,7 @@ function NavigationBar() {
     return (
         <>
 
-<Navbar bg="light" expand="lg" >
+<Navbar bg="light" expand="lg" sticky="top" >
   <Navbar.Brand href="#home">
   <img src="/imgs/green_logo_beans.png" id="logo"/>
 
@@ -34,10 +34,10 @@ function NavigationBar() {
         <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
       </NavDropdown> */}
     </Nav>
-    <Form inline>
+    {/* <Form inline>
       <FormControl type="text" placeholder="Search" className="mr-sm-2" />
       <Button variant="outline-success">Search</Button>
-    </Form>
+    </Form> */}
     
     <Nav.Link href="/signin">Sign In</Nav.Link>
     <Nav.Link href="/cart"><i className="fas fa-shopping-cart"></i></Nav.Link>

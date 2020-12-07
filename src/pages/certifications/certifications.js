@@ -1,6 +1,7 @@
-import React from "react";
+import React, {useEffect} from "react";
+
 import { Container, Row, Col } from "react-bootstrap";
-import CoffeeBanner from "../../components/CoffeeBanner/CoffeeBanner"
+import CoffeeBanner from "../../components/coffeeBanner/CoffeeBanner"
 
 const styles = {
     background: {
@@ -9,7 +10,14 @@ const styles = {
 }
 
 
-function certifications() {
+function Certifications() {
+
+
+    
+    useEffect(() => {
+        document.title = "Certications | Town Coffee Company"
+    }, []);
+
     return (
         <>
             <CoffeeBanner/>
@@ -58,4 +66,4 @@ function certifications() {
     )
 }
 
-export default certifications;
+export default Certifications;

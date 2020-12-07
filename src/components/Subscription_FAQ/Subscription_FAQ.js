@@ -13,13 +13,14 @@ return (
                 <Card.Header>
                     <Accordion.Toggle as={Button} variant="link" eventKey="0">
                         When will my subscription order be shipped?
+                        <i className="fas fa-chevron-down"></i>
                     </Accordion.Toggle>
-                    <Button className="downArrow"><i className="fas fa-chevron-down"></i></Button>
+                  
                     </Card.Header>
                     <Accordion.Collapse eventKey="0">
                     <Card.Body>
                         
-                    <p>Log into your Account to view your next Subscription ship date. (Click here for a guide to your Jim’s Subscription).</p>
+                    <p>Log into your Account to view your next ubscription ship date. (Click <a href="#">here</a> for a guide to your subscription).</p>
 
                     <p>General Shipping Info: When you place your order, choose the shipping interval of 2, 4, 6, 8, or 12 weeks. Your first order will typically be shipped the next business day. Depending on your chosen shipping interval, your next order will then be charged and ship 2, 4, 6, 8 or 12 weeks after the first order date.</p>
 
@@ -32,8 +33,10 @@ return (
                     <Card.Header>
                     <Accordion.Toggle as={Button} variant="link" eventKey="1">
                     How do I pause my subscription? 
+                    <i className="fas fa-chevron-down"></i>
+
                     </Accordion.Toggle>
-                    <Button className="downArrow"><i className="fas fa-chevron-down"></i></Button>
+                    
                     </Card.Header>
                     <Accordion.Collapse eventKey="1">
                     <Card.Body>
@@ -47,8 +50,9 @@ return (
                     <Card.Header>
                     <Accordion.Toggle as={Button} variant="link" eventKey="2">
                     How do I make changes to my subscription?
+                    <i className="fas fa-chevron-down"></i>
+
                     </Accordion.Toggle>
-                     <Button className="downArrow"><i className="fas fa-chevron-down"></i></Button>
                     </Card.Header>
                     <Accordion.Collapse eventKey="2">
                     <Card.Body>
@@ -62,8 +66,10 @@ return (
                     <Card.Header>
                     <Accordion.Toggle as={Button} variant="link" eventKey="3">
                     How do I cancel my subscription?
+                    <i className="fas fa-chevron-down"></i>
+
                     </Accordion.Toggle>
-                     <Button className="downArrow"><i className="fas fa-chevron-down"></i></Button>
+                    
                     </Card.Header>
                     <Accordion.Collapse eventKey="3">
                     <Card.Body>
@@ -78,8 +84,10 @@ return (
                     <Card.Header>
                     <Accordion.Toggle as={Button} variant="link" eventKey="4">
                     How is my credit card stored?
+                    <i className="fas fa-chevron-down"></i>
+
                     </Accordion.Toggle>
-                     <Button className="downArrow"><i className="fas fa-chevron-down"></i></Button>
+                    
                     </Card.Header>
                     <Accordion.Collapse eventKey="4">
                     <Card.Body>
@@ -93,8 +101,10 @@ return (
                     <Card.Header>
                     <Accordion.Toggle as={Button} variant="link" eventKey="5">
                     How do I get started? 
+                    <i className="fas fa-chevron-down"></i>
+
                     </Accordion.Toggle>
-                     <Button className="downArrow"><i className="fas fa-chevron-down"></i></Button>
+                     
                     </Card.Header>
                     <Accordion.Collapse eventKey="5">
                     <Card.Body>

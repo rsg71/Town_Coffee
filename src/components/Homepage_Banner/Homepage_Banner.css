@@ -4,8 +4,23 @@
     text-align: center
 } */
 
-.h2 {
-    margin-top: 10rem ;
-    margin-bottom: 10rem !important;
-    text-align: center
+.homepageBannerh2 {
+    /* margin-top: 10rem ;
+    margin-bottom: 10rem !important; */
+    text-align: center;
+
+}
+
+.bannerTagline {
+    margin-top: 10em;
+}
+
+.findOutButton {
+    margin-top:1.3em;
+}
+
+@media all and (max-width:576px) {
+    .findOutButton  {
+        variant: "outline-light"
+    }
 }

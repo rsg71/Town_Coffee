@@ -1,8 +1,9 @@
-import React from "react";
+import React, {useEffect} from "react";
+
 import { Container, Row, Col, CardDeck, Card, Button, Form } from 'react-bootstrap';
-import CardGroup from "../../components/CardGroup/CardGroup"
-import Homepage_Banner from "../../components/Homepage_Banner/Homepage_Banner"
-import Jumbotron from "../../components/Jumbotron/Jumbotron"
+import CardGroup from "../../components/cardGroup/CardGroup"
+import Homepage_Banner from "../../components/homepage_Banner/Homepage_Banner"
+import Jumbotron from "../../components/jumbotron/Jumbotron"
 
 
 const styles = {
@@ -25,17 +26,45 @@ const styles = {
         textAlign: "right",
         fontStyle: "italic"
     },
-    earthImage: {
-        objectFit: "inherit",
-        maxWidth: "100%"
+    blah: {
+        backgroundImage: 'url("/imgs/dirt_trail.jpg")',
+        height:900,
+        objectFit: "cover"
     },
-    // backgroundImageJumbo: {
-    //     backgroundImage: 'url("https://freebigpictures.com/wp-content/uploads/shady-forest.jpg")'
-    // }
+    grinder: {
+        maxWidth: "100%",
+        borderRadius: "9px"
+    },
+    homepageEmailInput: {
+        width: "75%"
+    },
+    getOnListRow: {
+        backgroundColor: "green"
+    },
+    earthImage: {
+        maxWidth:"100%",
+        height:"500px",
+        objectFit:"cover",
+        borderRadius: "7px",
+        marginTop: "1rem"
+    },
+    button: {
+
+        
+        backgroundColor: "#1E3932",
+        borderColor: "#1E3932"
+    }
 }
 
 
-function homepage() {
+function Homepage() {
+
+
+    useEffect(() => {
+        document.title = "Town Coffee Company | Organic Sustainable Coffee"
+    }, []);
+
+
     return (
         <>
         {/* <div class="alert alert-dark alert-dismissible fade show" role="alert">
@@ -64,12 +93,14 @@ function homepage() {
 
                 <Row>
                     <Col>
-                    <h3>Browse Selection:</h3>
+                    
+                    <h3>Browse our Blends:</h3>
                     <br/>
                     <CardGroup />
                     </Col>
                 </Row>
 
+                <br />
                 <br />
                 <br />
 
@@ -83,6 +114,8 @@ function homepage() {
 
                         <p>Working with all of our partners to provide fair wages at every step in the process, preserve and regenerate the environment and always reduce plastic and waste.</p>
 
+                        
+
                     </Col>
                 </Row>
 
@@ -92,8 +125,8 @@ function homepage() {
             <br />
 
             <Container fluid>
-                <Row style={styles.background}>
-                    <Col>
+                <Row >
+                    <Col style={styles.blah}>
                         <Homepage_Banner />
                     </Col>
                 </Row>
@@ -134,38 +167,44 @@ function homepage() {
                 <br />
 
                 <Row>
-                    <Col>
-                        <h2>Usage</h2>
+                    <Col md={6}>
+                        <h2>Usage Tips</h2>
 
                         <p>Once opened, beans should be stored in a container which can be sealed but also release gasses via a one-way value. We suggest opening only one bag at a time.</p>
 
-                        <p>Coffee is also at its best when it is ground freshly on an as-you-brew basis. A burr grinder is superior to a blade grinder for longevity and consistency of the grind but both with help you brew excellent coffee.</p>
+                        <p>Coffee is also at its <strong>best</strong> when it is ground freshly on an as-you-brew basis. A burr grinder is superior to a blade grinder for longevity and consistency of the grind but both with help you brew excellent coffee.</p>
 
-                        <p>Buying whole beans and grinding them daily will produce the best tasting coffee. Should you prefer your coffee ground we can do that for you prior to shipping. A choice of coarse, medium, and fine. Additonal fee applies.</p>
-
+                        <p>Buying whole beans and grinding them daily will produce the best tasting coffee. Should you prefer your coffee ground <a href="#">we can do that for you </a> prior to shipping. A choice of coarse, medium, and fine. Additonal fee applies.</p>
                     </Col>
 
-                    {/* <Col>
-                    <Card style={{ width: '18rem' }}>
-                    <Card.Img variant="top" src="holder.js/100px180" />
-                    <Card.Body>
-                        <Card.Title>Card Title</Card.Title>
-                        <Card.Text>
-                        Some quick example text to build on the card title and make up the bulk of
-                        the card's content.
-                        </Card.Text>
-                        <Button variant="primary">Go somewhere</Button>
-                    </Card.Body>
-                    </Card>
-                    </Col> */}
+                    <Col md={6}>
+                        <img style={styles.grinder} src="/imgs/coffee_grinder.jpg" />
+                    </Col>
+                </Row>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+               
+                <Row>
+                    <Col>
+                        <h2>Let's make a better tomorrow</h2>
+                    </Col>
                 </Row>
 
                 <Row>
                     <Col>
                     <img src="/imgs/world_image.jpg" style={styles.earthImage}/>
                     </Col>
-                </Row>
+                    <Col>
+                    <img src="/imgs/south_america_background.jpg" style={styles.earthImage}/>
+                    </Col>
+                    <Col>
+                    <img src="/imgs/fjord.jpg" style={styles.earthImage}/>
+                    </Col>
 
+                </Row>
 
 
                 <br />
@@ -174,13 +213,12 @@ function homepage() {
                 <br />
 
                 <Row>
-                    <Col>
-                        <h2>Get on the list! <i class="fas fa-angle-double-right"></i>{' '} </h2>
+                    <Col sm={6}>
+                        <h2>Get on the list!</h2>
                         <p>Join our mailing list for special product announcements, news and offers.</p>
                        
                     </Col>
-
-                    <Col>
+                    <Col sm={6}>
                         <h4>Join our mailing list for new deals, exclusive offers, and more:</h4>
                         <Form inline>
                             <Form.Label htmlFor="inlineFormInputName2" srOnly>
@@ -189,8 +227,8 @@ function homepage() {
                             <Form.Control
                                 className="mb-2 mr-sm-2"
                                 id="inlineFormInputName2"
-                                placeholder="Email address" />
-                            <Button type="submit" className="mb-2">
+                                placeholder="Email address" style={styles.homepageEmailInput} />
+                            <Button type="submit" className="mb-2" style={styles.button}>
                                 Submit
                             </Button>
                         </Form>
@@ -206,4 +244,4 @@ function homepage() {
     )
 }
 
-export default homepage;
+export default Homepage;

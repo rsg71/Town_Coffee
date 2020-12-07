@@ -1,20 +1,30 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import CoffeeBanner from "../../components/CoffeeBanner/CoffeeBanner"
-import Subscription_FAQ from "../../components/Subscription_FAQ/Subscription_FAQ"
+import CoffeeBanner from "../../components/coffeeBanner/CoffeeBanner"
+import Subscription_FAQ from "../../components/subscription_FAQ/Subscription_FAQ"
 
 const styles = {
     margin: {
         marginBottom: "15rem"
     },
     column: {
-        backgroundColor: "whitesmoke",
-        padding: 20
+        backgroundColor: "#1e3932",
+        color: "white",
+        padding: "20px"
+    },
+    h1: {
+        textAlign: "center"
     }
 }
 
 
-function aboutUs() {
+function Subscriptions() {
+
+    useEffect(() => {
+        document.title = "Subscriptions | Town Coffee Company"
+    }, []);
+
+
     return (
         <>
             <CoffeeBanner/>
@@ -23,7 +33,7 @@ function aboutUs() {
             <Row>
                 <Col>
                 <br/>
-                    <h1>Subscriptions</h1>
+                    <h1 style={styles.h1}>Subscriptions</h1>
                 <br/>
                 </Col>
             </Row>
@@ -41,6 +51,14 @@ function aboutUs() {
                 
             <br/>
             <br/>
+
+            <Row>
+                <Col>
+                    <h2>Subscription FAQ:</h2>
+                    <br/>
+                </Col>
+            </Row>
+
             <Row>
                 <Col>
                 <Subscription_FAQ/>
@@ -52,4 +70,4 @@ function aboutUs() {
     )
 }
 
-export default aboutUs;
+export default Subscriptions;

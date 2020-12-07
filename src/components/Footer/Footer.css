@@ -1,6 +1,7 @@
 .Container{
-    background-color: black;
-    color: rgb(112, 109, 109)
+    background-color: #1E3932;
+    /* background-color: black; */
+    color: rgb(133, 130, 130)
 }
 
 
@@ -24,4 +25,12 @@ ul li a:hover {
 }
 .fa-instagram {
     font-size: 1.45rem;
+}
+
+
+
+@media all and (max-width: 568px) {
+    ul {
+        padding-inline-start: initial;
+    }
 }

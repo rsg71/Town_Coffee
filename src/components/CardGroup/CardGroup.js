@@ -1,5 +1,14 @@
 import React from "react";
 import { CardDeck, Card, Button } from "react-bootstrap";
+import "./CardGroup.css"
+
+
+const styles = {
+    color: {
+        backgroundColor: "#1E3932",
+        borderColor: "#1E3932" 
+    }
+}
 
 function CardGroup () {
     return(
@@ -12,10 +21,10 @@ function CardGroup () {
                                     <Card.Text>
                                         Whole bean blend sourced sustainably in Mexico
                                     </Card.Text>
-                                    <Button>Shop Now</Button>
+                                    <Button className="groupCoffeeButtons">Shop Now</Button>
                                 </Card.Body>
                                 <Card.Footer>
-                                <small className="text-muted"><strong>$14.99</strong></small>
+                                <small className="text-muted"><strong>$12.99</strong></small>
                                 </Card.Footer>
                             </Card>
                             <Card>
@@ -25,10 +34,10 @@ function CardGroup () {
                                     <Card.Text>
                                     Whole bean blend sourced sustainably in Mexico
                                     </Card.Text>
-                                    <Button>Shop Now</Button>
+                                    <Button className="groupCoffeeButtons"  variant="success">Shop Now</Button>
                                 </Card.Body>
                                 <Card.Footer>
-                                    <small className="text-muted"><strong>$14.99</strong></small>
+                                    <small className="text-muted"><strong>$12.99</strong></small>
                                 </Card.Footer>
                             </Card>
                             <Card>
@@ -38,7 +47,7 @@ function CardGroup () {
                                     <Card.Text>
                                     Whole bean blend sourced sustainably in Mexico
                                     </Card.Text>
-                                    <Button>Shop Now</Button>
+                                    <Button className="groupCoffeeButtons" style={styles.color}>Shop Now</Button>
                                 </Card.Body>
                                 <Card.Footer>
                                 <small className="text-muted"><strong>$14.99</strong></small>

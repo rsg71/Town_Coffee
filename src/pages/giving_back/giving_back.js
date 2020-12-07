@@ -1,6 +1,7 @@
-import React from "react";
+import React, {useEffect} from "react";
+
 import { Container, Row, Col } from "react-bootstrap";
-import CoffeeBanner from "../../components/CoffeeBanner/CoffeeBanner"
+import CoffeeBanner from "../../components/coffeeBanner/CoffeeBanner"
 
 
 const styles = {
@@ -27,7 +28,14 @@ const styles = {
 }
 
 
-function givingBack() {
+function GivingBack() {
+
+    useEffect(() => {
+        document.title = "Giving Back | Town Coffee Company"
+    }, []);
+
+
+
     return (
         <>
 
@@ -103,4 +111,4 @@ function givingBack() {
     )
 }
 
-export default givingBack;
+export default GivingBack;

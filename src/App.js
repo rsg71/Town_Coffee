@@ -9,8 +9,11 @@ import Giving_back from "./pages/giving_back/giving_back";
 import Subscriptions from "./pages/subscriptions/subscriptions";
 import Homepage from "./pages/homepage/homepage";
 
-import NavigationBar from "./components/NavigationBar/NavigationBar"
-import Footer from "./components/Footer/Footer"
+import TermsOfUse from "./pages/terms_of_use/terms_of_use"
+import PrivacyPolicy from "./pages/privacy_policy/privacy_policy"
+
+import NavigationBar from "./components/navigationBar/NavigationBar"
+import Footer from "./components/footer/Footer"
 
 
 function App() {
@@ -26,6 +29,9 @@ function App() {
         <Route exact path="/contactus" component={Contact_us}/>
         <Route exact path="/givingback" component={Giving_back}/>
         <Route exact path="/subscriptions" component={Subscriptions}/>
+
+        <Route exact path="/terms_of_use" component={TermsOfUse}/>
+        <Route exact path="/privacy_policy" component={PrivacyPolicy}/>
         <Footer/>
 
 

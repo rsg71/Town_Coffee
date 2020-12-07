@@ -1,0 +1,15 @@
+.contactUsColumn {
+
+    background-color: #1E3932;
+    color: white;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding:20px;
+    margin-bottom: 5px;
+}
+
+
+
+/* @media all and (max-width: 576px) {
+    color: "red"
+} */

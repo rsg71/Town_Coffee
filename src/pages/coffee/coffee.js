@@ -1,7 +1,8 @@
-import React from "react";
+import React, {useEffect} from "react";
+
 import { Container, Row, Col, CardDeck, Card, Button } from "react-bootstrap";
-import CardGroup from "../../components/CardGroup/CardGroup"
-import CoffeeBanner from "../../components/CoffeeBanner/CoffeeBanner"
+import CardGroup from "../../components/cardGroup/CardGroup"
+import CoffeeBanner from "../../components/coffeeBanner/CoffeeBanner"
 
 
 
@@ -13,6 +14,14 @@ const styles = {
 }
 
 function Coffee() {
+
+
+
+    useEffect(() => {
+        document.title = "Coffee | Town Coffee Company"
+    }, []);
+
+
     return (
         <>
            <CoffeeBanner/>
