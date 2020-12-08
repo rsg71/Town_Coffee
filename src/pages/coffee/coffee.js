@@ -6,12 +6,12 @@ import CoffeeBanner from "../../components/CoffeeBanner/CoffeeBanner"
 
 
 
-const styles = {
-    buttonStyle: {
-        position: "absolute",
-        textAlign: "center"
-    }
-}
+// const styles = {
+//     buttonStyle: {
+//         position: "absolute",
+//         textAlign: "center"
+//     }
+// }
 
 function Coffee() {
 
