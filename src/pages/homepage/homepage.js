@@ -1,9 +1,8 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 
-import { Container, Row, Col, CardDeck, Card, Button, Form } from 'react-bootstrap';
+import { Container, Row, Col, Button, Form } from 'react-bootstrap';
 import CardGroup from "../../components/cardGroup/CardGroup"
-import Homepage_Banner from "../../components/homepage_Banner/Homepage_Banner"
-import Jumbotron from "../../components/jumbotron/Jumbotron"
+import HomepageBanner from "../../components/homepage_Banner/Homepage_Banner"
 
 
 
@@ -28,11 +27,8 @@ const styles = {
         fontStyle: "italic"
     },
     blah: {
-
-        
-
-        backgroundImage: 'url(/imgs/dirt_trail.jpg")',
-        height:900,
+        backgroundImage: 'url("imgs/dirt_trail.jpg")',
+        height: 900,
         objectFit: "cover"
     },
     grinder: {
@@ -46,15 +42,15 @@ const styles = {
         backgroundColor: "green"
     },
     earthImage: {
-        maxWidth:"100%",
-        height:"500px",
-        objectFit:"cover",
+        maxWidth: "100%",
+        height: "500px",
+        objectFit: "cover",
         borderRadius: "7px",
         marginTop: "1rem"
     },
     button: {
 
-        
+
         backgroundColor: "#1E3932",
         borderColor: "#1E3932"
     }
@@ -71,12 +67,7 @@ function Homepage() {
 
     return (
         <>
-        {/* <div class="alert alert-dark alert-dismissible fade show" role="alert">
-        <strong>Holy guacamole!</strong> You should check in on some of those fields below.
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
-        </div> */}
+           
 
 
             <Container fluid>
@@ -97,10 +88,10 @@ function Homepage() {
 
                 <Row>
                     <Col>
-                    
-                    <h3>Browse our Blends:</h3>
-                    <br/>
-                    <CardGroup />
+
+                        <h3>Browse our Blends:</h3>
+                        <br />
+                        <CardGroup />
                     </Col>
                 </Row>
 
@@ -118,7 +109,7 @@ function Homepage() {
 
                         <p>Working with all of our partners to provide fair wages at every step in the process, preserve and regenerate the environment and always reduce plastic and waste.</p>
 
-                        
+
 
                     </Col>
                 </Row>
@@ -130,7 +121,9 @@ function Homepage() {
 
             <Container fluid>
                 <Row >
-                <Homepage_Banner />
+                    <Col style={styles.blah}>
+                    <HomepageBanner />
+                    </Col>
                 </Row>
             </Container>
             <br />
@@ -138,8 +131,8 @@ function Homepage() {
 
             {/* <Jumbotron></Jumbotron> */}
 
-            <br/>
-            <br/>
+            <br />
+            <br />
 
             <Container>
                 <Row>
@@ -159,7 +152,7 @@ function Homepage() {
 
                 <Row>
                     <Col style={styles.signature}>
-                        <img src={process.env.PUBLIC_URL+"/imgs/signature_r.png"} style={styles.signature} />
+                        <img src="imgs/signature_r.png" style={styles.signature} />
                         <p style={styles.signatureInfo}>Rich Robertson, Founder and CEO</p>
                     </Col>
                 </Row>
@@ -180,15 +173,15 @@ function Homepage() {
                     </Col>
 
                     <Col md={6}>
-                        <img style={styles.grinder} src={process.env.PUBLIC_URL+"/imgs/coffee_grinder.jpg"} />
+                        <img style={styles.grinder} src="imgs/coffee_grinder.jpg" />
                     </Col>
                 </Row>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-               
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+
                 <Row>
                     <Col>
                         <h2>Let's make a better tomorrow</h2>
@@ -197,13 +190,13 @@ function Homepage() {
 
                 <Row>
                     <Col>
-                    <img src={process.env.PUBLIC_URL+"/imgs/world_image.jpg"} style={styles.earthImage}/>
+                        <img src="imgs/world_image.jpg" style={styles.earthImage} />
                     </Col>
                     <Col>
-                    <img src={process.env.PUBLIC_URL+"/imgs/south_america_background.jpg"} style={styles.earthImage}/>
+                        <img src="imgs/south_america_background.jpg" style={styles.earthImage} />
                     </Col>
                     <Col>
-                    <img src={process.env.PUBLIC_URL+"/imgs/fjord.jpg"} style={styles.earthImage}/>
+                        <img src="imgs/fjord.jpg" style={styles.earthImage} />
                     </Col>
 
                 </Row>
@@ -218,7 +211,7 @@ function Homepage() {
                     <Col sm={6}>
                         <h2>Get on the list!</h2>
                         <p>Join our mailing list for special product announcements, news and offers.</p>
-                       
+
                     </Col>
                     <Col sm={6}>
                         <h4>Join our mailing list for new deals, exclusive offers, and more:</h4>

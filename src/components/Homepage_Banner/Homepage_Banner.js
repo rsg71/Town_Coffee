@@ -1,26 +1,26 @@
 import React from "react";
 import "./Homepage_Banner.css"
 import { Button, Col } from "react-bootstrap";
+import {Link} from "react-router-dom";
 
 
 
-function Homepage_Banner() {
+
+function HomepageBanner() {
     return (
         <>
-
-            <Col className="homepageTrailBanner">
-
                 <div className="homepageBannerh2">
                     <h2 className="bannerTagline">Not many startups begin as a Certified B Corp&reg;.
-            <br />
-            We did.</h2>
-                    <Button variant="light" className="findOutButton">Find out how</Button>
+                    <br />
+                    We did.</h2>
+                    <Button variant="light" className="findOutButton">
+                        
+                        <Link className="findOutHow" to="/aboutus">Find out how</Link>
+                        
+                        </Button>
                 </div>
-
-            </Col>
-
         </>
     )
 }
 
-export default Homepage_Banner;
+export default HomepageBanner;

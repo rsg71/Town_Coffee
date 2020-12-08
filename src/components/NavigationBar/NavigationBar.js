@@ -13,7 +13,7 @@ function NavigationBar() {
 
 <Navbar bg="light" expand="lg" sticky="top" >
   <Navbar.Brand href="#home">
-  <img src={process.env.PUBLIC_URL+"/imgs/green_logo_beans.png"} id="logo"/>
+  <img src="imgs/green_logo_beans.png" id="logo"/>
 
   </Navbar.Brand>
   <Navbar.Toggle aria-controls="basic-navbar-nav" />

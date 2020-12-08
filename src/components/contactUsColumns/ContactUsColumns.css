@@ -8,8 +8,14 @@
     margin-bottom: 5px;
 }
 
+.contactUsFollowUs {
+    list-style-type: none;
+    padding-left:0 !important;
+}
 
 
-/* @media all and (max-width: 576px) {
-    color: "red"
-} */
+@media all and (min-width: 576px) {
+    .contactUsColumn {
+        max-width: 30% !important;
+    }
+}

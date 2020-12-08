@@ -78,9 +78,9 @@ function Footer() {
                     <Col sm={3} style={styles.column}>
                         <ul style={styles.listItems}>
                             <li style={styles.listItemTitle}>Follow Us</li>
-                            <li><a href="#"><i class="fab fa-instagram socialMediaIcons"></i></a></li>
-                            <li><a href="https://www.facebook.com/towncoffeecompany"><i class="fab fa-facebook socialMediaIcons"></i></a></li>
-                            <li><a href="#"><i class="fab fa-twitter socialMediaIcons"></i></a></li>
+                            <li><a href="#" target="_blank"><i class="fab fa-instagram socialMediaIcons"></i></a></li>
+                            <li><a href="https://www.facebook.com/towncoffeecompany" target="_blank"><i class="fab fa-facebook socialMediaIcons"></i></a></li>
+                            <li><a href="#" target="_blank"><i class="fab fa-twitter socialMediaIcons"></i></a></li>
                         </ul>
                     </Col>
                 </Row>

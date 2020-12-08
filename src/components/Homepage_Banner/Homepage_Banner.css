@@ -1,14 +1,19 @@
-/* .h1 {
-    margin-top: 12rem;
-    
-    text-align: center
-} */
+
 
 .homepageBannerh2 {
     /* margin-top: 10rem ;
     margin-bottom: 10rem !important; */
     text-align: center;
 
+}
+
+.findOutHow {
+    color:#212529
+}
+
+.findOutHow:hover {
+    text-decoration: none;
+    color:#212529
 }
 
 .bannerTagline {
@@ -19,11 +24,7 @@
     margin-top:1.3em;
 }
 
-.homepageTrailBanner {
-    /* background-image: url(./imgs/dirt_trail.jpg); */
-        height:900px;
-        object-fit: "cover"
-}
+
 
 
 @media all and (max-width:576px) {

@@ -11,17 +11,17 @@ function ContactUsColumns() {
                     <Col sm={4} className="contactUsColumn">
                         <h2>Town Coffee Company</h2>
                         <div>
-                        <p>215-696-9338</p>
-                        <p>towncoffeecompany@gmail.com</p>
+                        <p><i className="fas fa-phone"></i> <a href="tel:215.696.9338" >215-696-9338</a></p>
+                        <p><i className="fas fa-envelope"></i><a href="mailto:towncoffeecompany@gmail.com"> towncoffeecompany@gmail.com</a></p>
                         </div>
                     </Col>
                     <Col sm={4} className="contactUsColumn">
                         <h2>Follow us:</h2>
-                        <ul >
-                            <li><a href="#"><i class="fab fa-instagram socialMediaIcons"></i></a></li>
-                            <li><a href="https://www.facebook.com/towncoffeecompany"><i class="fab fa-facebook socialMediaIcons"></i></a></li>
-                            <li><a href="#"><i class="fab fa-twitter socialMediaIcons"></i></a></li>
-                            <li>Whatsapp <i class="fab fa-whatsapp"></i></li>
+                        <ul className="contactUsFollowUs">
+                            <li><a href="#" target="_blank"><i className="fab fa-instagram socialMediaIcons"></i></a></li>
+                            <li><a href="https://www.facebook.com/towncoffeecompany" target="_blank"><i className="fab fa-facebook socialMediaIcons"></i></a></li>
+                            <li><a href="#" target="_blank"><i className="fab fa-twitter socialMediaIcons"></i></a></li>
+                            <li>Whatsapp <i className="fab fa-whatsapp"></i></li>
                         </ul>
                     </Col>
                     <Col sm={4} className="contactUsColumn">
