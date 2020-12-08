@@ -19,7 +19,7 @@ import Footer from "./components/footer/Footer"
 function App() {
   return (
     <>
-      <Router>
+      <Router basename="/Town_Coffee">
 
         <NavigationBar />
         <Route exact path="/" component={Homepage}/>
