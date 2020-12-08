@@ -12,7 +12,7 @@ import Homepage from "./pages/Homepage/Homepage";
 import TermsOfUse from "./pages/TermsOfUse/TermsOfUse"
 import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy"
 
-import NavigationBar from "./components/Navigationbar/Navigationbar"
+import NavigationBar from "./components/NavigationBar/NavigationBar"
 import Footer from "./components/Footer/Footer"
 
 
