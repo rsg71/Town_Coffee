@@ -1,19 +1,19 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-import AboutUs from "./pages/about_us/about_us";
-import Coffee from "./pages/coffee/coffee";
-import Certifications from "./pages/certifications/certifications";
-import Contact_us from "./pages/contact_us/contact_us";
-import Giving_back from "./pages/giving_back/giving_back";
-import Subscriptions from "./pages/subscriptions/subscriptions";
-import Homepage from "./pages/homepage/homepage";
+import AboutUs from "./pages/About_us/About_us";
+import Coffee from "./pages/Coffee/Coffee";
+import Certifications from "./pages/Certifications/Certifications";
+import Contact_us from "./pages/Contact_us/Contact_us";
+import Giving_back from "./pages/Giving_back/Giving_back";
+import Subscriptions from "./pages/Subscriptions/Subscriptions";
+import Homepage from "./pages/Homepage/Homepage";
 
-import TermsOfUse from "./pages/terms_of_use/terms_of_use"
-import PrivacyPolicy from "./pages/privacy_policy/privacy_policy"
+import TermsOfUse from "./pages/Terms_of_use/Terms_of_use"
+import PrivacyPolicy from "./pages/Privacy_policy/Privacy_policy"
 
-import NavigationBar from "./components/navigationbar/navigationbar"
-import Footer from "./components/footer/footer"
+import NavigationBar from "./components/Navigationbar/Navigationbar"
+import Footer from "./components/Footer/Footer"
 
 
 function App() {

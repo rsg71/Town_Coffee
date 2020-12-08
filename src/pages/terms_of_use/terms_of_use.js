@@ -1,7 +1,7 @@
 
 import React, {useEffect} from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import CoffeeBanner from "../../components/coffeebanner/coffeebanner"
+import CoffeeBanner from "../../components/Coffeebanner/Coffeebanner"
 import "./terms_of_use.css"
 
 
