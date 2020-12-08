@@ -1,7 +1,7 @@
 import React, {useEffect} from "react";
 
 import { Container, Row, Col } from "react-bootstrap";
-import CoffeeBanner from "../../components/Coffeebanner/Coffeebanner"
+import Coffeebanner from "../../components/Coffeebanner/Coffeebanner"
 
 
 const styles = {
@@ -39,7 +39,7 @@ function GivingBack() {
     return (
         <>
 
-            <CoffeeBanner />
+            <Coffeebanner />
 
             <Container>
                 <br />
