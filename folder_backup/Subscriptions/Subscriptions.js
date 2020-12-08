@@ -1,7 +1,7 @@
 import React, {useEffect} from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import CoffeeBanner from "../../components/CoffeeBanner/CoffeeBanner"
-import Subscription_FAQ from "../../components/SubscriptionFAQ/SubscriptionFAQ"
+import CoffeeBanner from "../../src/components/CoffeeBanner/CoffeeBanner"
+import Subscription_FAQ from "../../src/components/SubscriptionFAQ/SubscriptionFAQ"
 
 const styles = {
     margin: {
