@@ -1,7 +1,7 @@
 
 import React, {useEffect} from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import Coffeebanner from "../../components/Coffeebanner/Coffeebanner"
+import CoffeeBanner from "../../components/CoffeeBanner/CoffeeBanner"
 import "./PrivacyPolicy.css"
 
 
@@ -15,7 +15,7 @@ function PrivacyPolicy () {
 
 return (
 <>
-<Coffeebanner/>
+<CoffeeBanner/>
 
     <Container>
         <Row>

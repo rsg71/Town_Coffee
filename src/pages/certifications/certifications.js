@@ -1,7 +1,7 @@
 import React, {useEffect} from "react";
 
 import { Container, Row, Col } from "react-bootstrap";
-import Coffeebanner from "../../components/Coffeebanner/Coffeebanner"
+import CoffeeBanner from "../../components/CoffeeBanner/CoffeeBanner"
 
 const styles = {
     background: {
@@ -20,7 +20,7 @@ function Certifications() {
 
     return (
         <>
-            <Coffeebanner/>
+            <CoffeeBanner/>
 
             <Container>
                 <br/>

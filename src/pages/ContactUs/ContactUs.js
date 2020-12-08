@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import { Container, Row, Col, Button, Form, Jumbotron } from "react-bootstrap";
-import Coffeebanner from "../../components/Coffeebanner/Coffeebanner"
+import CoffeeBanner from "../../components/CoffeeBanner/CoffeeBanner"
 import ContactUsColumns from "../../components/ContactUsColumns/ContactUsColumns"
 
 const styles = {
@@ -48,7 +48,7 @@ function ContacUs() {
         <>
 
 
-            <Coffeebanner />
+            <CoffeeBanner />
 
 
             <Container>

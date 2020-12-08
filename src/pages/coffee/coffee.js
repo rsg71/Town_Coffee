@@ -2,7 +2,7 @@ import React, {useEffect} from "react";
 
 import { Container, Row, Col } from "react-bootstrap";
 import CardGroup from "../../components/CardGroup/CardGroup"
-import Coffeebanner from "../../components/Coffeebanner/Coffeebanner"
+import CoffeeBanner from "../../components/CoffeeBanner/CoffeeBanner"
 
 
 
@@ -24,7 +24,7 @@ function Coffee() {
 
     return (
         <>
-           <Coffeebanner/>
+           <CoffeeBanner/>
 
             <Container>
                 <br />

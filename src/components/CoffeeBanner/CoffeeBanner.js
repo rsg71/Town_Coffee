@@ -1,5 +1,5 @@
 import React from "react"
-import "./Coffeebanner.css"
+import "./CoffeeBanner.css"
 
 function CoffeeBanner() {
     return(

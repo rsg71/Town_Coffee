@@ -1,7 +1,7 @@
 
 import React, {useEffect} from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import Coffeebanner from "../../components/Coffeebanner/Coffeebanner"
+import CoffeeBanner from "../../components/CoffeeBanner/CoffeeBanner"
 import "./TermsOfUse.css"
 
 
@@ -14,7 +14,7 @@ function TermsOfUse () {
 
 return (
 <>
-<Coffeebanner/>
+<CoffeeBanner/>
 
     <Container>
         <Row>

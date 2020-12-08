@@ -1,6 +1,6 @@
 import React, {useEffect} from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import Coffeebanner from "../../components/Coffeebanner/Coffeebanner"
+import CoffeeBanner from "../../components/CoffeeBanner/CoffeeBanner"
 import Subscription_FAQ from "../../components/SubscriptionFAQ/SubscriptionFAQ"
 
 const styles = {
@@ -27,7 +27,7 @@ function Subscriptions() {
 
     return (
         <>
-            <Coffeebanner/>
+            <CoffeeBanner/>
 
             <Container style={styles.margin}>
             <Row>
