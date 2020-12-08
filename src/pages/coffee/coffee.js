@@ -8,7 +8,7 @@ import CoffeeBanner from "../../components/CoffeeBanner/CoffeeBanner"
 
 // const styles = {
 //     buttonStyle: {
-//         position: "absolute",
+//         
 //         textAlign: "center"
 //     }
 // }
