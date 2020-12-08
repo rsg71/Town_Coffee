@@ -33,7 +33,7 @@ function Certifications() {
 
                 <Row>
                     <Col>
-                        <img src="/imgs/rainforest_alliance.PNG"></img>
+                        <img src={process.env.PUBLIC_URL+"/imgs/rainforest_alliance.PNG"}/>
                     </Col>
                     <Col style={styles.background}>
                         <p>Rainforest Alliance</p>
@@ -42,19 +42,19 @@ function Certifications() {
                 <Row>
                     <Col>
                         <p>Organic</p>
-                        <img src="/imgs/certified_organic.jpg"></img>
+                        <img src={process.env.PUBLIC_URL+"/imgs/certified_organic.jpg"}/>
                     </Col>
                     <Col>
                         <p>Kosher</p>
-                        <img src="/imgs/kosher.jpeg"></img>
+                        <img src={process.env.PUBLIC_URL+"/imgs/kosher.jpeg"}/>
                     </Col>
                     <Col>
                         <p>Fair Wages</p>
-                        <img src="/imgs/fair-pay.jpg"></img>
+                        <img src={process.env.PUBLIC_URL+"/imgs/fair-pay.jpg"}/>
                     </Col>
                     <Col>
                         <p>Smithsonian Institute - Certified Bird Friendly</p>
-                        <img src="/imgs/certified_bird_friendly.jpg"></img>
+                        <img src={process.env.PUBLIC_URL+"/imgs/certified_bird_friendly.jpg"}/>
                     </Col>
                 </Row>
                 <br/>

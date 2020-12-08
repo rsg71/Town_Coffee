@@ -6,6 +6,7 @@ import Homepage_Banner from "../../components/homepage_Banner/Homepage_Banner"
 import Jumbotron from "../../components/jumbotron/Jumbotron"
 
 
+
 const styles = {
     background: {
         backgroundColor: "whitesmoke"
@@ -27,7 +28,10 @@ const styles = {
         fontStyle: "italic"
     },
     blah: {
-        backgroundImage: 'url("/imgs/dirt_trail.jpg")',
+
+        
+
+        backgroundImage: 'url(/imgs/dirt_trail.jpg")',
         height:900,
         objectFit: "cover"
     },
@@ -126,9 +130,7 @@ function Homepage() {
 
             <Container fluid>
                 <Row >
-                    <Col style={styles.blah}>
-                        <Homepage_Banner />
-                    </Col>
+                <Homepage_Banner />
                 </Row>
             </Container>
             <br />
@@ -157,7 +159,7 @@ function Homepage() {
 
                 <Row>
                     <Col style={styles.signature}>
-                        <img src="/imgs/signature_r.png" style={styles.signature} />
+                        <img src={process.env.PUBLIC_URL+"/imgs/signature_r.png"} style={styles.signature} />
                         <p style={styles.signatureInfo}>Rich Robertson, Founder and CEO</p>
                     </Col>
                 </Row>
@@ -178,7 +180,7 @@ function Homepage() {
                     </Col>
 
                     <Col md={6}>
-                        <img style={styles.grinder} src="/imgs/coffee_grinder.jpg" />
+                        <img style={styles.grinder} src={process.env.PUBLIC_URL+"/imgs/coffee_grinder.jpg"} />
                     </Col>
                 </Row>
                 <br/>
@@ -195,13 +197,13 @@ function Homepage() {
 
                 <Row>
                     <Col>
-                    <img src="/imgs/world_image.jpg" style={styles.earthImage}/>
+                    <img src={process.env.PUBLIC_URL+"/imgs/world_image.jpg"} style={styles.earthImage}/>
                     </Col>
                     <Col>
-                    <img src="/imgs/south_america_background.jpg" style={styles.earthImage}/>
+                    <img src={process.env.PUBLIC_URL+"/imgs/south_america_background.jpg"} style={styles.earthImage}/>
                     </Col>
                     <Col>
-                    <img src="/imgs/fjord.jpg" style={styles.earthImage}/>
+                    <img src={process.env.PUBLIC_URL+"/imgs/fjord.jpg"} style={styles.earthImage}/>
                     </Col>
 
                 </Row>

@@ -19,6 +19,13 @@
     margin-top:1.3em;
 }
 
+.homepageTrailBanner {
+    /* background-image: url(./imgs/dirt_trail.jpg); */
+        height:900px;
+        object-fit: "cover"
+}
+
+
 @media all and (max-width:576px) {
     .findOutButton  {
         variant: "outline-light"
