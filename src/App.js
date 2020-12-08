@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import AboutUs from "./pages/about_us/about_us";
-import Coffee from "./pages/coffee/coffee.js";
+import Coffee from "./pages/coffee/coffee";
 import Certifications from "./pages/certifications/certifications";
 import Contact_us from "./pages/contact_us/contact_us";
 import Giving_back from "./pages/giving_back/giving_back";
@@ -12,8 +12,8 @@ import Homepage from "./pages/homepage/homepage";
 import TermsOfUse from "./pages/terms_of_use/terms_of_use"
 import PrivacyPolicy from "./pages/privacy_policy/privacy_policy"
 
-import NavigationBar from "./components/navigationBar/NavigationBar"
-import Footer from "./components/footer/Footer"
+import NavigationBar from "./components/navigationbar/navigationbar"
+import Footer from "./components/footer/footer"
 
 
 function App() {

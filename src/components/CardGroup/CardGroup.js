@@ -1,6 +1,6 @@
 import React from "react";
 import { CardDeck, Card, Button } from "react-bootstrap";
-import "./CardGroup.css"
+import "./cardgroup.css"
 
 
 const styles = {

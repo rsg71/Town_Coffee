@@ -1,7 +1,7 @@
 
 import React from "react";
 import { Container, Row, Col, Accordion, Card, Button } from "react-bootstrap";
-import "./Subscription_FAQ.css"
+import "./subscription_FAQ.css"
 
 
 

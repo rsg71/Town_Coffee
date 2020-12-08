@@ -1,8 +1,8 @@
 import React, {useEffect} from "react";
 
 import { Container, Row, Col, CardDeck, Card, Button } from "react-bootstrap";
-import CardGroup from "../../components/cardGroup/CardGroup"
-import CoffeeBanner from "../../components/coffeeBanner/CoffeeBanner"
+import CardGroup from "../../components/cardgroup/cardgroup"
+import CoffeeBanner from "../../components/coffeebanner/coffeebanner"
 
 
 

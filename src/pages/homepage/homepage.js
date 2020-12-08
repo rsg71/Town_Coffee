@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 
 import { Container, Row, Col, Button, Form } from 'react-bootstrap';
-import CardGroup from "../../components/cardGroup/CardGroup"
-import HomepageBanner from "../../components/homepage_Banner/Homepage_Banner"
+import CardGroup from "../../components/cardgroup/cardgroup"
+import HomepageBanner from "../../components/homepagebanner/homepagebanner"
 
 
 

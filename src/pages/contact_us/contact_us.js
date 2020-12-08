@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 
 import { Container, Row, Col, Button, Form, Jumbotron } from "react-bootstrap";
-import CoffeeBanner from "../../components/coffeeBanner/CoffeeBanner"
-import ContactUsColumns from "../../components/contactUsColumns/ContactUsColumns"
+import CoffeeBanner from "../../components/coffeebanner/coffeebanner"
+import ContactUsColumns from "../../components/contactuscolumns/contactuscolumns"
 
 const styles = {
     listStyle: {

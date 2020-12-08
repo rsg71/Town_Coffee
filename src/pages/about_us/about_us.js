@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
-import CoffeeBanner from "../../components/coffeeBanner/CoffeeBanner"
+import CoffeeBanner from "../../components/coffeebanner/coffeebanner"
 
 
 const styles = {

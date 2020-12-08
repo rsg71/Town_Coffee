@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
-import "./Footer.css"
+import "./footer.css"
 
 const styles = {
     listItems: {
