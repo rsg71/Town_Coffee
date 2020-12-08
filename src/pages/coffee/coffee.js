@@ -1,7 +1,7 @@
 import React, {useEffect} from "react";
 
-import { Container, Row, Col, CardDeck, Card, Button } from "react-bootstrap";
-import Cardgroup from "../../components/Cardgroup/Cardgroup"
+import { Container, Row, Col } from "react-bootstrap";
+import CardGroup from "../../components/CardGroup/CardGroup"
 import Coffeebanner from "../../components/Coffeebanner/Coffeebanner"
 
 
@@ -38,7 +38,7 @@ function Coffee() {
 
                 <Row>
                     <Col>
-                        <Cardgroup/>
+                        <CardGroup/>
                             
                        
                     </Col>
