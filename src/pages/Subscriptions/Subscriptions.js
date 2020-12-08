@@ -1,7 +1,7 @@
 import React, {useEffect} from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import CoffeeBanner from "../../src/components/CoffeeBanner/CoffeeBanner"
-import Subscription_FAQ from "../../src/components/SubscriptionFAQ/SubscriptionFAQ"
+import CoffeeBanner from "../../components/CoffeeBanner/CoffeeBanner";
+import SubscriptionFAQ from "../../components/SubscriptionFAQ/SubscriptionFAQ";
 
 const styles = {
     margin: {
@@ -24,12 +24,10 @@ function Subscriptions() {
         document.title = "Subscriptions | Town Coffee Company"
     }, []);
 
-
     return (
-        <>
-            <CoffeeBanner/>
-
-            <Container style={styles.margin}>
+        <> 
+        <CoffeeBanner/>
+        <Container style={styles.margin}>
             <Row>
                 <Col>
                 <br/>
@@ -61,7 +59,7 @@ function Subscriptions() {
 
             <Row>
                 <Col>
-                <Subscription_FAQ/>
+                <SubscriptionFAQ/>
                 </Col>
             </Row>
 
@@ -69,5 +67,6 @@ function Subscriptions() {
         </>
     )
 }
+
 
 export default Subscriptions;
