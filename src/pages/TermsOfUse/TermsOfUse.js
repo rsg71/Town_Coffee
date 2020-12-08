@@ -2,11 +2,11 @@
 import React, {useEffect} from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import CoffeeBanner from "../../components/Coffeebanner/Coffeebanner"
-import "./terms_of_use.css"
+import "./TermsOfUse.css"
 
 
 
-function Terms_of_use () {
+function TermsOfUse () {
 
     useEffect(() => {
         document.title = "Terms of Use | Town Coffee Company"
@@ -120,4 +120,4 @@ return (
 )
 }
 
-export default Terms_of_use;
+export default TermsOfUse;

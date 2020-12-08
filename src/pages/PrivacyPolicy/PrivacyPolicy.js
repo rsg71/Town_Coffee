@@ -6,7 +6,7 @@ import "./privacy_policy.css"
 
 
 
-function Privacy_policy () {
+function PrivacyPolicy () {
 
     useEffect(() => {
         document.title = "Privacy Policy | Town Coffee Company"
@@ -59,4 +59,4 @@ return (
 )
 }
 
-export default Privacy_policy;
+export default PrivacyPolicy;

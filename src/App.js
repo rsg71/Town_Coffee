@@ -1,16 +1,16 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-import AboutUs from "./pages/About_us/About_us";
+import AboutUs from "./pages/AboutUs/AboutUs";
 import Coffee from "./pages/Coffee/Coffee";
 import Certifications from "./pages/Certifications/Certifications";
-import Contact_us from "./pages/Contact_us/Contact_us";
-import Giving_back from "./pages/Giving_back/Giving_back";
+import Contact_us from "./pages/ContactUs/ContactUs";
+import Giving_back from "./pages/GivingBack/GivingBack";
 import Subscriptions from "./pages/Subscriptions/Subscriptions";
 import Homepage from "./pages/Homepage/Homepage";
 
-import TermsOfUse from "./pages/Terms_of_use/Terms_of_use"
-import PrivacyPolicy from "./pages/Privacy_policy/Privacy_policy"
+import TermsOfUse from "./pages/TermsOfUse/TermsOfUse"
+import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy"
 
 import NavigationBar from "./components/Navigationbar/Navigationbar"
 import Footer from "./components/Footer/Footer"

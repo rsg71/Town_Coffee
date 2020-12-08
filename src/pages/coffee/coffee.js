@@ -1,7 +1,7 @@
 import React, {useEffect} from "react";
 
 import { Container, Row, Col, CardDeck, Card, Button } from "react-bootstrap";
-import CardGroup from "../../components/cardgroup/Cardgroup"
+import CardGroup from "../../components/Cardgroup/Cardgroup"
 import CoffeeBanner from "../../components/Coffeebanner/Coffeebanner"
 
 
