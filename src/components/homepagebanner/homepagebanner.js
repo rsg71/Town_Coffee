@@ -1,5 +1,5 @@
 import React from "react";
-import "./homepagebanner.css"
+import "./HomepageBanner.css"
 import { Button, Col } from "react-bootstrap";
 import {Link} from "react-router-dom";
 

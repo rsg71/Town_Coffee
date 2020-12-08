@@ -1,11 +1,11 @@
 
 import React from "react";
 import { Container, Row, Col, Accordion, Card, Button } from "react-bootstrap";
-import "./Subscription_FAQ.css"
+import "./SubscriptionFAQ.css"
 
 
 
-function Subscription_FAQ() {
+function SubscriptionFAQ() {
 return (
 <>
         <Accordion>
@@ -119,4 +119,4 @@ return (
 )
 }
 
-export default Subscription_FAQ;
+export default SubscriptionFAQ;

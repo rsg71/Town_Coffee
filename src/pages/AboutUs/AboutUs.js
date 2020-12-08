@@ -71,7 +71,7 @@ function AboutUs() {
                         <p> We are Town Coffee Company. A true small business sourcing the best coffee it could find and delivering that to doorsteps. Customers are the same people that changed their habits from big businesses to small business. To help people stay open, help people stay employed. Under much closer review now is how does a company behave. How do they treat their shareholders - everyone in the supply chain, their employees and their customers looking deeper and committing their purchasing to the gropus that behave ethically and responsibly. </p>
                     </Col>
                     <Col sm={6} style={styles.alignCenter}>
-                        <img src="imgs/logo.png" alt="coffee cup" style={styles.townCoffeeLogo}></img>
+                        <img src="/imgs/logo.png" alt="coffee cup" style={styles.townCoffeeLogo}></img>
                     </Col>
                 </Row>
                 <br />
@@ -108,7 +108,7 @@ function AboutUs() {
 
                 <Row>
                     <Col sm={6} style={styles.center}>
-                        <img src="imgs/b-corp-logo.png" alt="b corp logo"></img>
+                        <img src="/imgs/b-corp-logo.png" alt="b corp logo"></img>
                     </Col>
                     <Col sm={6} style={styles.backgroundStyleLight}>
                         <h2>  B Corporation Pending </h2>

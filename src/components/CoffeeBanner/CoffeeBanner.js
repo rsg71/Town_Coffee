@@ -1,10 +1,10 @@
 import React from "react"
-import "./coffeebanner.css"
+import "./Coffeebanner.css"
 
 function CoffeeBanner() {
     return(
         <>
-          <img src="imgs/coffee_white.jpg" className="coffeeJumbotron" alt="coffee background" />
+          <img src="/imgs/coffee_white.jpg" className="coffeeJumbotron" alt="coffee background" />
 
         </>
     )

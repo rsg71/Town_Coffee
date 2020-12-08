@@ -2,7 +2,7 @@
 import React, {useEffect} from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import CoffeeBanner from "../../components/Coffeebanner/Coffeebanner"
-import "./privacy_policy.css"
+import "./PrivacyPolicy.css"
 
 
 
