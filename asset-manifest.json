@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/Town_Coffee/static/css/main.fb8dc033.chunk.css",
-    "main.js": "/Town_Coffee/static/js/main.20f6ee05.chunk.js",
-    "main.js.map": "/Town_Coffee/static/js/main.20f6ee05.chunk.js.map",
+    "main.js": "/Town_Coffee/static/js/main.7e5022a6.chunk.js",
+    "main.js.map": "/Town_Coffee/static/js/main.7e5022a6.chunk.js.map",
     "runtime-main.js": "/Town_Coffee/static/js/runtime-main.6d19cbb3.js",
     "runtime-main.js.map": "/Town_Coffee/static/js/runtime-main.6d19cbb3.js.map",
     "static/css/2.1a02f21c.chunk.css": "/Town_Coffee/static/css/2.1a02f21c.chunk.css",
-    "static/js/2.a49958f0.chunk.js": "/Town_Coffee/static/js/2.a49958f0.chunk.js",
-    "static/js/2.a49958f0.chunk.js.map": "/Town_Coffee/static/js/2.a49958f0.chunk.js.map",
+    "static/js/2.6598f255.chunk.js": "/Town_Coffee/static/js/2.6598f255.chunk.js",
+    "static/js/2.6598f255.chunk.js.map": "/Town_Coffee/static/js/2.6598f255.chunk.js.map",
     "index.html": "/Town_Coffee/index.html",
     "static/css/2.1a02f21c.chunk.css.map": "/Town_Coffee/static/css/2.1a02f21c.chunk.css.map",
     "static/css/main.fb8dc033.chunk.css.map": "/Town_Coffee/static/css/main.fb8dc033.chunk.css.map",
-    "static/js/2.a49958f0.chunk.js.LICENSE.txt": "/Town_Coffee/static/js/2.a49958f0.chunk.js.LICENSE.txt"
+    "static/js/2.6598f255.chunk.js.LICENSE.txt": "/Town_Coffee/static/js/2.6598f255.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.6d19cbb3.js",
     "static/css/2.1a02f21c.chunk.css",
-    "static/js/2.a49958f0.chunk.js",
+    "static/js/2.6598f255.chunk.js",
     "static/css/main.fb8dc033.chunk.css",
-    "static/js/main.20f6ee05.chunk.js"
+    "static/js/main.7e5022a6.chunk.js"
   ]
 }
