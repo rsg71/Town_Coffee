@@ -15,7 +15,7 @@ function CardGroup () {
         <> 
         <CardDeck>
                             <Card>
-                                <Card.Img variant="top" src="/imgs/mockup_bag1.jpg" />
+                                <Card.Img variant="top" src="/imgs/prod_IXeeUDzn45Abgf.jpg" />
                                 <Card.Body>
                                     <Card.Title>12 oz. Whole Bean Original Blend</Card.Title>
                                     <Card.Text>
@@ -28,7 +28,7 @@ function CardGroup () {
                                 </Card.Footer>
                             </Card>
                             <Card>
-                                <Card.Img variant="top" src="/imgs/mockup_bag1.jpg" />
+                                <Card.Img variant="top" src="/imgs/prod_IXeeUDzn45Abgf.jpg" />
                                 <Card.Body>
                                     <Card.Title>16 oz. Whole Bean Original Blend</Card.Title>
                                     <Card.Text>
@@ -41,7 +41,7 @@ function CardGroup () {
                                 </Card.Footer>
                             </Card>
                             <Card>
-                                <Card.Img variant="top" src="/imgs/mockup_bag1.jpg" />
+                                <Card.Img variant="top" src="/imgs/prod_IXeeUDzn45Abgf.jpg" />
                                 <Card.Body>
                                     <Card.Title>12 oz. Whole Bean Dark Blend</Card.Title>
                                     <Card.Text>

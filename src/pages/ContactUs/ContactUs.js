@@ -48,7 +48,7 @@ function ContacUs() {
         <>
 
 
-            <CoffeeBanner />
+            <CoffeeBanner/>
 
 
             <Container>
