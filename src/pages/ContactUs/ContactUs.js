@@ -98,28 +98,10 @@ function ContacUs() {
                 </Row>
 
 
-
-                <Row style={styles.bottomRow}>
-                    <Col>
-                        <h2>Get on the list!</h2>
-                        <p>Join our mailing list for special product announcements, news and offers</p>
-                    </Col>
-                    <Col>
-                        <h4>Join our mailing list for new deals, exclusive offers, and more:</h4>
-                        <Form inline>
-                            <Form.Label htmlFor="inlineFormInputName2" srOnly>
-                                Name
-                            </Form.Label>
-                            <Form.Control
-                                className="mb-2 mr-sm-2"
-                                id="inlineFormInputName2"
-                                placeholder="Email address" />
-                            <Button type="submit" className="mb-2">
-                                Submit
-                            </Button>
-                        </Form>
-                    </Col>
-                </Row>
+                    <br/>
+                    <br/>
+                    <br/>
+               
 
             </Container>
         </>

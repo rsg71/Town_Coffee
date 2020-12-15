@@ -100,7 +100,7 @@ function Homepage() {
                 <br />
 
                 <Row>
-                    <Col >
+                    <Col md={6}>
                         <h2>Who We Are</h2>
 
                         <p>Premium small batch artisan coffee company sourcing the finest micro lot coffee available.</p>
@@ -108,9 +108,11 @@ function Homepage() {
                         <p>Our coffee is sourced and roasted fresh. We receive new shipments every 21 days. The coffee are limited release and quantities are very limited. We often sell out very quickly. Current sections are offered from the mountainous coffee growing regions in Mexico.</p>
 
                         <p>Working with all of our partners to provide fair wages at every step in the process, preserve and regenerate the environment and always reduce plastic and waste.</p>
+                                
+                    </Col>
 
-
-
+                    <Col md={6} style={{textAlign: "center"}}>
+                        <img src="/imgs/b-corp-logo.png" style={{maxHeight: "337px"}}/>
                     </Col>
                 </Row>
 

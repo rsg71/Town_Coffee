@@ -9,11 +9,8 @@ const styles = {
     listItemTitle: {
         fontSize: "1.3em",
         color: "white"
-    },
-
-    center: {
-        textAlign: "center"
     }
+
 }
 
 
@@ -22,20 +19,20 @@ function Footer() {
         <>
             <Container fluid className="Container">
                 <br />
-{/* 
+
+
+                {/* Four columns: shop, support, our policies, and follow us */}
+
                 <Row>
-                    <Col style={styles.column}>
-                        <h4>Join our mailing list for new deals, exclusive offers, and more:</h4>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col>
+
+                    <Col sm={4}>
+                        <h5>Join our mailing list for new deals, exclusive offers, and more:</h5>
                         <Form inline>
                             <Form.Label htmlFor="inlineFormInputName2" srOnly>
                                 Name
                             </Form.Label>
                             <Form.Control
-                                className="mb-2 "
+                                className="mb-2 mr-sm-2"
                                 id="inlineFormInputName2"
                                 placeholder="Email address" />
                             <Button type="submit" className="mb-2">
@@ -43,11 +40,8 @@ function Footer() {
                             </Button>
                         </Form>
                     </Col>
-                </Row> */}
 
-            {/* Four columns: shop, support, our policies, and follow us */}
-                <Row>
-                    <Col sm={3} style={styles.column}>
+                    <Col sm={2} >
                         <ul style={styles.listItems}>
                             <li style={styles.listItemTitle}>Shop</li>
                             <li><a href="/coffee">Coffee</a></li>
@@ -56,7 +50,7 @@ function Footer() {
                         </ul>
                     </Col>
 
-                    <Col sm={3} style={styles.column}>
+                    <Col sm={2} >
                         <ul style={styles.listItems}>
                             <li style={styles.listItemTitle}>Support</li>
                             <li><a href="/contactus">Contact Us</a></li>
@@ -66,7 +60,7 @@ function Footer() {
                         </ul>
                     </Col>
 
-                    <Col sm={3} style={styles.column}>
+                    <Col sm={2} >
                         <ul style={styles.listItems}>
                             <li style={styles.listItemTitle}>Our Policies</li>
                             <li><a href="/terms_of_use">Terms of Sale</a></li>
@@ -75,7 +69,7 @@ function Footer() {
                             <li><a href="#">Cookies</a></li>
                         </ul>
                     </Col>
-                    <Col sm={3} style={styles.column}>
+                    <Col sm={2} >
                         <ul style={styles.listItems}>
                             <li style={styles.listItemTitle}>Follow Us</li>
                             <li><a href="#" target="_blank"><i class="fab fa-instagram socialMediaIcons"></i></a></li>
@@ -83,13 +77,20 @@ function Footer() {
                             <li><a href="#" target="_blank"><i class="fab fa-twitter socialMediaIcons"></i></a></li>
                         </ul>
                     </Col>
+
+
+
                 </Row>
+                <br />
+
+             
+
 
                 <br />
                 <br />
 
                 <Row className="footerBottom">
-                    <Col style={styles.center}>
+                    <Col style={{ textAlign: "center" }}>
                         <p className="text-muted">&copy; 2020 Town Coffee Co. | All Rights Reserved</p>
                     </Col>
 

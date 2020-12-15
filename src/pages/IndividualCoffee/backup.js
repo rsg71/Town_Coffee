@@ -1,9 +1,10 @@
-import React from "react"
+import React, { useState } from "react"
 import { Container, Row, Col, Button, Form } from "react-bootstrap";
 
-function IndividualCoffee({ addToCart }) {
 
-    // const [quantity, setQuantity] = useState(0)
+function blahCoffee() {
+
+    const [quantity, setQuantity] = useState(0)
 
 
 
@@ -27,28 +28,29 @@ function IndividualCoffee({ addToCart }) {
 
 
                         <h4>Quantity:</h4>
-                        <h5>your quantity is:  </h5>
+                        <h5>your quantity is: {quantity}</h5>
                         <Form>
                             <Form.Row className="align-items-center">
                                 <Col sm={3} className="my-1">
                                     <Form.Label htmlFor="inlineFormInputName" srOnly>
                                         Name
                                 </Form.Label>
-                                    <Form.Control id="inlineFormInputName" name="quantity" />
+                                    <Form.Control id="inlineFormInputName" name="quantity" value={quantity} onChange={(e)=> setQuantity(e.target.value, console.log(quantity))}/>
                                 </Col>
 
 
                                 <Col xs="auto" className="my-1">
-                                    <Button >
+                                    <Button onClick={() =>
+                                        setQuantity(
+                                            quantity+ 1)
 
-
-                                        <i className="fas fa-plus"></i></Button>
+                                    }><i className="fas fa-plus"></i></Button>
                                 </Col>
                                 <Col xs="auto" className="my-1">
-                                    <Button ><i className="fas fa-minus"></i></Button>
+                                    <Button onClick={() => setQuantity(quantity - 1)}><i className="fas fa-minus"></i></Button>
                                 </Col>
                                 <Col xs="auto" className="my-1">
-                                    <Button onClick={() => addToCart()}>Add to Cart</Button>
+                                    <Button>Add to Cart</Button>
                                 </Col>
 
                             </Form.Row>
@@ -78,4 +80,4 @@ function IndividualCoffee({ addToCart }) {
         </>
     )
 }
-export default IndividualCoffee;
+export default blahCoffee;

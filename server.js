@@ -6,6 +6,7 @@ app.use(express.static('.'));
 const YOUR_DOMAIN = 'http://localhost:3000/checkout';
 
 app.post('/create-session', async (req, res) => {
+  console.log('were here')
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ['card'],
     line_items: [
@@ -29,4 +30,4 @@ app.post('/create-session', async (req, res) => {
   res.json({ id: session.id });
 });
 
-app.listen(4242, () => console.log('Running on port 4242'));
+app.listen(3000, () => console.log('Running on port 4242'));

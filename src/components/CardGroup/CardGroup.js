@@ -21,7 +21,7 @@ function CardGroup () {
                                     <Card.Text>
                                         Whole bean blend sourced sustainably in Mexico
                                     </Card.Text>
-                                    <Button className="groupCoffeeButtons">Shop Now</Button>
+                                    <Button className="groupCoffeeButtons" href="/products-12oz-whole-bean">Shop Now</Button>
                                 </Card.Body>
                                 <Card.Footer>
                                 <small className="text-muted"><strong>$12.99</strong></small>
