@@ -10,12 +10,10 @@ import Subscriptions from "./pages/Subscriptions/Subscriptions";
 import Homepage from "./pages/Homepage/Homepage";
 import TermsOfUse from "./pages/TermsOfUse/TermsOfUse"
 import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy"
-import Cart from "./components/Cart/Cart"
-import SomeProduct from "./pages/SomeProduct/SomeProduct"
 import IndividualCoffee from "./pages/IndividualCoffee/IndividualCoffee"
 
 
-import SecondCart from "./pages/SecondCart/SecondCart"
+import Cart from "./pages/Cart/Cart"
 import CartContext from "./utils/CartContext"
 
 
@@ -32,11 +30,14 @@ function App() {
   })
 
 
-  function addToCart() {
+  function addToCart(newItem, itemQuantity) {
     setCartItems({
-      item: "coffee 12 oz",
-      quantity: 1
+      item: newItem,
+      quantity: itemQuantity
     })
+
+
+    console.log(cartItems)
   }
 
 
@@ -59,14 +60,16 @@ function App() {
           <Route exact path="/privacy_policy" component={PrivacyPolicy} />
 
 
-          <Route exact path="/products-12oz-whole-bean" component={IndividualCoffee} addToCart={addToCart} />
+          <Route exact path="/products-12oz-whole-bean" render={
+            
+           (props) => <IndividualCoffee addToCart={addToCart}/>
+          
+          }/>
 
 
-          <Route exact path="/secondcart" component={SecondCart} />
 
 
           <Route exact path="/cart" component={Cart} />
-          <Route exact path="/checkout" component={SomeProduct} />
           <Footer />
 
         </CartContext.Provider>

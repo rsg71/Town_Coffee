@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { Container, Row, Col, Button, Form } from "react-bootstrap";
 
 
-function blahCoffee() {
+function BackupCoffee() {
 
     const [quantity, setQuantity] = useState(0)
 
@@ -80,4 +80,4 @@ function blahCoffee() {
         </>
     )
 }
-export default blahCoffee;
+export default BackupCoffee;

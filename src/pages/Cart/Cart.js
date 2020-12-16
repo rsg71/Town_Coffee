@@ -1,23 +1,25 @@
-import React, {useState} from "react"
-import { Container, Row, Col, Button } from "react-bootstrap";
+import React, { useContext } from "react"
+import CartContext from "../../utils/CartContext"
 
 
-function Cart () {
 
+function Cart(props) {
 
-    const [items, setItems] = useState({
-        items: {
-            
-        }
-    })
-
-
+    const cartItems = useContext(CartContext)
 
 
     return (
         <>
+        <h1>Your Cart Items:</h1>
+
+
+        <p>{cartItems.item}</p>
+        
+        <h1>Quantity:</h1>
+        <p>{cartItems.quantity}</p>
 
         </>
+        
     )
 }
 

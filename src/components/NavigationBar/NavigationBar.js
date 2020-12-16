@@ -35,7 +35,7 @@ function NavigationBar() {
 
 
           <Link className="mr-2 navbarLink" to="/signin">Sign In</Link>
-          <Link className="mr-2 navbarLink" to="/secondcart"><i className="fas fa-shopping-cart"></i> ({cartItems.quantity})</Link>
+          <Link className="mr-2 navbarLink" to="/cart"><i className="fas fa-shopping-cart"></i> ({cartItems.quantity})</Link>
         </Navbar.Collapse>
       </Navbar>
 

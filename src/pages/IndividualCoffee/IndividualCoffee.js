@@ -1,10 +1,12 @@
-import React from "react"
+import React, { useState } from "react"
 import { Container, Row, Col, Button, Form } from "react-bootstrap";
+import { Link } from "react-router-dom";
+
 
 function IndividualCoffee({ addToCart }) {
 
-    // const [quantity, setQuantity] = useState(0)
-
+    const [bagQuantity, setBagQuantity] = useState(0)
+    const [coffeeItem, setCoffeeItem] = useState("Full Bodied Bean from Mexico")
 
 
 
@@ -27,29 +29,36 @@ function IndividualCoffee({ addToCart }) {
 
 
                         <h4>Quantity:</h4>
-                        <h5>your quantity is:  </h5>
+                        <h5>your quantity is: {bagQuantity} </h5>
                         <Form>
                             <Form.Row className="align-items-center">
                                 <Col sm={3} className="my-1">
                                     <Form.Label htmlFor="inlineFormInputName" srOnly>
                                         Name
                                 </Form.Label>
-                                    <Form.Control id="inlineFormInputName" name="quantity" />
+                                    <Form.Control id="inlineFormInputName" name="quantity" value={bagQuantity} />
                                 </Col>
 
 
                                 <Col xs="auto" className="my-1">
-                                    <Button >
+                                    <Button onClick={() => setBagQuantity(bagQuantity + 1)}>
 
 
                                         <i className="fas fa-plus"></i></Button>
                                 </Col>
                                 <Col xs="auto" className="my-1">
-                                    <Button ><i className="fas fa-minus"></i></Button>
+                                    <Button onClick={() => setBagQuantity(bagQuantity - 1)}><i className="fas fa-minus"></i></Button>
                                 </Col>
                                 <Col xs="auto" className="my-1">
-                                    <Button onClick={() => addToCart()}>Add to Cart</Button>
+                                    <Button onClick={() => addToCart(coffeeItem, bagQuantity)}>Add to Cart</Button>
                                 </Col>
+
+
+                                <Row>
+                                    <Col>
+                                        <Link to="/cart"> Checkout</Link>
+                                    </Col>
+                                </Row>
 
                             </Form.Row>
                         </Form>
