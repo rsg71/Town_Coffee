@@ -1,0 +1,16 @@
+.navbarLink {
+    color: rgb(161, 160, 160);
+}
+
+.active {
+    color: #008000;
+    font-weight: bold;
+}
+.navbarLink:hover {
+    color: #008000;
+    text-decoration:none;
+}
+
+#logo {
+    height:4rem;
+}
