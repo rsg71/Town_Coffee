@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import "./Footer.css"
 
@@ -44,8 +45,8 @@ function Footer() {
                     <Col sm={2} >
                         <ul style={styles.listItems}>
                             <li style={styles.listItemTitle}>Shop</li>
-                            <li><a href="/coffee">Coffee</a></li>
-                            <li><a href="/subscriptions">Subscriptions</a></li>
+                            <li><Link to="/coffee">Coffee</Link></li>
+                            <li><Link to="/subscriptions"></Link></li>
                             <li></li>
                         </ul>
                     </Col>
@@ -53,28 +54,28 @@ function Footer() {
                     <Col sm={2} >
                         <ul style={styles.listItems}>
                             <li style={styles.listItemTitle}>Support</li>
-                            <li><a href="/contactus">Contact Us</a></li>
-                            <li><a href="/FAQ">FAQs</a></li>
-                            <li><a href="mailto:towncoffeecompany@gmail.com">towncoffeecompany@gmail.com</a></li>
-                            <li><a href="tel:215.696.9338">215-696-9338</a></li>
+                            <li><Link to="/contactus">Contact Us</Link></li>
+                            <li><Link to="/FAQ">FAQs</Link></li>
+                            <li><Link to="mailto:towncoffeecompany@gmail.com">towncoffeecompany@gmail.com</Link></li>
+                            <li><Link to="tel:215.696.9338">215-696-9338</Link></li>
                         </ul>
                     </Col>
 
                     <Col sm={2} >
                         <ul style={styles.listItems}>
                             <li style={styles.listItemTitle}>Our Policies</li>
-                            <li><a href="/terms_of_use">Terms of Sale</a></li>
-                            <li><a href="/terms_of_use">Terms of Use</a></li>
-                            <li><a href="/privacy_policy">Privacy Policy</a></li>
-                            <li><a href="#">Cookies</a></li>
+                            <li><Link to="/terms_of_use">Terms of Sale</Link></li>
+                            <li><Link to="/terms_of_use">Terms of Use</Link></li>
+                            <li><Link to="/privacy_policy">Privacy Policy</Link></li>
+                            <li><Link to="#">Cookies</Link></li>
                         </ul>
                     </Col>
                     <Col sm={2} >
                         <ul style={styles.listItems}>
                             <li style={styles.listItemTitle}>Follow Us</li>
-                            <li><a href="#" target="_blank"><i class="fab fa-instagram socialMediaIcons"></i></a></li>
-                            <li><a href="https://www.facebook.com/towncoffeecompany" target="_blank"><i class="fab fa-facebook socialMediaIcons"></i></a></li>
-                            <li><a href="#" target="_blank"><i class="fab fa-twitter socialMediaIcons"></i></a></li>
+                            <li><Link to="#" target="_blank"><i className="fab fa-instagram socialMediaIcons"></i></Link></li>
+                            <li><Link to="https://www.facebook.com/towncoffeecompany" target="_blank"><i className="fab fa-facebook socialMediaIcons"></i></Link></li>
+                            <li><Link to="#" target="_blank"><i className="fab fa-twitter socialMediaIcons"></i></Link></li>
                         </ul>
                     </Col>
 
