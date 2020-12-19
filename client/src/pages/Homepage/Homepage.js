@@ -112,7 +112,7 @@ function Homepage() {
                     </Col>
 
                     <Col md={6} style={{textAlign: "center"}}>
-                        <img src="/imgs/b-corp-logo.png" style={{maxHeight: "337px"}}/>
+                        <img src="/imgs/b-corp-logo.png" style={{maxHeight: "337px"}} alt="B Corp logo"/>
                     </Col>
                 </Row>
 
@@ -154,7 +154,7 @@ function Homepage() {
 
                 <Row>
                     <Col style={styles.signature}>
-                        <img src="/imgs/signature_r.png" style={styles.signature} />
+                        <img src="/imgs/signature_r.png" style={styles.signature} alt="Signature"/>
                         <p style={styles.signatureInfo}>Rich Robertson, Founder and CEO</p>
                     </Col>
                 </Row>
@@ -175,7 +175,7 @@ function Homepage() {
                     </Col>
 
                     <Col md={6}>
-                        <img style={styles.grinder} src="/imgs/coffee_grinder.jpg" />
+                        <img style={styles.grinder} src="/imgs/coffee_grinder.jpg" alt="Coffee Grinder"/>
                     </Col>
                 </Row>
                 <br />
@@ -192,13 +192,13 @@ function Homepage() {
 
                 <Row>
                     <Col>
-                        <img src="/imgs/world_image.jpg" style={styles.earthImage} />
+                        <img src="/imgs/world_image.jpg" style={styles.earthImage} alt="earth"/>
                     </Col>
                     <Col>
-                        <img src="/imgs/south_america_background.jpg" style={styles.earthImage} />
+                        <img src="/imgs/south_america_background.jpg" style={styles.earthImage} alt="south america" />
                     </Col>
                     <Col>
-                        <img src="/imgs/fjord.jpg" style={styles.earthImage} />
+                        <img src="/imgs/fjord.jpg" style={styles.earthImage} alt="fjord"/>
                     </Col>
 
                 </Row>

@@ -1,19 +1,34 @@
-import React, { useState } from "react"
+import React, { useState, useContext } from "react"
 import { Container, Row, Col, Button, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
-
-
-
-
+import CartContext from "../../utils/CartContext"
 
 
 function IndividualCoffee({ addToCart }) {
+    const {item, quantity, price} = useContext(CartContext);
+
+    console.log(`item is : ${item} and quantity is ${quantity}`)
+
 
     const [bagQuantity, setBagQuantity] = useState(0)
-    const [coffeeItem, setCoffeeItem] = useState("Full Bodied Bean from Mexico")
+    const [coffeeItem, setCoffeeItem] = useState("12 oz mexican bean")
+    const [itemPrice, setPrice] = useState(12.99)
+
+    
 
 
 
+    const handleIncrement = () => {
+        setBagQuantity(bagQuantity + 1)
+    }
+
+    const handleDecrement = () => {
+        if(bagQuantity >0) {
+            setBagQuantity(bagQuantity -1)
+        }
+    }
+
+    const mexicanBeanPrice = 12.99
 
     return (
         <>
@@ -28,7 +43,7 @@ function IndividualCoffee({ addToCart }) {
                     </Col>
                     <Col lg={6} sm={12}>
                         <h2>Dark Roast Ground Coffee, 12 oz.</h2>
-                        <h3>$12.99</h3>
+                        <h3>${mexicanBeanPrice}</h3>
                         <p>Good for the planet and good for your body. Get a taste of this full-bodied Mexican bean. We're so confident in our coffee that if you aren't fully satisfied, keep the bag and we'll refund your purchase. Yep. It's that good.</p>
 
 
@@ -36,6 +51,9 @@ function IndividualCoffee({ addToCart }) {
                         <h5>your quantity is: {bagQuantity} </h5>
                         <Form>
                             <Form.Row className="align-items-center">
+                                <Col xs="auto" className="my-1">
+                                    <Button onClick={e => handleDecrement()}><i className="fas fa-minus"></i></Button>
+                                </Col>
                                 <Col sm={3} className="my-1">
                                     <Form.Label htmlFor="inlineFormInputName" srOnly>
                                         Name
@@ -44,14 +62,12 @@ function IndividualCoffee({ addToCart }) {
                                 </Col>
 
                                 <Col xs="auto" className="my-1">
-                                    <Button onClick={() => setBagQuantity(bagQuantity + 1)}>
+                                    <Button onClick={e => handleIncrement()}>
                                         <i className="fas fa-plus"></i></Button>
                                 </Col>
+
                                 <Col xs="auto" className="my-1">
-                                    <Button onClick={() => setBagQuantity(bagQuantity - 1)}><i className="fas fa-minus"></i></Button>
-                                </Col>
-                                <Col xs="auto" className="my-1">
-                                    <Button onClick={() => addToCart(coffeeItem, bagQuantity)}>Add to Cart</Button>
+                                    <Button onClick={() => addToCart(coffeeItem, bagQuantity, itemPrice)}>Add to Cart</Button>
                                 </Col>
 
                             </Form.Row>

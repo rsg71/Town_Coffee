@@ -25,19 +25,19 @@ import Footer from "./components/Footer/Footer"
 
 function App() {
 
-  const [cartItems, setCartItems] = useState({
-    item: "",
-    quantity: 0
-  })
+  const [cartItems, setCartItems] = useState(
+    [{
+    item: "12 oz mexican bean",
+    quantity: 0,
+    price: 0
+  }])
 
-
-  function addToCart(newItem, itemQuantity) {
+  function addToCart(newItem, itemQuantity, itemPrice) {
     setCartItems({
       item: newItem,
-      quantity: itemQuantity
+      quantity: itemQuantity,
+      price: itemPrice
     })
-
-
     console.log(cartItems)
   }
 
