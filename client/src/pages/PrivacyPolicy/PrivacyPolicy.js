@@ -13,6 +13,7 @@ function PrivacyPolicy () {
     }, []);
 
 
+
 return (
 <>
 <CoffeeBanner/>
@@ -21,6 +22,7 @@ return (
         <Row>
             <Col>
             <h1 className="termsOfUseHeader">Privacy Policy</h1>
+
 
                 <h3>1. Introduction</h3>
                 <p>

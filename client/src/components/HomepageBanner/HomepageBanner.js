@@ -1,6 +1,6 @@
 import React from "react";
 import "./HomepageBanner.css"
-import { Button, Col } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import {Link} from "react-router-dom";
 
 

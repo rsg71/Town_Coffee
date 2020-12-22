@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import CartContext from "../../utils/CartContext"
 import { Container, Row, Col, Table, Button } from "react-bootstrap";
-
 // calling loadStripe (using their "test" API key - later we will replace this):
 import { loadStripe } from '@stripe/stripe-js';
 const stripePromise = loadStripe('pk_test_51Hvpi3EepCRzNwguls5OnTw70wCoyLoTSIGqq2IEwsXV2tAiYiolvLMCfn2f0ESi18IVa5tP2f676tJ4hrJ8cSXr00IcBrN1E9');
@@ -10,17 +9,35 @@ const stripePromise = loadStripe('pk_test_51Hvpi3EepCRzNwguls5OnTw70wCoyLoTSIGqq
 
 function Cart(props) {
     const cartItems = useContext(CartContext)
-    console.log(`cartitems are: ${cartItems.item} and quantity is: ${cartItems.quantity} and price is ${cartItems.price}`)
+    console.log("cart", cartItems)
 
 
+    const removefromCart = (element) => {
+        let copy = [...cartItems];
+        //filtering: make a copy of the cart excluding the removed item
+        copy = copy.filter(cartItem => cartItem.item !== element.item);
+        //still need to adjust this below; instead of console log, I want the new cart to equal the copy
+        console.log(copy)
+    }
 
+
+    const user = {
+        first_name: 'John',
+        last_name: 'Doe',
+        job_title: 'Blogger'
+    };
+
+    
     const handleClick = async (event) => {
         // Get Stripe.js instance
         const stripe = await stripePromise;
 
         // Call your backend to create the Checkout Session
-        const response = await fetch('/create-checkout-session', { method: 'POST' });
+        const response = await fetch('/create-checkout-session', { 
+            method: 'POST',
+            body: JSON.stringify(user)
 
+    });
         const session = await response.json();
 
         // When the customer clicks on the button, redirect them to Checkout.
@@ -45,50 +62,75 @@ function Cart(props) {
                 <br />
                 <Row>
                     <Col>
-                        <h1>Your Cart Items: ({cartItems.quantity})</h1>
-                        <p>Item: {cartItems.item}</p>
-                        <p>Price: {cartItems.price}</p>
-
-                        <Table >
-                            <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>Item Name</th>
-                                    <th>Quantity</th>
-                                    <th>Price</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                {/* {cartItems.map(element => (
-                                    <tr>
-                                        <td>{element.item}</td>
-                                        <td>{element.quantity}</td>
-                                        <td>{element.price}</td>
-                                    </tr>
-                                ))} */}
-
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td>Subtotal</td>
-                                    <td>$ { }</td>
-                                </tr>
-
-                            </tbody>
-                        </Table>
+                        <h1>Your Cart Items:</h1>
+                        <br />
+                        <br />
                     </Col>
                 </Row>
+
 
                 <Row>
-                    <Col style={{ textAlign: "right" }}>
-                        <Button role="link" onClick={handleClick}>Proceed to Checkout</Button>
+                    <Col>
+                    
                     </Col>
                 </Row>
+
+
+
+
+                {cartItems.length < 1 ?
+                    <Row>
+                        <Col>
+                            <br />
+                            <br />
+                            <h2>You currently have no items in your cart</h2>
+                            <p>Click <Link to="/coffee">here</Link> to continue shopping</p>
+                        </Col>
+                    </Row>
+                    :
+                    <>
+                        <Row>
+                            <Col>
+                                <Table >
+                                    <thead>
+                                        <tr>
+                                            <th>Item Name</th>
+                                            <th>Quantity</th>
+                                            <th>Price</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        {cartItems.map((element, index) => (
+                                            <tr key={index}>
+                                                <td>{element.item}</td>
+                                                <td>{element.quantity}</td>
+                                                <td>${element.price}</td>
+                                                <td onClick={() => removefromCart(element)}><Button>x</Button></td>
+                                            </tr>
+                                        ))}
+
+                                        <tr>
+                                            <td></td>
+                                            <td>Subtotal</td>
+                                            <td>$ { }</td>
+                                        </tr>
+
+                                    </tbody>
+                                </Table>
+                            </Col>
+                        </Row>
+
+                        <Row>
+                            <Col style={{ textAlign: "right" }}>
+                                <Button role="link" onClick={handleClick}>Proceed to Checkout</Button>
+                            </Col>
+                        </Row>
+                    </>
+                }
+
+
                 <br />
                 <br />
                 <br />

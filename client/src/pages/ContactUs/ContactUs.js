@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import { Container, Row, Col, Button, Form, Jumbotron } from "react-bootstrap";
+import { Container, Row, Col, Button, Form } from "react-bootstrap";
 import CoffeeBanner from "../../components/CoffeeBanner/CoffeeBanner"
 import ContactUsColumns from "../../components/ContactUsColumns/ContactUsColumns"
 
