@@ -2,6 +2,7 @@ import React, {useEffect} from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import CoffeeBanner from "../../components/CoffeeBanner/CoffeeBanner";
 import SubscriptionFAQ from "../../components/SubscriptionFAQ/SubscriptionFAQ";
+import Subscribe from "../Subscribe/Subscribe";
 
 const styles = {
     margin: {
@@ -64,6 +65,10 @@ function Subscriptions() {
             </Row>
 
             </Container>
+
+
+
+            <Container>hey</Container>
         </>
     )
 }
