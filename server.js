@@ -8,13 +8,20 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-
 const Stripe = require('stripe');
 const stripe = Stripe('sk_test_51Hvpi3EepCRzNwguGDTCpqfrjNSKJGguBee2FLE5khNxaQSkJ8QSAoNUUFGBnC7eWoZTYBp5ustqEAqMXyEZKD3P00ZMPotyts');
 
 
+
+
+
 app.post('/create-checkout-session', async (req, res) => {
+  console.log(req.body)
   const session = await stripe.checkout.sessions.create({
+    billing_address_collection: 'auto',
+    shipping_address_collection: {
+      allowed_countries: ['US']
+    },
     payment_method_types: ['card'],
     line_items: [
       {
@@ -26,7 +33,7 @@ app.post('/create-checkout-session', async (req, res) => {
           },
           unit_amount: 1299,
         },
-        quantity: 1,
+        quantity: 1
       },
     ],
     mode: 'payment',

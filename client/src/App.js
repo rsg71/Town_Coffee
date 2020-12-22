@@ -25,20 +25,24 @@ import Footer from "./components/Footer/Footer"
 
 function App() {
 
-  const [cartItems, setCartItems] = useState(
-    [{
-    item: "12 oz mexican bean",
-    quantity: 0,
-    price: 0
-  }])
+  const [cartItems, setCartItems] = useState([])
 
   function addToCart(newItem, itemQuantity, itemPrice) {
-    setCartItems({
+
+    for(let i=0; i< cartItems.length; i++) {
+      if(cartItems[i].item === newItem) {
+        cartItems[i].quantity = itemQuantity;
+        return
+      }
+    }
+
+    setCartItems([...cartItems,{
       item: newItem,
       quantity: itemQuantity,
       price: itemPrice
-    })
-    console.log(cartItems)
+    }])
+   
+
   }
 
 
@@ -58,13 +62,19 @@ function App() {
           <Route exact path="/subscriptions" component={Subscriptions} />
 
           <Route exact path="/terms_of_use" component={TermsOfUse} />
-          <Route exact path="/privacy_policy" component={PrivacyPolicy} />
+          {/* <Route exact path="/:id" component={PrivacyPolicy} />
 
+          <Route path="/:id" component={ContactUs}></Route> */}
 
-
-          <Route exact path="/products-12oz-whole-bean" render={
+          <Route exact path="/products-16oz-whole-bean" render={
            (props) => <IndividualCoffee addToCart={addToCart}/>
           }/>
+          {/* <Route exact path="/products-12oz-Kenyan-blend" render={
+           (props) => <IndividualCoffee addToCart={addToCart}/>
+          }/>
+          <Route exact path="/products-12oz-Mocha-blend" render={
+           (props) => <IndividualCoffee addToCart={addToCart}/>
+          }/> */}
 
 
 

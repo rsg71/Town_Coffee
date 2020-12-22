@@ -10,6 +10,13 @@ import CartContext from "../../utils/CartContext"
 function NavigationBar() {
   const cartItems = useContext(CartContext);
 
+    let cartItemsQuantity = 0;
+    for (var i=0; i< cartItems.length; i++) {
+        cartItemsQuantity += cartItems[i].quantity
+    }
+
+  console.log(` navbar: ${cartItems.length}`)
+
    const location = useLocation();
 
   return (
@@ -35,7 +42,7 @@ function NavigationBar() {
 
 
           <Link className="mr-2 navbarLink" to="/signin">Sign In</Link>
-          <Link className="mr-2 navbarLink" to="/cart"><i className="fas fa-shopping-cart"></i> ({cartItems.quantity})</Link>
+          <Link className="mr-2 navbarLink" to="/cart"><i className="fas fa-shopping-cart"></i> ({cartItemsQuantity})</Link>
         </Navbar.Collapse>
       </Navbar>
 
