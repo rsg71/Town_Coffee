@@ -33,7 +33,13 @@ function Cart(props) {
 
         // Call your backend to create the Checkout Session
         const response = await fetch('/create-checkout-session', {
-            method: 'POST'
+            method: 'POST',
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                cartItems
+            })
         });
         const session = await response.json();
 

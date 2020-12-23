@@ -26,35 +26,56 @@ const stripe = Stripe(process.env.PRIVATE_KEY);
 
 app.post('/myroute', (req, res) => {
   console.log('body', req.body)
-  res.send(req.body)
+  console.log('product item:', req.body.cartItems[0].item)
+  console.log('product quantity:', req.body.cartItems[0].quantity)
+  console.log('product price:', req.body.cartItems[0].price)
+  res.send(req.body.cartItems)
+
+
+
+  for (var i = 0; i < req.body.cartItems.length; i++) {
+    console.log("itemName:", req.body.cartItems[i].item)
+  }
+
 })
 
 
 
 app.post('/create-checkout-session', async (req, res) => {
   console.log(req.body)
+
+
+  let lineItemsMap =  req.body.cartItems.map(element => (
+
+    {
+      price_data: {
+        currency: 'usd',
+        product_data: {
+          name: element.item,
+          images: ['https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.TYt3pDfTyTagH_XDBDlcLAHaFj%26pid%3DApi&f=1'],
+        },
+        unit_amount: 1299,
+      },
+      quantity: element.quantity
+    }
+
+  ))
+
+  console.log(lineItemsMap)
+
+
   const session = await stripe.checkout.sessions.create({
-    billing_address_collection: 'auto',
+    billing_address_collection: 'required',
     shipping_address_collection: {
       allowed_countries: ['US']
     },
     payment_method_types: ['card'],
-    line_items: [
-      {
-        price_data: {
-          currency: 'usd',
-          product_data: {
-            name: "coffee",
-            images: ['https://i.imgur.com/EHyR2nP.png'],
-          },
-          unit_amount: 1299,
-        },
-        quantity: 1
-      }
-    ],
+    line_items: 
+      lineItemsMap
+     ,
     mode: 'payment',
-    success_url: 'https://example.com/success',
-    cancel_url: 'https://example.com/cancel',
+    success_url: 'http://localhost:3000/success',
+    cancel_url: 'http://localhost:3000/cancel',
   });
 
   res.json({ id: session.id });
@@ -64,17 +85,17 @@ app.post('/create-checkout-session', async (req, res) => {
 
 // set up a path for a successful payment:
 // app.get("/success", (req, res) => {
-  
+
 // })
 
 
 // Send every request to the React app
 // Define any API routes before this runs
-app.get("*", function(req, res) {
+app.get("*", function (req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
 
-app.listen(PORT, function() {
+app.listen(PORT, function () {
   console.log(`🌎 ==> API server now on port ${PORT}!`);
 });

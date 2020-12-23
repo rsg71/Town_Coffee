@@ -19,9 +19,13 @@ import Cart from "./pages/Cart/Cart"
 import CartContext from "./utils/CartContext"
 
 import Checkout from "./pages/Checkout/Checkout"
+import SuccessfulPayment from "./pages/SuccessfulPayment/SuccessfulPayment";
+import CanceledPayment from "./pages/CanceledPayment/CanceledPayment";
+
 
 import NavigationBar from "./components/NavigationBar/NavigationBar"
 import Footer from "./components/Footer/Footer"
+
 
 
 
@@ -104,6 +108,12 @@ function App() {
           />
           } />
           <Route exact path="/checkout" component={Checkout} />
+
+
+          {/* success and cancel pages */}
+          <Route exact path="/success" component={SuccessfulPayment} />
+          <Route exact path="/cancel" component={CanceledPayment} />
+
 
           <Footer />
 
