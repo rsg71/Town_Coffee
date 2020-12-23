@@ -10,8 +10,9 @@ const stripePromise = loadStripe('pk_test_51Hvpi3EepCRzNwguls5OnTw70wCoyLoTSIGqq
 function Cart(props) {
     const cartItems = useContext(CartContext)
     console.log("cart", cartItems)
+    console.log("cart total is ", props.cartTotal)
+    const cartTotal = props.cartTotal
 
-    
 
 
     const removefromCart = (element) => {
@@ -25,13 +26,13 @@ function Cart(props) {
 
 
 
-    
+
     const handleClick = async (event) => {
         // Get Stripe.js instance
         const stripe = await stripePromise;
 
         // Call your backend to create the Checkout Session
-        const response = await fetch('/create-checkout-session', { 
+        const response = await fetch('/create-checkout-session', {
             method: 'POST'
         });
         const session = await response.json();
@@ -77,7 +78,7 @@ function Cart(props) {
 
                 <Row>
                     <Col>
-                        <button onClick={()=>testClick()}>Click to talk to back end</button>
+                        <button onClick={() => testClick()}>Click to talk to back end</button>
                     </Col>
                 </Row>
 
@@ -101,8 +102,9 @@ function Cart(props) {
                                     <thead>
                                         <tr>
                                             <th>Item Name</th>
-                                            <th>Quantity</th>
                                             <th>Price</th>
+                                            <th>Quantity</th>
+                                            <th>Subtotal</th>
                                             <th></th>
                                         </tr>
                                     </thead>
@@ -111,16 +113,19 @@ function Cart(props) {
                                         {cartItems.map((element, index) => (
                                             <tr key={index}>
                                                 <td>{element.item}</td>
-                                                <td>{element.quantity}</td>
                                                 <td>${element.price}</td>
-                                                <td onClick={() => removefromCart(element)}><Button>x</Button></td>
+                                                <td>{element.quantity}</td>
+                                                <td>${element.quantity * element.price}</td>
+                                                <td onClick={() => removefromCart(element)}><Button>Remove</Button></td>
                                             </tr>
                                         ))}
 
                                         <tr>
+                                            <td>Cart Total</td>
                                             <td></td>
-                                            <td>Subtotal</td>
-                                            <td>$ { }</td>
+                                            <td></td>
+                                            <td>$ {cartTotal}</td>
+                                            <td></td>
                                         </tr>
 
                                     </tbody>

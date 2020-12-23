@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import AboutUs from "./pages/AboutUs/AboutUs";
@@ -28,24 +28,43 @@ import Footer from "./components/Footer/Footer"
 function App() {
 
   const [cartItems, setCartItems] = useState([])
+  const [cartTotal, setCartTotal] = useState(0)
 
+  //updating the total anytime the cart is modified
+  useEffect(()=> {
+    total()
+  }, [cartItems])
+
+  //calculating the cart total
+  function total() {
+    let totalVal = 0;
+    for (var i = 0; i < cartItems.length; i++) {
+      totalVal += cartItems[i].price * cartItems[i].quantity
+    }
+    setCartTotal(totalVal)
+  }
+
+  //add to cart function; if the user adds an item that is already in the cart, update the item quantity
   function addToCart(newItem, itemQuantity, itemPrice) {
 
-    for(let i=0; i< cartItems.length; i++) {
-      if(cartItems[i].item === newItem) {
+    for (let i = 0; i < cartItems.length; i++) {
+      if (cartItems[i].item === newItem) {
         cartItems[i].quantity = itemQuantity;
         return
       }
     }
 
-    setCartItems([...cartItems,{
+    setCartItems([...cartItems, {
       item: newItem,
       quantity: itemQuantity,
       price: itemPrice
     }])
-   
 
+
+    total()
   }
+
+
 
 
   return (
@@ -69,18 +88,21 @@ function App() {
           <Route path="/:id" component={ContactUs}></Route> */}
 
           <Route exact path="/products-16oz-Kenyan-bean" render={
-           (props) => <IndividualCoffee addToCart={addToCart} />
-          }/>
+            (props) => <IndividualCoffee addToCart={addToCart} />
+          } />
           <Route exact path="/products-16oz-Mocha-blend" render={
-           (props) => <IndividualCoffee2 addToCart={addToCart} />
-          }/>
+            (props) => <IndividualCoffee2 addToCart={addToCart} />
+          } />
           <Route exact path="/products-16oz-Whole-Bean-blend" render={
-           (props) => <IndividualCoffee3 addToCart={addToCart} />
-          }/>
+            (props) => <IndividualCoffee3 addToCart={addToCart} />
+          } />
 
 
-          <Route exact path="/cart" render={(props) => <Cart setCartItems={setCartItems}/>
-          }/>
+          <Route exact path="/cart" render={(props) => <Cart
+            setCartItems={setCartItems}
+            cartTotal={cartTotal}
+          />
+          } />
           <Route exact path="/checkout" component={Checkout} />
 
           <Footer />
