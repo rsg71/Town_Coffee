@@ -12,9 +12,9 @@ function IndividualCoffee({ addToCart }) {
     
     //need to find a way to not set price on client side
     //also the bagQuantity will set to 0 every time we go to this page; I need to instead set it to the cartcontext value for this particular product
-    const [bagQuantity, setBagQuantity] = useState(0)
-    const [coffeeItem, setCoffeeItem] = useState("12 oz mexican bean")
-    const [itemPrice, setPrice] = useState(12.99)
+    const [bagQuantity, setBagQuantity] = useState(1)
+    const [coffeeItem, setCoffeeItem] = useState("16 oz Whole Bean blend")
+    const [itemPrice, setPrice] = useState(13.99)
 
 
 
@@ -42,9 +42,9 @@ function IndividualCoffee({ addToCart }) {
                         <img src="/imgs/prod_IXeeUDzn45Abgf.jpg" style={{ maxWidth: "100%" }} alt="coffee" />
                     </Col>
                     <Col lg={6} sm={12}>
-                        <h2>Dark Roast Ground Coffee, 12 oz.</h2>
+                        <h2>Whole Bean Blend Coffee, 16 oz.</h2>
                         <h3>${itemPrice}</h3>
-                        <p>Good for the planet and good for your body. Get a taste of this full-bodied Mexican bean. We're so confident in our coffee that if you aren't fully satisfied, keep the bag and we'll refund your purchase. Yep. It's that good.</p>
+                        <p>Good for the planet and good for your body. Get a taste of this full-bodied Mexican whole blend bean. We're so confident in our coffee that if you aren't fully satisfied, keep the bag and we'll refund your purchase. Yep. It's that good.</p>
 
 
                         <h4>Quantity:</h4>
@@ -82,13 +82,13 @@ function IndividualCoffee({ addToCart }) {
 
                         <Row>
                             <Col>
-                                <p>Extra details: this coffee is a full-bodied blend</p>
+                                <p>Extra details: this coffee is a full-bodied, subtle blend</p>
 
                                 <label>Flavor Profile:</label>
                                 <ul>
                                     <li>Extra flavor</li>
-                                    <li>Our boldest, darkest roast</li>
-                                    <li>20 mg caffeine per cup</li>
+                                    <li>A very medium roast</li>
+                                    <li>15 mg caffeine per cup</li>
                                 </ul>
                             </Col>
                         </Row>

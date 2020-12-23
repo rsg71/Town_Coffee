@@ -11,6 +11,8 @@ import Homepage from "./pages/Homepage/Homepage";
 import TermsOfUse from "./pages/TermsOfUse/TermsOfUse"
 import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy"
 import IndividualCoffee from "./pages/IndividualCoffee/IndividualCoffee"
+import IndividualCoffee2 from "./pages/IndividualCoffee2/IndividualCoffee2"
+import IndividualCoffee3 from "./pages/IndividualCoffee3/IndividualCoffee3"
 
 
 import Cart from "./pages/Cart/Cart"
@@ -66,19 +68,19 @@ function App() {
 
           <Route path="/:id" component={ContactUs}></Route> */}
 
-          <Route exact path="/products-16oz-whole-bean" render={
-           (props) => <IndividualCoffee addToCart={addToCart}/>
+          <Route exact path="/products-16oz-Kenyan-bean" render={
+           (props) => <IndividualCoffee addToCart={addToCart} />
           }/>
-          {/* <Route exact path="/products-12oz-Kenyan-blend" render={
-           (props) => <IndividualCoffee addToCart={addToCart}/>
+          <Route exact path="/products-16oz-Mocha-blend" render={
+           (props) => <IndividualCoffee2 addToCart={addToCart} />
           }/>
-          <Route exact path="/products-12oz-Mocha-blend" render={
-           (props) => <IndividualCoffee addToCart={addToCart}/>
-          }/> */}
+          <Route exact path="/products-16oz-Whole-Bean-blend" render={
+           (props) => <IndividualCoffee3 addToCart={addToCart} />
+          }/>
 
 
-
-          <Route exact path="/cart" component={Cart} />
+          <Route exact path="/cart" render={(props) => <Cart setCartItems={setCartItems}/>
+          }/>
           <Route exact path="/checkout" component={Checkout} />
 
           <Footer />
