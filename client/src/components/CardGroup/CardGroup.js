@@ -22,11 +22,10 @@ function CardGroup() {
                         <Card.Text>
                             Kenyan blend sourced sustainably in Kenya
                                     </Card.Text>
-                        <Button className="groupCoffeeButtons">
-                        
-                        <Link to="/products-16oz-whole-bean">Shop Now</Link>
-                            
-                        </Button>
+
+                        <Link to="/products-16oz-whole-bean">
+                            <Button className="groupCoffeeButtons">Shop Now</Button>
+                        </Link>
                     </Card.Body>
                     <Card.Footer>
                         <small className="text-muted"><strong>$13.99</strong></small>
@@ -37,13 +36,13 @@ function CardGroup() {
                     <Card.Body>
                         <Card.Title>16 oz. Mocha Blend</Card.Title>
                         <Card.Text>
-                           Mocha blend sourced sustainably in Mexico
+                            Mocha blend sourced sustainably in Mexico
                                     </Card.Text>
-                        <Button className="groupCoffeeButtons" variant="success">
-
-                            <Link to="/products-16oz-mocha-blend">Shop Now</Link>
-
+                        <Link to="/products-16oz-mocha-blend">
+                            <Button className="groupCoffeeButtons" variant="success">
+                                Shop Now
                         </Button>
+                        </Link>
                     </Card.Body>
                     <Card.Footer>
                         <small className="text-muted"><strong>$16.99</strong></small>
@@ -56,11 +55,11 @@ function CardGroup() {
                         <Card.Text>
                             Whole bean blend sourced sustainably in Mexico
                                     </Card.Text>
-                        <Button className="groupCoffeeButtons" style={styles.color}>
-                            
-                        <Link to="/products-16oz-whole-bean-blend">Shop Now</Link>
-                            
+                        <Link to="/products-16oz-whole-bean-blend">
+                            <Button className="groupCoffeeButtons" style={styles.color}>
+                                Shop Now
                         </Button>
+                        </Link>
                     </Card.Body>
                     <Card.Footer>
                         <small className="text-muted"><strong>$12.99</strong></small>
