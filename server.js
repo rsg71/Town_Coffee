@@ -9,11 +9,25 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
+
 
 const Stripe = require('stripe');
 const stripe = Stripe(process.env.PRIVATE_KEY);
 
 
+// app.get("https://api.stripe.com/v1/products", (req, res) => {
+//   console.log('this is working')
+//   res.send("it's working!!")
+// })
+
+
+app.post('/myroute', (req, res) => {
+  console.log('body', req.body)
+  res.send(req.body)
+})
 
 
 
@@ -30,13 +44,13 @@ app.post('/create-checkout-session', async (req, res) => {
         price_data: {
           currency: 'usd',
           product_data: {
-            name: 'Coffee',
+            name: "coffee",
             images: ['https://i.imgur.com/EHyR2nP.png'],
           },
           unit_amount: 1299,
         },
         quantity: 1
-      },
+      }
     ],
     mode: 'payment',
     success_url: 'https://example.com/success',

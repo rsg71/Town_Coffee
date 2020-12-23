@@ -17,15 +17,10 @@ function Cart(props) {
         //filtering: make a copy of the cart excluding the removed item
         copy = copy.filter(cartItem => cartItem.item !== element.item);
         //still need to adjust this below; instead of console log, I want the new cart to equal the copy
-        console.log(copy)
+        console.log("copy:", copy)
     }
 
 
-    const user = {
-        first_name: 'John',
-        last_name: 'Doe',
-        job_title: 'Blogger'
-    };
 
     
     const handleClick = async (event) => {
@@ -34,10 +29,8 @@ function Cart(props) {
 
         // Call your backend to create the Checkout Session
         const response = await fetch('/create-checkout-session', { 
-            method: 'POST',
-            body: JSON.stringify(user)
-
-    });
+            method: 'POST'
+        });
         const session = await response.json();
 
         // When the customer clicks on the button, redirect them to Checkout.
@@ -53,7 +46,17 @@ function Cart(props) {
     };
 
 
-
+    const testClick = () => {
+        fetch("/myroute", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                cartItems
+            })
+        })
+    }
 
 
     return (
@@ -71,7 +74,7 @@ function Cart(props) {
 
                 <Row>
                     <Col>
-                    
+                        <button onClick={()=>testClick()}>Click to talk to back end</button>
                     </Col>
                 </Row>
 
