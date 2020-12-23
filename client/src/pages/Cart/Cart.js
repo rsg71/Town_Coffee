@@ -11,13 +11,16 @@ function Cart(props) {
     const cartItems = useContext(CartContext)
     console.log("cart", cartItems)
 
+    
+
 
     const removefromCart = (element) => {
         let copy = [...cartItems];
         //filtering: make a copy of the cart excluding the removed item
         copy = copy.filter(cartItem => cartItem.item !== element.item);
         //still need to adjust this below; instead of console log, I want the new cart to equal the copy
-        console.log("copy:", copy)
+        console.log(copy)
+        props.setCartItems(copy)
     }
 
 

@@ -23,7 +23,7 @@ function CardGroup() {
                             Kenyan blend sourced sustainably in Kenya
                                     </Card.Text>
 
-                        <Link to="/products-16oz-whole-bean">
+                        <Link to="products-16oz-Kenyan-bean">
                             <Button className="groupCoffeeButtons">Shop Now</Button>
                         </Link>
                     </Card.Body>
