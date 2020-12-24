@@ -45,7 +45,7 @@ app.post('/create-checkout-session', async (req, res) => {
   console.log(req.body)
 
 
-  let lineItemsMap =  req.body.cartItems.map(element => (
+  let lineItemsMap = req.body.cartItems.map(element => (
 
     {
       price_data: {
@@ -54,7 +54,7 @@ app.post('/create-checkout-session', async (req, res) => {
           name: element.item,
           images: ['https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.TYt3pDfTyTagH_XDBDlcLAHaFj%26pid%3DApi&f=1'],
         },
-        unit_amount: 1299,
+        unit_amount: element.price,
       },
       quantity: element.quantity
     }
@@ -70,9 +70,9 @@ app.post('/create-checkout-session', async (req, res) => {
       allowed_countries: ['US']
     },
     payment_method_types: ['card'],
-    line_items: 
+    line_items:
       lineItemsMap
-     ,
+    ,
     mode: 'payment',
     success_url: 'http://localhost:3000/success',
     cancel_url: 'http://localhost:3000/cancel',
@@ -83,10 +83,7 @@ app.post('/create-checkout-session', async (req, res) => {
 
 
 
-// set up a path for a successful payment:
-// app.get("/success", (req, res) => {
 
-// })
 
 
 // Send every request to the React app
