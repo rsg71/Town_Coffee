@@ -119,9 +119,9 @@ function Cart(props) {
                                         {cartItems.map((element, index) => (
                                             <tr key={index}>
                                                 <td>{element.item}</td>
-                                                <td>${element.price}</td>
+                                                <td>${element.price/100}</td>
                                                 <td>{element.quantity}</td>
-                                                <td>${element.quantity * element.price}</td>
+                                                <td>${element.quantity * element.price/100}</td>
                                                 <td onClick={() => removefromCart(element)}><Button>Remove</Button></td>
                                             </tr>
                                         ))}
@@ -130,7 +130,7 @@ function Cart(props) {
                                             <td>Cart Total</td>
                                             <td></td>
                                             <td></td>
-                                            <td>$ {cartTotal}</td>
+                                            <td>$ {cartTotal/100}</td>
                                             <td></td>
                                         </tr>
 

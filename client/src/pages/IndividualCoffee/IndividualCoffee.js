@@ -16,7 +16,7 @@ function IndividualCoffee({ addToCart }) {
     //also the bagQuantity will set to 0 every time we go to this page; I need to instead set it to the cartcontext value for this particular product
     const [bagQuantity, setBagQuantity] = useState(1)
     const [coffeeItem, setCoffeeItem] = useState("12 oz Kenyan blend")
-    const [itemPrice, setPrice] = useState(12.99)
+    const [itemPrice, setPrice] = useState(1299)
 
 
 
@@ -45,7 +45,7 @@ function IndividualCoffee({ addToCart }) {
                     </Col>
                     <Col lg={6} sm={12}>
                         <h2>16 oz Kenyan blend</h2>
-                        <h3>${itemPrice}</h3>
+                        <h3>${itemPrice/100}</h3>
                         <p>Good for the planet and good for your body. Get a taste of this full-bodied Kenyan bean. We're so confident in our coffee that if you aren't fully satisfied, keep the bag and we'll refund your purchase. Yep. It's that good.</p>
 
 
