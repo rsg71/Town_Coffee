@@ -18,50 +18,22 @@ const Stripe = require('stripe');
 const stripe = Stripe(process.env.PRIVATE_KEY);
 
 
-// app.get("https://api.stripe.com/v1/products", (req, res) => {
-//   console.log('this is working')
-//   res.send("it's working!!")
-// })
 
-
-app.post('/myroute', (req, res) => {
-  console.log('body', req.body)
-  console.log('product item:', req.body.cartItems[0].item)
-  console.log('product quantity:', req.body.cartItems[0].quantity)
-  console.log('product price:', req.body.cartItems[0].price)
-  res.send(req.body.cartItems)
-
-
-
-  for (var i = 0; i < req.body.cartItems.length; i++) {
-    console.log("itemName:", req.body.cartItems[i].item)
-  }
-
+app.get("/apiCall", async (req, res) => {
+  const productsList = await stripe.products.list();
+  console.log("productsList is:", productsList)
+  res.send(productsList)
 })
+
+
+
+
+
 
 
 
 app.post('/create-checkout-session', async (req, res) => {
   console.log(req.body)
-
-
-  let lineItemsMap = req.body.cartItems.map(element => (
-
-    {
-      price_data: {
-        currency: 'usd',
-        product_data: {
-          name: element.item,
-          images: ['https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.TYt3pDfTyTagH_XDBDlcLAHaFj%26pid%3DApi&f=1'],
-        },
-        unit_amount: element.price,
-      },
-      quantity: element.quantity
-    }
-
-  ))
-
-  console.log(lineItemsMap)
 
 
   const session = await stripe.checkout.sessions.create({
@@ -71,7 +43,21 @@ app.post('/create-checkout-session', async (req, res) => {
     },
     payment_method_types: ['card'],
     line_items:
-      lineItemsMap
+      req.body.cartItems.map(element => (
+
+        {
+          price_data: {
+            currency: 'usd',
+            product_data: {
+              name: element.item,
+              images: ['https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.TYt3pDfTyTagH_XDBDlcLAHaFj%26pid%3DApi&f=1'],
+            },
+            unit_amount: element.price,
+          },
+          quantity: element.quantity
+        }
+
+      ))
     ,
     mode: 'payment',
     success_url: 'http://localhost:3000/success',
