@@ -1,10 +1,14 @@
+import axios from 'axios'
+
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import CartContext from "../../utils/CartContext"
 import { Container, Row, Col, Table, Button } from "react-bootstrap";
 // calling loadStripe (using their "test" API key - later we will replace this):
 import { loadStripe } from '@stripe/stripe-js';
+
 const stripePromise = loadStripe('pk_test_51Hvpi3EepCRzNwguls5OnTw70wCoyLoTSIGqq2IEwsXV2tAiYiolvLMCfn2f0ESi18IVa5tP2f676tJ4hrJ8cSXr00IcBrN1E9');
+
 
 
 function Cart(props) {
@@ -56,17 +60,15 @@ function Cart(props) {
     };
 
 
-    const testClick = () => {
-        fetch("/myroute", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                cartItems
-            })
-        })
-    }
+
+     const getProductsFromStripe = () => {
+        return axios.get("/apiCall")
+        .then((res) => console.log(res))
+         .catch(err => console.log(err))
+     }
+
+
+
 
 
     return (
@@ -82,9 +84,10 @@ function Cart(props) {
                 </Row>
 
 
+            
                 <Row>
                     <Col>
-                        <button onClick={() => testClick()}>Click to talk to back end</button>
+                        <button onClick={() => getProductsFromStripe()}>Click to test api call with axios</button>
                     </Col>
                 </Row>
 
