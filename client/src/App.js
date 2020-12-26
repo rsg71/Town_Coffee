@@ -18,7 +18,6 @@ import IndividualCoffee3 from "./pages/IndividualCoffee3/IndividualCoffee3"
 import Cart from "./pages/Cart/Cart"
 import CartContext from "./utils/CartContext"
 
-import Checkout from "./pages/Checkout/Checkout"
 import SuccessfulPayment from "./pages/SuccessfulPayment/SuccessfulPayment";
 import CanceledPayment from "./pages/CanceledPayment/CanceledPayment";
 
@@ -53,7 +52,7 @@ function App() {
 
     for (let i = 0; i < cartItems.length; i++) {
       if (cartItems[i].item === newItem) {
-        cartItems[i].quantity = itemQuantity;
+        cartItems[i].quantity += itemQuantity;
         return
       }
     }
@@ -87,7 +86,9 @@ function App() {
           <Route exact path="/subscriptions" component={Subscriptions} />
 
           <Route exact path="/terms_of_use" component={TermsOfUse} />
-          {/* <Route exact path="/:id" component={PrivacyPolicy} />
+          <Route exact path="/privacy_policy" component={PrivacyPolicy}/>
+
+          {/* <Route exact path="/privacy-policy" component={PrivacyPolicy} />
 
           <Route path="/:id" component={ContactUs}></Route> */}
 
@@ -107,7 +108,6 @@ function App() {
             cartTotal={cartTotal}
           />
           } />
-          <Route exact path="/checkout" component={Checkout} />
 
 
           {/* success and cancel pages */}

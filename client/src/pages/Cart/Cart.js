@@ -133,9 +133,24 @@ function Cart(props) {
                                             <td>Cart Total</td>
                                             <td></td>
                                             <td></td>
-                                            <td>$ {cartTotal/100}</td>
+                                            <td>${cartTotal/100}</td>
                                             <td></td>
                                         </tr>
+
+                                        <tr>
+                                            <td>Shipping</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td>$8.50</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Grand Total</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+
 
                                     </tbody>
                                 </Table>

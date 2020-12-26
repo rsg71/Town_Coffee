@@ -26,16 +26,36 @@ app.get("/apiCall", async (req, res) => {
 })
 
 
-
-
-
-
-
-
 app.post('/create-checkout-session', async (req, res) => {
   console.log(req.body)
 
 
+  let lineItems =  req.body.cartItems.map(element => (
+    {
+      price_data: {
+        currency: 'usd',
+        product_data: {
+          name: element.item,
+          images: ['https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.TYt3pDfTyTagH_XDBDlcLAHaFj%26pid%3DApi&f=1'],
+        },
+        unit_amount: element.price,
+      },
+      quantity: element.quantity
+    }
+  ))
+
+  lineItems.push({
+    price_data: {
+      currency: 'usd',
+      product_data: {
+        name: 'Flat-rate Shipping',
+      },
+      unit_amount: 850,
+    },
+    quantity: 1,
+  })
+
+  console.log(lineItems)
   const session = await stripe.checkout.sessions.create({
     billing_address_collection: 'required',
     shipping_address_collection: {
@@ -43,21 +63,7 @@ app.post('/create-checkout-session', async (req, res) => {
     },
     payment_method_types: ['card'],
     line_items:
-      req.body.cartItems.map(element => (
-
-        {
-          price_data: {
-            currency: 'usd',
-            product_data: {
-              name: element.item,
-              images: ['https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.TYt3pDfTyTagH_XDBDlcLAHaFj%26pid%3DApi&f=1'],
-            },
-            unit_amount: element.price,
-          },
-          quantity: element.quantity
-        }
-
-      ))
+    lineItems
     ,
     mode: 'payment',
     success_url: 'http://localhost:3000/success',
