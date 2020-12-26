@@ -35,7 +35,7 @@ function IndividualCoffee({ addToCart }) {
     }
 
     const handleDecrement = () => {
-        if(bagQuantity >0) {
+        if(bagQuantity >1) {
             setBagQuantity(bagQuantity -1)
         }
     }
@@ -58,7 +58,7 @@ function IndividualCoffee({ addToCart }) {
 
 
                         <h4>Quantity:</h4>
-                        <h5>your quantity is: {bagQuantity} </h5>
+                        {/* <h5>your quantity is: {bagQuantity} </h5> */}
                         <Form>
                             <Form.Row className="align-items-center">
                                 <Col xs="auto" className="my-1">
@@ -79,7 +79,7 @@ function IndividualCoffee({ addToCart }) {
                                 <Col xs="auto" className="my-1">
                                 {status === "Available"?
                                     <Button onClick={() => addToCart(coffeeItem, bagQuantity, itemPrice)}>Add to Cart</Button> :
-                                    <Button disabled>Add to Cart</Button>}
+                                    <Button disabled style={{cursor: "not-allowed"}}>Add to Cart</Button>}
                                 </Col>
 
                             </Form.Row>
