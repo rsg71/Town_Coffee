@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react"
 import { Container, Row, Col, Button, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import BreadCrumbsCoffee from "../../components/BreadCrumbsCoffee/BreadCrumbsCoffee";
 import CartContext from "../../utils/CartContext"
 
 function IndividualCoffee2({ addToCart }) {
@@ -33,9 +34,8 @@ function IndividualCoffee2({ addToCart }) {
     return (
         <>
             <Container>
-                <br />
-                <br />
-                <br />
+            <br />
+            <BreadCrumbsCoffee name={coffeeItem}/>
                 <br />
                 <Row>
                     <Col lg={6} sm={12}>

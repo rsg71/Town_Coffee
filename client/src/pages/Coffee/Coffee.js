@@ -1,9 +1,10 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 
 import { Container, Row, Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import CardGroup from "../../components/CardGroup/CardGroup"
 import CoffeeBanner from "../../components/CoffeeBanner/CoffeeBanner"
-
+import "./Coffee.css"
 
 
 // const styles = {
@@ -24,23 +25,28 @@ function Coffee() {
 
     return (
         <>
-           <CoffeeBanner/>
+            <CoffeeBanner />
 
             <Container>
                 <br />
+                {/* <Breadcrumb style={{ width: "fit-content" }} class="breadcrumbC">
+                    <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
+                    <Breadcrumb.Item active>Coffee</Breadcrumb.Item>
+                </Breadcrumb> */}
 
                 <Row>
                     <Col>
-                      <h5>Home &gt; Coffee</h5>
+                    <span><Link className="breadcrumbLink" to="/">Home </Link><i className="fas fa-angle-right"></i> <span style={{fontWeight: "bold"}}> Coffee</span>
+                     
+                     </span>
                     </Col>
                 </Row>
+
                 <br />
 
                 <Row>
                     <Col>
-                        <CardGroup/>
-                            
-                       
+                        <CardGroup />
                     </Col>
                 </Row>
 

@@ -1,5 +1,6 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import CoffeeBanner from "../../components/CoffeeBanner/CoffeeBanner";
 import SubscriptionFAQ from "../../components/SubscriptionFAQ/SubscriptionFAQ";
 
@@ -25,43 +26,53 @@ function Subscriptions() {
     }, []);
 
     return (
-        <> 
-        <CoffeeBanner/>
-        <Container style={styles.margin}>
-            <Row>
-                <Col>
-                <br/>
-                    <h1 style={styles.h1}>Subscriptions</h1>
-                <br/>
-                </Col>
-            </Row>
-            <Row>
-                <Col style={styles.column}>
+        <>
+            <CoffeeBanner />
 
-                <p>TCC offers a once per month coffee subscription to customers. Minimum of 2 lbs. per month any choice of coffee. 10% discount on the retail price plus shipping.</p>
+            <Container style={styles.margin}>
+                <br />
+                <Row>
+                    <Col>
+                    <span><Link className="breadcrumbLink" to="/">Home </Link><i className="fas fa-angle-right"></i> <span style={{fontWeight: "bold"}}> Subscriptions</span>
+                     </span>
+                    </Col>
+                </Row>
+                <br />
 
-                <p>SC will get first opportunity at new coffees including very limited releases. Periodically, samples of new coffees and blends will be sent as we do our research and development.</p>
+                <Row>
+                    <Col>
+                        <br />
+                        <h1 style={styles.h1}>Subscriptions</h1>
+                        <br />
+                    </Col>
+                </Row>
+                <Row>
+                    <Col style={styles.column}>
 
-                <p>Subscriptions may be cancelled at any time at no cost.</p>
-                     
-                </Col>
-            </Row>
-                
-            <br/>
-            <br/>
+                        <p>TCC offers a once per month coffee subscription to customers. Minimum of 2 lbs. per month any choice of coffee. 10% discount on the retail price plus shipping.</p>
 
-            <Row>
-                <Col>
-                    <h2>Subscription FAQ:</h2>
-                    <br/>
-                </Col>
-            </Row>
+                        <p>SC will get first opportunity at new coffees including very limited releases. Periodically, samples of new coffees and blends will be sent as we do our research and development.</p>
 
-            <Row>
-                <Col>
-                <SubscriptionFAQ/>
-                </Col>
-            </Row>
+                        <p>Subscriptions may be cancelled at any time at no cost.</p>
+
+                    </Col>
+                </Row>
+
+                <br />
+                <br />
+
+                <Row>
+                    <Col>
+                        <h2>Subscription FAQ:</h2>
+                        <br />
+                    </Col>
+                </Row>
+
+                <Row>
+                    <Col>
+                        <SubscriptionFAQ />
+                    </Col>
+                </Row>
 
             </Container>
         </>
