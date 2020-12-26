@@ -1,7 +1,13 @@
 const express = require("express");
 const path = require("path");
+const request = require('request');
+const bodyParser = require('body-parser');
 const PORT = process.env.PORT || 3001;
 const app = express();
+
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
@@ -11,8 +17,14 @@ if (process.env.NODE_ENV === "production") {
 const Stripe = require('stripe');
 const stripe = Stripe('sk_test_51Hvpi3EepCRzNwguGDTCpqfrjNSKJGguBee2FLE5khNxaQSkJ8QSAoNUUFGBnC7eWoZTYBp5ustqEAqMXyEZKD3P00ZMPotyts');
 
+//Bodyparser Middleware
+app.use(bodyParser.urlencoded({ extended: true }));
 
-
+// Signup Route
+app.post('/signup', (req, res) => {
+console.log(req.body)
+res.send('hello');
+});
 
 
 app.post('/create-checkout-session', async (req, res) => {

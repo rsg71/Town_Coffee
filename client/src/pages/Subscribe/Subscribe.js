@@ -1,16 +1,44 @@
 import React from "react";
-import TextField from "material-ui/TextField";
-import Button from 'material-ui/Button';
+import { Form, Button } from "react-bootstrap";
+
+
 
 class Subscribe extends React.Component {
+
     
-    onSubmit = (e) => {
-          // check if email is missing, return undefined    // if email exists, call subscribeToNewsletter() API method  
-        };
-        render() {    return (     <form onSubmit={this.onSubmit}>  <p>We will email you when a new tutorial is released:</p>  <TextField    type="email"    label="Your email"    style={styleTextField}    required />  <p/>  <Button variant="raised" color="primary" type="submit">  Subscribe  </Button></form>
-            );  }
+    render() {
+        
+        return (
+            <Form>
+                <h2>Subscribe!</h2>
+                <br/>
+  <Form.Group controlId="firstName">
+    <Form.Label>First Name</Form.Label>
+    <Form.Control placeholder="Jane" />
+  </Form.Group>
+
+  <Form.Group controlId="lastName">
+    <Form.Label>Last Name</Form.Label>
+    <Form.Control placeholder="Smith" />
+  </Form.Group>
+
+  <Form.Group controlId="email">
+    <Form.Label>Email</Form.Label>
+    <Form.Control 
+    type="email"
+    placeholder="coffee@email.com" />
+  </Form.Group>
+  
+  <Button variant="primary" type="submit">
+    Submit
+  </Button>
+</Form>
+        );
+
+    }
     
-        }
-    
+
+}
+
 
 export default Subscribe;

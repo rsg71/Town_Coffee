@@ -68,7 +68,10 @@ function Subscriptions() {
 
 
 
-            <Container>hey</Container>
+            <Container><Subscribe/></Container>
+            <br/>
+            <br/>
+            <br/>
         </>
     )
 }
