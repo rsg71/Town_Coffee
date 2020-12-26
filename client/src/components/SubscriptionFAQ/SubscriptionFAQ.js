@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Container, Row, Col, Accordion, Card, Button } from "react-bootstrap";
+import { Accordion, Card, Button } from "react-bootstrap";
 import "./SubscriptionFAQ.css"
 
 
@@ -20,7 +20,7 @@ return (
                     <Accordion.Collapse eventKey="0">
                     <Card.Body>
                         
-                    <p>Log into your Account to view your next ubscription ship date. (Click <a href="#">here</a> for a guide to your subscription).</p>
+                    <p>Log into your Account to view your next subscription ship date. (Click <a href="#">here</a> for a guide to your subscription).</p>
 
                     <p>General Shipping Info: When you place your order, choose the shipping interval of 2, 4, 6, 8, or 12 weeks. Your first order will typically be shipped the next business day. Depending on your chosen shipping interval, your next order will then be charged and ship 2, 4, 6, 8 or 12 weeks after the first order date.</p>
 

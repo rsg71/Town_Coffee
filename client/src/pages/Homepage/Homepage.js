@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-import { Container, Row, Col, Button, Form } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import CardGroup from "../../components/CardGroup/CardGroup"
 import HomepageBanner from "../../components/HomepageBanner/HomepageBanner"
 
@@ -171,7 +171,7 @@ function Homepage() {
 
                         <p>Coffee is also at its <strong>best</strong> when it is ground freshly on an as-you-brew basis. A burr grinder is superior to a blade grinder for longevity and consistency of the grind but both with help you brew excellent coffee.</p>
 
-                        <p>Buying whole beans and grinding them daily will produce the best tasting coffee. Should you prefer your coffee ground <a href="#">we can do that for you </a> prior to shipping. A choice of coarse, medium, and fine. Additonal fee applies.</p>
+                        <p>Buying whole beans and grinding them daily will produce the best tasting coffee. Should you prefer your coffee ground <a href="/subscriptions">we can do that for you </a> prior to shipping. A choice of coarse, medium, and fine. Additonal fee applies.</p>
                     </Col>
 
                     <Col md={6}>

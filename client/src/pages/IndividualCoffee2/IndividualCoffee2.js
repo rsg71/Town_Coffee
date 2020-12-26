@@ -2,6 +2,7 @@ import axios from "axios"
 import React, { useState, useContext, useEffect } from "react"
 import { Container, Row, Col, Button, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import BreadCrumbsCoffee from "../../components/BreadCrumbsCoffee/BreadCrumbsCoffee";
 import CartContext from "../../utils/CartContext"
 import "./IndividualCoffee2.css"
 
@@ -12,8 +13,8 @@ function IndividualCoffee2({ addToCart }) {
     console.log("cartItems are:", cartItems)
     
     
-    //need to find a way to not set price on client side
-    //also the bagQuantity will set to 0 every time we go to this page; I need to instead set it to the cartcontext value for this particular product
+    
+    //also the bagQuantity will set to 1 every time we go to this page; I need to instead set it to the cartcontext value for this particular product
     const [bagQuantity, setBagQuantity] = useState(1)
     const [coffeeItem, setCoffeeItem] = useState("16 oz Mocha blend")
     const [itemPrice, setPrice] = useState(1699)
@@ -45,9 +46,8 @@ function IndividualCoffee2({ addToCart }) {
     return (
         <>
             <Container>
-                <br />
-                <br />
-                <br />
+            <br />
+            <BreadCrumbsCoffee name={coffeeItem}/>
                 <br />
                 <Row>
                     <Col lg={6} sm={12}>
