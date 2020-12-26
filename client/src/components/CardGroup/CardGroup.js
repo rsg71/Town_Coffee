@@ -16,14 +16,16 @@ function CardGroup() {
         <>
             <CardDeck>
                 <Card>
+                    <Link to="/products-16oz-Kenyan-bean">
                     <Card.Img variant="top" src="/imgs/prod_IXeeUDzn45Abgf.jpg" />
+                    </Link>
                     <Card.Body>
                         <Card.Title>16 oz. Kenyan Blend</Card.Title>
                         <Card.Text>
                             Kenyan blend sourced sustainably in Kenya
                                     </Card.Text>
 
-                        <Link to="products-16oz-Kenyan-bean">
+                        <Link to="/products-16oz-Kenyan-bean">
                             <Button className="groupCoffeeButtons">Shop Now</Button>
                         </Link>
                     </Card.Body>
@@ -32,7 +34,9 @@ function CardGroup() {
                     </Card.Footer>
                 </Card>
                 <Card>
+                    <Link to="/products-16oz-mocha-blend">
                     <Card.Img variant="top" src="/imgs/prod_IXeeUDzn45Abgf.jpg" />
+                    </Link>
                     <Card.Body>
                         <Card.Title>16 oz. Mocha Blend</Card.Title>
                         <Card.Text>
@@ -49,7 +53,9 @@ function CardGroup() {
                     </Card.Footer>
                 </Card>
                 <Card>
+                    <Link to="/products-16oz-whole-bean-blend">
                     <Card.Img variant="top" src="/imgs/prod_IXeeUDzn45Abgf.jpg" />
+                    </Link>
                     <Card.Body>
                         <Card.Title>16 oz. Whole Bean Blend</Card.Title>
                         <Card.Text>

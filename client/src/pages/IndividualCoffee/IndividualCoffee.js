@@ -1,8 +1,10 @@
-import React, { useState, useContext } from "react"
+import axios from "axios"
+import React, { useState, useContext, useEffect } from "react"
 import { Container, Row, Col, Button, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import BreadCrumbsCoffee from "../../components/BreadCrumbsCoffee/BreadCrumbsCoffee";
 import CartContext from "../../utils/CartContext"
+import "./IndividualCoffee.css"
 
 function IndividualCoffee({ addToCart }) {
     
@@ -18,9 +20,16 @@ function IndividualCoffee({ addToCart }) {
     const [bagQuantity, setBagQuantity] = useState(1)
     const [coffeeItem, setCoffeeItem] = useState("12 oz Kenyan blend")
     const [itemPrice, setPrice] = useState(1299)
+    const [status, setStatus] = useState("")
 
+    useEffect(() => {
+       axios.get("/apiCall")
+       .then(res=> setStatus(res.data.data[0].metadata.Status))
+       .catch(err=>console.log(err))
 
+      
 
+    }, [])
 
 
     const handleIncrement = () => {
@@ -32,6 +41,8 @@ function IndividualCoffee({ addToCart }) {
             setBagQuantity(bagQuantity -1)
         }
     }
+
+   
 
     return (
         <>
@@ -46,6 +57,7 @@ function IndividualCoffee({ addToCart }) {
                     <Col lg={6} sm={12}>
                         <h2>16 oz Kenyan blend</h2>
                         <h3>${itemPrice/100}</h3>
+                        <h3>Status: <span className={status==="Available"? "coffeeStatusAvail" : "coffeeStatusUnavail"}>{status}</span></h3>
                         <p>Good for the planet and good for your body. Get a taste of this full-bodied Kenyan bean. We're so confident in our coffee that if you aren't fully satisfied, keep the bag and we'll refund your purchase. Yep. It's that good.</p>
 
 
@@ -69,7 +81,9 @@ function IndividualCoffee({ addToCart }) {
                                 </Col>
 
                                 <Col xs="auto" className="my-1">
-                                    <Button onClick={() => addToCart(coffeeItem, bagQuantity, itemPrice)}>Add to Cart</Button>
+                                {status === "Available"?
+                                    <Button onClick={() => addToCart(coffeeItem, bagQuantity, itemPrice)}>Add to Cart</Button> :
+                                    <Button disabled>Add to Cart</Button>}
                                 </Col>
 
                             </Form.Row>
