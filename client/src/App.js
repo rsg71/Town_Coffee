@@ -7,6 +7,7 @@ import Certifications from "./pages/Certifications/Certifications";
 import ContactUs from "./pages/ContactUs/ContactUs";
 import GivingBack from "./pages/GivingBack/GivingBack";
 import Subscriptions from "./pages/Subscriptions/Subscriptions";
+import SubscriptionForm from "./pages/SubscriptionForm/SubscriptionForm";
 import Homepage from "./pages/Homepage/Homepage";
 import TermsOfUse from "./pages/TermsOfUse/TermsOfUse"
 import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy"
@@ -24,7 +25,6 @@ import CanceledPayment from "./pages/CanceledPayment/CanceledPayment";
 
 import NavigationBar from "./components/NavigationBar/NavigationBar"
 import Footer from "./components/Footer/Footer"
-
 
 
 
@@ -84,6 +84,7 @@ function App() {
           <Route exact path="/contactus" component={ContactUs} />
           <Route exact path="/givingback" component={GivingBack} />
           <Route exact path="/subscriptions" component={Subscriptions} />
+          <Route exact path="/subscriptions/subscription-form" component={SubscriptionForm} />
 
           <Route exact path="/terms_of_use" component={TermsOfUse} />
           <Route exact path="/privacy_policy" component={PrivacyPolicy}/>
