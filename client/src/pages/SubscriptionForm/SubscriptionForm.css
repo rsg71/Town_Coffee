@@ -1,0 +1,17 @@
+.subscriptionRow{
+    margin: 4rem 0rem;
+}
+
+.subscriptionProgressRow{
+    margin: 2rem 0rem;
+    text-align: center;
+}
+
+
+.subscriptionStepIcon{
+
+}
+
+.subscriptionStepButton{
+    border-radius: 100%;
+}
