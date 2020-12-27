@@ -9,7 +9,7 @@ class Subscribe extends React.Component {
     render() {
         
         return (
-            <Form>
+            <Form action="/signup" method="POST">
                 <h2>Subscribe!</h2>
                 <br/>
   <Form.Group controlId="firstName">
@@ -30,7 +30,7 @@ class Subscribe extends React.Component {
   </Form.Group>
   
   <Button variant="primary" type="submit">
-    Submit
+    Subscribe
   </Button>
 </Form>
         );

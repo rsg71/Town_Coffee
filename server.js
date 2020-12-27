@@ -22,8 +22,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Signup Route
 app.post('/signup', (req, res) => {
-console.log(req.body)
-res.send('hello');
+const { firstName, lastName, email} = req.body
+
+// Make sure fields are filled out
+
+// if(!firstName || lastName || !email) {
+//   r
+// }
 });
 
 
