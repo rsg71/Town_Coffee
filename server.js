@@ -25,10 +25,9 @@ app.post('/signup', (req, res) => {
 const { firstName, lastName, email} = req.body
 
 // Make sure fields are filled out
-
-// if(!firstName || lastName || !email) {
-//   r
-// }
+if(!firstName || lastName || !email) {
+  res.redirect('/fail')
+}
 });
 
 
