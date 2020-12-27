@@ -24,51 +24,51 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Signup Route
 app.post('/signup', (req, res) => {
-const { firstName, lastName, email } = req.body
-console.log(req.body, "anything coming through?")
-// 
-// Make sure fields are filled out
-if(!firstName || !lastName || !email) {
-  res.redirect('/fail')
-}
+  const { firstName, lastName, email } = req.body
+  console.log(req.body, "anything coming through?")
+  // 
+  // Make sure fields are filled out
+  if (!firstName || !lastName || !email) {
+    res.redirect('/fail')
+  }
 
-// constuct req data
-const data = {
-  members: [
-    {
-      email_address: email,
-      status: 'subscribed',
-      merge_fields: {
-        FNAME: firstName,
-        LNAME: lastName
+  // constuct req data
+  const data = {
+    members: [
+      {
+        EMAIL: email,
+        status: 'subscribed',
+        merge_fields: {
+          FNAME: firstName,
+          LNAME: lastName
+        }
+      }
+    ]
+  }
+
+  const postData = JSON.stringify(data)
+
+  const options = {
+    url: 'https://us7.api.mailchimp.com/3.0/lists/1de7a3f112',
+    method: 'POST',
+    headers: {
+      Authorization: 'auth ' + process.env.MAILCHIMP_KEY
+    },
+    body: postData
+  }
+
+  request(options, (err, response, body) => {
+    if (err) {
+      res.redirect('/fail');
+
+    } else {
+      if (response.statusCode === 200) {
+        res.redirect('/success');
+      } else {
+        res.redirect('/fail');
       }
     }
-  ]
-}
-
-const postData = JSON.stringify(data)
-
-const options = {
-  url: 'https://us7.api.mailchimp.com/3.0/lists/1de7a3f112',
-  method: 'POST',
-  headers: {
-    Authorization: 'auth ' + process.env.MAILCHIMP_KEY
-  },
-  body: postData
-}
-
-request(options, (err, response, body) => {
- if(err) {
-   res.redirect('/fail');
-
- } else {
-   if(response.statusCode === 200) {
-     redirect('/success');
-   } else {
-     redirect('/fail');
-   }
- }
-})
+  })
 });
 
 
@@ -105,7 +105,7 @@ app.post('/create-checkout-session', async (req, res) => {
 
 // set up a path for a successful payment:
 // app.get("/success", (req, res) => {
-  
+
 // })
 
 
@@ -116,6 +116,6 @@ app.post('/create-checkout-session', async (req, res) => {
 // });
 
 
-app.listen(PORT, function() {
+app.listen(PORT, function () {
   console.log(`🌎 ==> API server now on port ${PORT}!`);
 });
