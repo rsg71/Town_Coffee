@@ -4,6 +4,7 @@ const request = require('request');
 const bodyParser = require('body-parser');
 const PORT = process.env.PORT || 3001;
 const app = express();
+require("dotenv").config();
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -15,19 +16,59 @@ if (process.env.NODE_ENV === "production") {
 }
 
 const Stripe = require('stripe');
+const { redirect } = require("next/dist/next-server/server/api-utils");
 const stripe = Stripe('sk_test_51Hvpi3EepCRzNwguGDTCpqfrjNSKJGguBee2FLE5khNxaQSkJ8QSAoNUUFGBnC7eWoZTYBp5ustqEAqMXyEZKD3P00ZMPotyts');
 
-//Bodyparser Middleware
+// Bodyparser Middleware
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Signup Route
 app.post('/signup', (req, res) => {
-const { firstName, lastName, email} = req.body
-
+const { firstName, lastName, email } = req.body
+console.log(req.body, "anything coming through?")
+// 
 // Make sure fields are filled out
-if(!firstName || lastName || !email) {
+if(!firstName || !lastName || !email) {
   res.redirect('/fail')
 }
+
+// constuct req data
+const data = {
+  members: [
+    {
+      email_address: email,
+      status: 'subscribed',
+      merge_fields: {
+        FNAME: firstName,
+        LNAME: lastName
+      }
+    }
+  ]
+}
+
+const postData = JSON.stringify(data)
+
+const options = {
+  url: 'https://us7.api.mailchimp.com/3.0/lists/1de7a3f112',
+  method: 'POST',
+  headers: {
+    Authorization: 'auth ' + process.env.MAILCHIMP_KEY
+  },
+  body: postData
+}
+
+request(options, (err, response, body) => {
+ if(err) {
+   res.redirect('/fail');
+
+ } else {
+   if(response.statusCode === 200) {
+     redirect('/success');
+   } else {
+     redirect('/fail');
+   }
+ }
+})
 });
 
 
@@ -70,9 +111,9 @@ app.post('/create-checkout-session', async (req, res) => {
 
 // Send every request to the React app
 // Define any API routes before this runs
-app.get("*", function(req, res) {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
-});
+// app.get("*", function(req, res) {
+//   res.sendFile(path.join(__dirname, "./client/build/index.html"));
+// });
 
 
 app.listen(PORT, function() {

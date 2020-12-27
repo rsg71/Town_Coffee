@@ -8,18 +8,21 @@ import ContactUs from "./pages/ContactUs/ContactUs";
 import GivingBack from "./pages/GivingBack/GivingBack";
 import Subscriptions from "./pages/Subscriptions/Subscriptions";
 import Homepage from "./pages/Homepage/Homepage";
-import TermsOfUse from "./pages/TermsOfUse/TermsOfUse"
-import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy"
-import IndividualCoffee from "./pages/IndividualCoffee/IndividualCoffee"
+import TermsOfUse from "./pages/TermsOfUse/TermsOfUse";
+import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy";
+import IndividualCoffee from "./pages/IndividualCoffee/IndividualCoffee";
 
 
-import Cart from "./pages/Cart/Cart"
-import CartContext from "./utils/CartContext"
+import Cart from "./pages/Cart/Cart";
+import CartContext from "./utils/CartContext";
 
-import Checkout from "./pages/Checkout/Checkout"
+import Checkout from "./pages/Checkout/Checkout";
 
-import NavigationBar from "./components/NavigationBar/NavigationBar"
-import Footer from "./components/Footer/Footer"
+import NavigationBar from "./components/NavigationBar/NavigationBar";
+import Footer from "./components/Footer/Footer";
+
+import Fail from "./pages/Fail/Fail";
+import Success from "./pages/Success/Success"
 
 
 
@@ -60,7 +63,9 @@ function App() {
           <Route exact path="/contactus" component={ContactUs} />
           <Route exact path="/givingback" component={GivingBack} />
           <Route exact path="/subscriptions" component={Subscriptions} />
-
+          <Route exact path="/fail" component={Fail} />
+          <Route exact path="/success" component={Success} />
+          
           <Route exact path="/terms_of_use" component={TermsOfUse} />
           {/* <Route exact path="/:id" component={PrivacyPolicy} />
 
