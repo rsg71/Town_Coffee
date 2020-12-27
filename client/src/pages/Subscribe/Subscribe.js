@@ -14,12 +14,12 @@ class Subscribe extends React.Component {
                 <br/>
   <Form.Group controlId="firstName" name="firstName">
     <Form.Label>First Name</Form.Label>
-    <Form.Control placeholder="Jane" name="email"/>
+    <Form.Control placeholder="Jane" name="firstName"/>
   </Form.Group>
 
   <Form.Group controlId="lastName" name="lastName">
     <Form.Label>Last Name</Form.Label>
-    <Form.Control placeholder="Smith" name="email"/>
+    <Form.Control placeholder="Smith" name="lastName"/>
   </Form.Group>
 
   <Form.Group controlId="email" name="email" >

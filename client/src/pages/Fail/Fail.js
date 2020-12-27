@@ -9,7 +9,7 @@ function Fail () {
                     <Col>
                     <h1>Failed to Subscribe</h1>
                     
-                    <h2>hahahahahaha</h2>
+                    <h2> :( </h2>
                     
                     </Col>
                 </Row>

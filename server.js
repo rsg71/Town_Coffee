@@ -19,6 +19,7 @@ const Stripe = require('stripe');
 const { redirect } = require("next/dist/next-server/server/api-utils");
 const stripe = Stripe('sk_test_51Hvpi3EepCRzNwguGDTCpqfrjNSKJGguBee2FLE5khNxaQSkJ8QSAoNUUFGBnC7eWoZTYBp5ustqEAqMXyEZKD3P00ZMPotyts');
 
+
 // Bodyparser Middleware
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -29,30 +30,34 @@ app.post('/signup', (req, res) => {
   // 
   // Make sure fields are filled out
   if (!firstName || !lastName || !email) {
-    res.redirect('/fail')
+    res.redirect('/fail');
+    console.log("no it didnt happen")
+    return;
   }
 
+  
   // constuct req data
   const data = {
     members: [
       {
-        EMAIL: email,
+        email_address: email,
         status: 'subscribed',
         merge_fields: {
           FNAME: firstName,
           LNAME: lastName
+          
         }
       }
     ]
   }
 
-  const postData = JSON.stringify(data)
-
+  const postData = JSON.stringify(data,"POSTDATA")
+// This url may not be right .. make sure to check
   const options = {
     url: 'https://us7.api.mailchimp.com/3.0/lists/1de7a3f112',
     method: 'POST',
     headers: {
-      Authorization: 'auth ' + process.env.MAILCHIMP_KEY
+      Authorization: 'auth 3b99e8bb13288b6d99f3085bde90abd6-us7'
     },
     body: postData
   }
@@ -65,7 +70,8 @@ app.post('/signup', (req, res) => {
       if (response.statusCode === 200) {
         res.redirect('/success');
       } else {
-        res.redirect('/fail');
+        res.redirect('/fail')
+        console.log("Oh you down there");
       }
     }
   })
