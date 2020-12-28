@@ -1,16 +1,26 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
+import "./style.css";
+
 
 function Success () {
     return (
         <> 
             <Container>
-                <Row>
+            <br/>
+            <br/>
+                <Row className="success">
                     <Col>
-                    <h1>Subscribed</h1>
-                    
-                    <h2>yassssssss homie you did it</h2>
-                    
+                    <h2><i className="fas fa-thumbs-up fa-2x"></i></h2>
+                    <br/>
+                    <h1>Subscribed!</h1>
+                    <br/>
+                    <h3>You are now signed up for our dope monthly newsletter!</h3>
+                    <br/>
+                    <Button href="/contactus">Go Back</Button>
+                    <br/>
+                    <br/>
+                    <br/>
                     </Col>
                 </Row>
             </Container>

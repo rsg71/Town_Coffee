@@ -11,11 +11,13 @@ function Fail () {
                 <Row className="failed">
                     <Col>
                     
-                    <h1>Failed to Subscribe</h1>
-                    
+                    <h1>Sorry!</h1>
+                    <br/>
                     <h2><i className="far fa-sad-tear"></i></h2>
-
-                    <a href="/subscriptions"><Button>Go Back</Button></a>
+                    <br/>
+                    <p>Something went wrong, please go back and make sure all the fields are filled in correctly.</p>
+                    <br/>
+                    <a href="/contactus"><Button>Go Back</Button></a>
                     
                     </Col>
                 </Row>
