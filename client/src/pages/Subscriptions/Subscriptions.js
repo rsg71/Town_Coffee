@@ -5,6 +5,7 @@ import CoffeeBanner from "../../components/CoffeeBanner/CoffeeBanner";
 import SubscriptionFAQ from "../../components/SubscriptionFAQ/SubscriptionFAQ";
 import "./Subscriptions.css"
 
+
 const styles = {
     margin: {
         marginBottom: "5rem"
@@ -136,6 +137,10 @@ function Subscriptions() {
                 </Row>
 
             </Container>
+
+            <br/>
+            <br/>
+            <br/>
         </>
     )
 }

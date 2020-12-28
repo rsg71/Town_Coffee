@@ -16,15 +16,18 @@ import IndividualCoffee2 from "./pages/IndividualCoffee2/IndividualCoffee2"
 import IndividualCoffee3 from "./pages/IndividualCoffee3/IndividualCoffee3"
 
 
-import Cart from "./pages/Cart/Cart"
-import CartContext from "./utils/CartContext"
+import Cart from "./pages/Cart/Cart";
+import CartContext from "./utils/CartContext";
 
 import SuccessfulPayment from "./pages/SuccessfulPayment/SuccessfulPayment";
 import CanceledPayment from "./pages/CanceledPayment/CanceledPayment";
 
 
-import NavigationBar from "./components/NavigationBar/NavigationBar"
-import Footer from "./components/Footer/Footer"
+import NavigationBar from "./components/NavigationBar/NavigationBar";
+import Footer from "./components/Footer/Footer";
+
+import Fail from "./pages/Fail/Fail";
+import SuccessMC from "./pages/SuccessMC/SuccessMC";
 
 
 
@@ -84,6 +87,9 @@ function App() {
           <Route exact path="/contactus" component={ContactUs} />
           <Route exact path="/givingback" component={GivingBack} />
           <Route exact path="/subscriptions" component={Subscriptions} />
+          <Route exact path="/fail" component={Fail} />
+          <Route exact path="/successMC" component={SuccessMC} />
+          
           <Route exact path="/subscriptions/subscription-form" component={SubscriptionForm} />
 
           <Route exact path="/terms_of_use" component={TermsOfUse} />

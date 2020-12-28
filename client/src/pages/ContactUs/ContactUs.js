@@ -4,7 +4,7 @@ import { Container, Row, Col, Button, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import CoffeeBanner from "../../components/CoffeeBanner/CoffeeBanner"
 import ContactUsColumns from "../../components/ContactUsColumns/ContactUsColumns"
-
+import SubscribeMC from "../SubscribeMC/SubscribeMC";
 const styles = {
     listStyle: {
         listStyleType: "none",
@@ -69,7 +69,15 @@ function ContacUs() {
                 <br />
                 <br />
                 <br />
+            </Container>
 
+            <SubscribeMC />
+
+
+            <Container>
+                <br />
+                <br />
+                <br />
                 <Row>
                     <Col>
                         <Form action="https://formspree.io/f/mdopwono" method="POST">
