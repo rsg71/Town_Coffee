@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import CoffeeBanner from "../../components/CoffeeBanner/CoffeeBanner"
 
 
@@ -52,6 +53,13 @@ function AboutUs() {
             <CoffeeBanner />
 
             <Container>
+                <br/>
+                <Row>
+                    <Col>
+                    <span><Link className="breadcrumbLink" to="/">Home </Link><i className="fas fa-angle-right"></i> <span style={{fontWeight: "bold"}}> About Us</span>
+                     </span>
+                    </Col>
+                </Row>
                 <br />
                 <h1 style={styles.h1}>About Us</h1>
                 <br />

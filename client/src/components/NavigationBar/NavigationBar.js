@@ -23,8 +23,8 @@ function NavigationBar() {
     <>
 
       <Navbar bg="light" expand="lg" sticky="top" >
-        <Navbar.Brand href="#home">
-          <img src="imgs/green_logo_beans.png" id="logo" alt="green logo beans" />
+        <Navbar.Brand href="/">
+          <img src="/imgs/green_logo_beans.png" id="logo" alt="green logo beans" />
 
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

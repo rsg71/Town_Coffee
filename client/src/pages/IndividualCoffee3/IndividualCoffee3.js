@@ -4,32 +4,30 @@ import { Container, Row, Col, Button, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import BreadCrumbsCoffee from "../../components/BreadCrumbsCoffee/BreadCrumbsCoffee";
 import CartContext from "../../utils/CartContext"
-import "./IndividualCoffee.css"
+import "./IndividualCoffee3.css"
+
 
 function IndividualCoffee({ addToCart }) {
     
     
     const cartItems = useContext(CartContext)
     console.log("cartItems are:", cartItems)
-
-    // let thisParticularItem = cartItems.filter(cartItem => cartItem.item="12 oz Kenyan blend")
-    // console.log("this ite m", thisParticularItem)
     
-   
-   
+    
+    
+    //also the bagQuantity will set to 0 every time we go to this page; I need to instead set it to the cartcontext value for this particular product
     const [bagQuantity, setBagQuantity] = useState(1)
-    const [coffeeItem, setCoffeeItem] = useState("12 oz Kenyan blend")
-    const [itemPrice, setPrice] = useState(1299)
+    const [coffeeItem, setCoffeeItem] = useState("16 oz Whole Bean blend")
+    const [itemPrice, setPrice] = useState(1399)
     const [status, setStatus] = useState("")
 
     useEffect(() => {
        axios.get("/apiCall")
-       .then(res=> setStatus(res.data.data[0].metadata.Status))
+       .then(res=> setStatus(res.data.data[2].metadata.Status))
        .catch(err=>console.log(err))
-
-      
-
     }, [])
+
+
 
 
     const handleIncrement = () => {
@@ -42,8 +40,6 @@ function IndividualCoffee({ addToCart }) {
         }
     }
 
-   
-
     return (
         <>
             <Container>
@@ -55,10 +51,10 @@ function IndividualCoffee({ addToCart }) {
                         <img src="/imgs/prod_IXeeUDzn45Abgf.jpg" style={{ maxWidth: "100%" }} alt="coffee" />
                     </Col>
                     <Col lg={6} sm={12}>
-                        <h2>16 oz Kenyan blend</h2>
+                        <h2>Whole Bean Blend Coffee, 16 oz.</h2>
                         <h3>${itemPrice/100}</h3>
-                        <h3>Status: <span className={status==="Available"? "coffeeStatusAvail" : "coffeeStatusUnavail"}>{status}</span></h3>
-                        <p>Good for the planet and good for your body. Get a taste of this full-bodied Kenyan bean. We're so confident in our coffee that if you aren't fully satisfied, keep the bag and we'll refund your purchase. Yep. It's that good.</p>
+                        <h3> Status: <span className={status==="Available"? "coffeeStatusAvail": "coffeeStatusUnavail"}>{status}</span></h3>
+                        <p>Good for the planet and good for your body. Get a taste of this full-bodied Mexican whole blend bean. We're so confident in our coffee that if you aren't fully satisfied, keep the bag and we'll refund your purchase. Yep. It's that good.</p>
 
 
                         <h4>Quantity:</h4>
@@ -98,13 +94,13 @@ function IndividualCoffee({ addToCart }) {
 
                         <Row>
                             <Col>
-                                <p>Extra details: this coffee is a full-bodied, smooth, and strong blend</p>
+                                <p>Extra details: this coffee is a full-bodied, subtle blend</p>
 
                                 <label>Flavor Profile:</label>
                                 <ul>
                                     <li>Extra flavor</li>
-                                    <li>Our boldest, darkest roast</li>
-                                    <li>20 mg caffeine per cup</li>
+                                    <li>A very medium roast</li>
+                                    <li>15 mg caffeine per cup</li>
                                 </ul>
                             </Col>
                         </Row>

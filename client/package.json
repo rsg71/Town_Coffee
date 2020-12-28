@@ -6,6 +6,8 @@
   "secure": false,
   "dependencies": {
     "@stripe/stripe-js": "^1.11.0",
+    "axios": "^0.21.1",
+    "dotenv": "^8.2.0",
     "react": "^16.6.3",
     "react-bootstrap": "^1.4.0",
     "react-dom": "^16.6.3",

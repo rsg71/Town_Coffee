@@ -3,7 +3,7 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 import "./style.css";
 
 
-function Success () {
+function SuccessMC () {
     return (
         <> 
             <Container>
@@ -28,4 +28,4 @@ function Success () {
     )
 }
 
-export default Success;
+export default SuccessMC;

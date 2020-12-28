@@ -15,10 +15,15 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-const Stripe = require('stripe');
-const { redirect } = require("next/dist/next-server/server/api-utils");
-const stripe = Stripe('sk_test_51Hvpi3EepCRzNwguGDTCpqfrjNSKJGguBee2FLE5khNxaQSkJ8QSAoNUUFGBnC7eWoZTYBp5ustqEAqMXyEZKD3P00ZMPotyts');
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
+
+
+const Stripe = require('stripe');
+const stripe = Stripe(process.env.PRIVATE_KEY);
+
+// ---- MailChimp ---- //
 
 // Bodyparser Middleware
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -26,12 +31,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Signup Route
 app.post('/signup', (req, res) => {
   const { firstName, lastName, email } = req.body
-  console.log(req.body, "anything coming through?")
   // 
   // Make sure fields are filled out
   if (!firstName || !lastName || !email) {
     res.redirect('/fail');
-    console.log("no it didnt happen")
     return;
   }
 
@@ -52,12 +55,12 @@ app.post('/signup', (req, res) => {
   }
 
   const postData = JSON.stringify(data,"POSTDATA")
-// This url may not be right .. make sure to check
+
   const options = {
     url: 'https://us7.api.mailchimp.com/3.0/lists/1de7a3f112',
     method: 'POST',
     headers: {
-      Authorization: 'auth 3b99e8bb13288b6d99f3085bde90abd6-us7'
+      Authorization: 'auth ' + process.env.MAILCHIMP_KEY
     },
     body: postData
   }
@@ -68,40 +71,65 @@ app.post('/signup', (req, res) => {
 
     } else {
       if (response.statusCode === 200) {
-        res.redirect('/success');
+        res.redirect('/successMC');
       } else {
-        res.redirect('/fail')
-        console.log("Oh you down there");
+        res.redirect('/fail');
       }
     }
   })
 });
 
+// ----  End of MailChimp ---- //
+
+app.get("/apiCall", async (req, res) => {
+  const productsList = await stripe.products.list();
+  console.log("productsList is:", productsList)
+  res.send(productsList)
+})
+
 
 app.post('/create-checkout-session', async (req, res) => {
   console.log(req.body)
+
+
+  let lineItems =  req.body.cartItems.map(element => (
+    {
+      price_data: {
+        currency: 'usd',
+        product_data: {
+          name: element.item,
+          images: ['https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.TYt3pDfTyTagH_XDBDlcLAHaFj%26pid%3DApi&f=1'],
+        },
+        unit_amount: element.price,
+      },
+      quantity: element.quantity
+    }
+  ))
+
+  lineItems.push({
+    price_data: {
+      currency: 'usd',
+      product_data: {
+        name: 'Flat-rate Shipping',
+      },
+      unit_amount: 850,
+    },
+    quantity: 1,
+  })
+
+  console.log(lineItems)
   const session = await stripe.checkout.sessions.create({
-    billing_address_collection: 'auto',
+    billing_address_collection: 'required',
     shipping_address_collection: {
       allowed_countries: ['US']
     },
     payment_method_types: ['card'],
-    line_items: [
-      {
-        price_data: {
-          currency: 'usd',
-          product_data: {
-            name: 'Coffee',
-            images: ['https://i.imgur.com/EHyR2nP.png'],
-          },
-          unit_amount: 1299,
-        },
-        quantity: 1
-      },
-    ],
+    line_items:
+    lineItems
+    ,
     mode: 'payment',
-    success_url: 'https://example.com/success',
-    cancel_url: 'https://example.com/cancel',
+    success_url: 'http://localhost:3000/success',
+    cancel_url: 'http://localhost:3000/cancel',
   });
 
   res.json({ id: session.id });
@@ -109,17 +137,13 @@ app.post('/create-checkout-session', async (req, res) => {
 
 
 
-// set up a path for a successful payment:
-// app.get("/success", (req, res) => {
-
-// })
 
 
 // Send every request to the React app
 // Define any API routes before this runs
-// app.get("*", function(req, res) {
-//   res.sendFile(path.join(__dirname, "./client/build/index.html"));
-// });
+app.get("*", function (req, res) {
+  res.sendFile(path.join(__dirname, "./client/build/index.html"));
+});
 
 
 app.listen(PORT, function () {

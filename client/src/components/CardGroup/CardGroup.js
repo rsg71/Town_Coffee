@@ -16,51 +16,56 @@ function CardGroup() {
         <>
             <CardDeck>
                 <Card>
+                    <Link to="/products-16oz-Kenyan-bean">
                     <Card.Img variant="top" src="/imgs/prod_IXeeUDzn45Abgf.jpg" />
+                    </Link>
                     <Card.Body>
                         <Card.Title>16 oz. Kenyan Blend</Card.Title>
                         <Card.Text>
                             Kenyan blend sourced sustainably in Kenya
                                     </Card.Text>
-                        <Button className="groupCoffeeButtons">
-                        
-                        <Link to="/products-16oz-whole-bean">Shop Now</Link>
-                            
-                        </Button>
+
+                        <Link to="/products-16oz-Kenyan-bean">
+                            <Button className="groupCoffeeButtons">Shop Now</Button>
+                        </Link>
                     </Card.Body>
                     <Card.Footer>
                         <small className="text-muted"><strong>$13.99</strong></small>
                     </Card.Footer>
                 </Card>
                 <Card>
+                    <Link to="/products-16oz-mocha-blend">
                     <Card.Img variant="top" src="/imgs/prod_IXeeUDzn45Abgf.jpg" />
+                    </Link>
                     <Card.Body>
                         <Card.Title>16 oz. Mocha Blend</Card.Title>
                         <Card.Text>
-                           Mocha blend sourced sustainably in Mexico
+                            Mocha blend sourced sustainably in Mexico
                                     </Card.Text>
-                        <Button className="groupCoffeeButtons" variant="success">
-
-                            <Link to="/products-16oz-mocha-blend">Shop Now</Link>
-
+                        <Link to="/products-16oz-mocha-blend">
+                            <Button className="groupCoffeeButtons" variant="success">
+                                Shop Now
                         </Button>
+                        </Link>
                     </Card.Body>
                     <Card.Footer>
                         <small className="text-muted"><strong>$16.99</strong></small>
                     </Card.Footer>
                 </Card>
                 <Card>
+                    <Link to="/products-16oz-whole-bean-blend">
                     <Card.Img variant="top" src="/imgs/prod_IXeeUDzn45Abgf.jpg" />
+                    </Link>
                     <Card.Body>
                         <Card.Title>16 oz. Whole Bean Blend</Card.Title>
                         <Card.Text>
                             Whole bean blend sourced sustainably in Mexico
                                     </Card.Text>
-                        <Button className="groupCoffeeButtons" style={styles.color}>
-                            
-                        <Link to="/products-16oz-whole-bean-blend">Shop Now</Link>
-                            
+                        <Link to="/products-16oz-whole-bean-blend">
+                            <Button className="groupCoffeeButtons" style={styles.color}>
+                                Shop Now
                         </Button>
+                        </Link>
                     </Card.Body>
                     <Card.Footer>
                         <small className="text-muted"><strong>$12.99</strong></small>

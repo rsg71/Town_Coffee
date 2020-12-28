@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 
 import { Container, Row, Col, Button, Form } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import CoffeeBanner from "../../components/CoffeeBanner/CoffeeBanner"
 import ContactUsColumns from "../../components/ContactUsColumns/ContactUsColumns"
-import Subscribe from "../Subscribe/Subscribe";
+import SubscribeMC from "../SubscribeMC/SubscribeMC";
 const styles = {
     listStyle: {
         listStyleType: "none",
@@ -53,6 +54,14 @@ function ContacUs() {
 
             <Container>
                 <br />
+                <Row>
+                    <Col>
+                    <span><Link className="breadcrumbLink" to="/">Home </Link><i className="fas fa-angle-right"></i> <span style={{fontWeight: "bold"}}> Contact Us</span>
+                     </span>
+                    </Col>
+                </Row>
+                <br />
+
                 <h1 style={styles.h1}>Contact Us</h1>
                 <br />
                 <br />
@@ -62,7 +71,7 @@ function ContacUs() {
                 <br />
             </Container>
 
-            <Subscribe />
+            <SubscribeMC />
 
 
             <Container>
