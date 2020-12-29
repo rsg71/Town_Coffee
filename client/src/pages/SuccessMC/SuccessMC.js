@@ -13,6 +13,7 @@ function SuccessMC () {
                     <Col>
                     <h2><i className="fas fa-thumbs-up fa-2x"></i></h2>
                     <br/>
+                    <br/>
                     <h1>Subscribed!</h1>
                     <br/>
                     <h3>You are now signed up for our dope monthly newsletter!</h3>
