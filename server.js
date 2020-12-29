@@ -33,7 +33,7 @@ app.post('/signup', (req, res) => {
   const { firstName, lastName, email } = req.body
   // 
   // Make sure fields are filled out
-  if (!firstName || !lastName || !email) {
+  if (!email) {
     res.redirect('/fail');
     return;
   }
@@ -54,7 +54,7 @@ app.post('/signup', (req, res) => {
     ]
   }
 
-  const postData = JSON.stringify(data,"POSTDATA")
+  const postData = JSON.stringify(data)
 
   const options = {
     url: 'https://us7.api.mailchimp.com/3.0/lists/1de7a3f112',

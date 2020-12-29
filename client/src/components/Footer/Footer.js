@@ -28,14 +28,16 @@ function Footer() {
 
                     <Col sm={4}>
                         <h5>Join our mailing list for new deals, exclusive offers, and more:</h5>
-                        <Form inline>
+                        <Form inline action="/signup" method="POST">
                             <Form.Label htmlFor="inlineFormInputName2" srOnly>
                                 Name
                             </Form.Label>
                             <Form.Control
                                 className="mb-2 mr-sm-2"
                                 id="inlineFormInputName2"
-                                placeholder="Email address" />
+                                placeholder="Email address"
+                                type="email"
+                                name="email" />
                             <Button type="submit" className="mb-2">
                                 Submit
                             </Button>
