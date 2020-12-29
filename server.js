@@ -34,7 +34,7 @@ app.post('/signup', (req, res) => {
   // 
   // Make sure fields are filled out
   if (!email) {
-    res.redirect('/fail');
+    console.log('Fail');
     return;
   }
 
@@ -67,13 +67,13 @@ app.post('/signup', (req, res) => {
 
   request(options, (err, response, body) => {
     if (err) {
-      res.redirect('/fail');
+      console.log("Fail");
 
     } else {
       if (response.statusCode === 200) {
-        res.redirect('/successMC');
+        console.log("Success")
       } else {
-        res.redirect('/fail');
+        console.log("Fail");
       }
     }
   })

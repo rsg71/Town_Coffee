@@ -1,12 +1,24 @@
 import React from "react";
 import { Form, Button, Container, Row, Col } from "react-bootstrap";
 import "./style.css";
+import SuccessModal from "../../components/SuccessModal/SuccessModal";
+import Fail from "../../components/FailModal/FailModal";
 
 
-class SubscribeMC extends React.Component {
+function SubscribeMC () {
+  
+  
+    const [successModalShow, setSuccessModal] = React.useState(false);
+    const [failModalShow, setFailModal] = React.useState(false);
 
-
-  render() {
+    const successOrFail = (req) => {
+      console.log(req)
+      // if () {
+      //   setFailModal(true)
+      // } else {
+      //   setSuccessModal(true)
+      // }
+    }
 
     return (
       <>
@@ -35,20 +47,32 @@ class SubscribeMC extends React.Component {
                     placeholder="coffee@email.com" />
                 </Form.Group>
 
-                <Button variant="primary" type="submit">
+                <Button variant="primary" type="submit" onClick={() => successOrFail}>
                   Subscribe
   </Button>
               </Form>
             </Col>
           </Row>
         </Container>
+        
+        <SuccessModal
+          show={successModalShow}
+          onHide={() => setSuccessModal(false)}
+        />
+        <Fail 
+          show={failModalShow} 
+          onHide={() => setFailModal(false)}
+        />
+          
       </>
     );
+
+
 
   }
 
 
-}
+
 
 
 export default SubscribeMC;
