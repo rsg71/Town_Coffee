@@ -31,7 +31,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Signup Route
 app.post('/signup', (req, res) => {
   const { firstName, lastName, email } = req.body
-  // 
+  
   // Make sure fields are filled out
   if (!email) {
     console.log('fail');
