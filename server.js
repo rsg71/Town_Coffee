@@ -31,10 +31,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Signup Route
 app.post('/signup', (req, res) => {
   const { firstName, lastName, email } = req.body
-  // 
+  
   // Make sure fields are filled out
-  if (!firstName || !lastName || !email) {
-    res.redirect('/fail');
+  if (!email) {
+    console.log('fail');
     return;
   }
 
@@ -54,7 +54,7 @@ app.post('/signup', (req, res) => {
     ]
   }
 
-  const postData = JSON.stringify(data,"POSTDATA")
+  const postData = JSON.stringify(data)
 
   const options = {
     url: 'https://us7.api.mailchimp.com/3.0/lists/1de7a3f112',
@@ -67,13 +67,13 @@ app.post('/signup', (req, res) => {
 
   request(options, (err, response, body) => {
     if (err) {
-      res.redirect('/fail');
+      console.log("Fail");
 
     } else {
       if (response.statusCode === 200) {
-        res.redirect('/successMC');
+        console.log("Success")
       } else {
-        res.redirect('/fail');
+        console.log("Fail");
       }
     }
   })
