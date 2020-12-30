@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Form, Button, Container, Row, Col } from "react-bootstrap";
 import "./style.css";
 import SuccessModal from "../../components/SuccessModal/SuccessModal";
@@ -8,16 +8,18 @@ import Fail from "../../components/FailModal/FailModal";
 function SubscribeMC () {
   
   
-    const [successModalShow, setSuccessModal] = React.useState(false);
-    const [failModalShow, setFailModal] = React.useState(false);
+    const [successModalShow, setSuccessModal] = useState(false);
+    const [failModalShow, setFailModal] = useState(false);
+    const [email, setEmail] = useState()
 
-    const successOrFail = (req) => {
-      console.log(req)
-      // if () {
-      //   setFailModal(true)
-      // } else {
-      //   setSuccessModal(true)
-      // }
+
+    const successOrFail = () => {
+      
+      if (!email) {
+        setFailModal(true)
+      } else {
+        setSuccessModal(true)
+      }
     }
 
     return (
@@ -27,7 +29,7 @@ function SubscribeMC () {
             <Col>
 
               <Form action="/signup" method="POST">
-                <h3 className="newsletter"><i className="fas fa-newspaper fa-2x"></i></h3> <h2 className="newsletter">Subscribe! </h2>
+                <h3 className="newsletter"><i className="fas fa-newspaper fa-2x"></i></h3> <h2 className="newsletter">Subscribe!</h2>
                 <br />
                 <Form.Group controlId="firstName" name="firstName">
                   <Form.Label>First Name</Form.Label>
@@ -44,10 +46,10 @@ function SubscribeMC () {
                   <Form.Control
                     type="email"
                     name="email"
-                    placeholder="coffee@email.com" />
+                    placeholder="coffee@email.com" onChange={event => setEmail(event.target.value)}/>
                 </Form.Group>
 
-                <Button variant="primary" type="submit" onClick={() => successOrFail}>
+                <Button variant="primary" type="submit" onClick={() => successOrFail()}>
                   Subscribe
   </Button>
               </Form>

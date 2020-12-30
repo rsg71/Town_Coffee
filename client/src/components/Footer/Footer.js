@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
+import Fail from "../../components/FailModal/FailModal";
+import SuccessModal from "../../components/SuccessModal/SuccessModal";
 import "./Footer.css"
 
 const styles = {
@@ -16,6 +18,21 @@ const styles = {
 
 
 function Footer() {
+
+    const [successModalShow, setSuccessModal] = useState(false);
+    const [failModalShow, setFailModal] = useState(false);
+    const [email, setEmail] = useState()
+
+    const successOrFail = () => {
+      
+        if (!email) {
+          setFailModal(true)
+        } else {
+          setSuccessModal(true)
+        }
+      }
+
+
     return (
         <>
             <Container fluid className="Container">
@@ -25,7 +42,7 @@ function Footer() {
                 {/* Four columns: shop, support, our policies, and follow us */}
 
                 <Row>
-
+                    
                     <Col sm={4}>
                         <h5>Join our mailing list for new deals, exclusive offers, and more:</h5>
                         <Form inline action="/signup" method="POST">
@@ -37,8 +54,9 @@ function Footer() {
                                 id="inlineFormInputName2"
                                 placeholder="Email address"
                                 type="email"
-                                name="email" />
-                            <Button type="submit" className="mb-2">
+                                name="email" 
+                                onChange={event => setEmail(event.target.value)}/>
+                            <Button type="submit" className="mb-2" onClick={() => successOrFail()} >
                                 Submit
                             </Button>
                         </Form>
@@ -102,6 +120,15 @@ function Footer() {
 
             </Container>
 
+
+            <SuccessModal
+          show={successModalShow}
+          onHide={() => setSuccessModal(false)}
+        />
+        <Fail 
+          show={failModalShow} 
+          onHide={() => setFailModal(false)}
+        />
         </>
     )
 }

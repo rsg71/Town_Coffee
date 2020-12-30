@@ -34,7 +34,7 @@ app.post('/signup', (req, res) => {
   // 
   // Make sure fields are filled out
   if (!email) {
-    console.log('Fail');
+    console.log('fail');
     return;
   }
 
