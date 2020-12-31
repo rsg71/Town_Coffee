@@ -95,21 +95,20 @@ function Subscriptions() {
 
                     <Col className="getStartedCol">
                     <Link to="/subscriptions/subscription-form"><Button>Subscribe here</Button></Link>
-                    
+                    <div id="infoPlusFAQ"></div>
                     </Col>
-
+                    
                 </Row>
             </Container>
 
-
+                
 
             <Container style={styles.margin}>
 
 
-
-
                 <Row>
                     <Col style={styles.column}>
+                    
 
                         <p>TCC offers a once per month coffee subscription to customers. Minimum of 2 lbs. per month any choice of coffee. 10% discount on the retail price plus shipping.</p>
 
@@ -122,6 +121,8 @@ function Subscriptions() {
 
                 <br />
                 <br />
+                <br />
+
 
                 <Row>
                     <Col>

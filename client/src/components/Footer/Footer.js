@@ -55,7 +55,7 @@ function Footer() {
                         </div>
 
                         <div className="m-2 socialMediaRowForce">
-                            <a href="/FAQ"><i className="fas fa-question-circle fa-2x socialMediaIcons"/></a>
+                            <a href="/subscriptions#infoPlusFAQ"><i className="fas fa-question-circle fa-2x socialMediaIcons"/></a>
                         </div>
 
                     </Col>

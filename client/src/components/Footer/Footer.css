@@ -59,6 +59,44 @@
 
 }
 
+
+/* media query tweaks for © at exact breakpoints footer goes vertical and again below 326 px  */
+
+@media screen and (max-width: 767px) {
+
+    .textMuted {
+
+        font-size: 12px !important;
+    }
+}
+
+@media screen and (max-width: 326px) {
+
+    .textMuted {
+
+        font-size: 10px !important;
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+
+    .termsConditionsPrivacyFont,
+    .dotSpacer {
+
+        font-size: 10px !important;
+    }
+}
+
+@media screen and (max-width: 326px) {
+
+    .termsConditionsPrivacyFont,
+    .dotSpacer {
+
+        font-size: 8px !important;
+    }
+}
+
 /* --  */
 
 
@@ -143,3 +181,4 @@
     margin-bottom: 15px !important;
 
 }
+

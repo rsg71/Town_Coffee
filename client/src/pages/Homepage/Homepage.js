@@ -80,8 +80,17 @@ function Homepage() {
             </Container>
 
 
+          
+            
+            <Container fluid>
+                <Row >
+                    <Col style={styles.blah}>
+                    <HomepageBanner />
+                    </Col>
+                </Row>
+            </Container>
             <br />
-
+            <br />
 
 
             <Container>
@@ -121,7 +130,7 @@ function Homepage() {
             <br />
             <br />
 
-            <Container fluid>
+            {/* <Container fluid>
                 <Row >
                     <Col style={styles.blah}>
                     <HomepageBanner />
@@ -129,7 +138,7 @@ function Homepage() {
                 </Row>
             </Container>
             <br />
-            <br />
+            <br /> */}
 
             {/* <Jumbotron></Jumbotron> */}
 
