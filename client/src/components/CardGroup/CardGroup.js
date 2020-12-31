@@ -15,7 +15,7 @@ import "./CardGroup.css"
 function CardGroup() {
     return (
         <>
-            <CardDeck>
+            <CardDeck md={1}>
                 <Card>
                     <Link to="/products-16oz-Kenyan-bean">
                     <Card.Img variant="top" src="/imgs/prod_IXeeUDzn45Abgf.jpg" />
