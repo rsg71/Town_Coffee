@@ -1,10 +1,72 @@
-p {
-    /* font-family: 'Montserrat', sans-serif; */
+
+/* global font family selection  */
+
+* {
+
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+/* global treatments to reduce/remove tacky decoration + outlines */
+
+
+a,
+a:hover,
+a:active,
+a:visited,
+a:focus {
+
+    text-decoration: none !important;
+}
+
+p,
+p:hover,
+p:active,
+p:visited,
+p:focus {
+
+    text-decoration: none !important;
+}
+
+button:focus,
+button:active,
+button:hover,
+.btn:active,
+.btn.active, 
+textarea:hover, 
+input:hover, 
+textarea:active, 
+input:active, 
+textarea:focus, 
+input:focus,
+label:focus {
+
+    outline: 0px !important;
+    border-color: #cccccc !important;
+    -moz-appearance: none !important;
+    -webkit-appearance: none !important;
+    box-shadow: none !important;
+
+}
+
+
+/* not in use  */
+
+
+/* p {
+    font-family: 'Montserrat', sans-serif;
 }
 
 
 
 h1, h2 {
-    /* font-family: 'Playfair Display', serif; */
+    /* font-family: 'Playfair Display', serif; 
+} */
 
-}
+/* .button,
+.button:hover,
+.button:active,
+.button:visited,
+.button:focus {
+    text-decoration: none !important;
+} */

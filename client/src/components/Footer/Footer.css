@@ -1,36 +1,145 @@
 .Container{
+
     background-color: #1E3932;
-    /* background-color: black; */
-    color: rgb(133, 130, 130)
-}
-
-
-.footerBottom i {
-    font-size: 2em;
-    margin-bottom: 10px;
-}
-
-ul li a {
     color: grey;
+}
+
+/* stylized footer hr line  */
+
+.footerHr {
+
+    height: 0px;
+    border: none;
+    border-top: 2px solid white !important;
 
 }
 
-ul li a:hover {
-    color: white
+/* --  */
+
+.columnMargins {
+
+    margin-top:30px;
+    margin-bottom: 30px;
+}
+
+.rowMargin {
+
+    margin-top: 20px;
+}
+
+.footerSectionTitle {
+
+    color: rgb(221, 221, 221) !important;
+}
+
+/* terms and conditions treatments  */
+
+.textMuted {
+
+    color: rgb(105, 105, 105) !important;
+    font-size: 14px !important;
+}
+
+.termsConditionsPrivacyFont {
+
+    font-size: 12px !important;
+    color: rgb(92, 92, 92) !important;
+
+}
+
+.termsConditionsPrivacyFont:hover {
+
+    color: rgb(221, 221, 221) !important;
+}
+
+.dotSpacer {
+
+    font-size: 12px !important;
+    color: #4d4d4d !important;
+
+}
+
+/* --  */
+
+
+/* mailing list treatments  */
+
+.formBackground {
+
+    background-color: rgb(221, 221, 221) !important;
+}
+
+
+
+#mailingListSubmitButton {
+
+    background: #1E3932 !important;
+    transition: all 0.35s ease-in-out !important;
+    color: rgb(221, 221, 221) !important;
+    border-color: rgb(221, 221, 221) !important;
+
+}
+
+#mailingListSubmitButton:hover {
+
+    background-color: #018037 !important;
+    color: rgb(221, 221, 221) !important;
+    border-color: #018037 !important;
+    transition: all 0.35s ease-in-out !important;
+
+}
+
+
+.mailingListContainer {
+    max-width: 270px !important;
+    padding: 0px !important;
+}
+
+.mailingListFormWidth {
+
+    max-width: 200px !important;
+    align-items: center !important;
+    text-align: center !important;
+    
+    margin-left: auto !important;
+    margin-right: auto !important;
+    
+}
+
+.joinFont {
+    
+    margin-bottom: 12px;
+    
+}
+
+/* --  */
+
+
+/* social icon treatments  */
+
+.socialMediaRowForce {
+
+    display: inline-block !important;
+    float: none !important;
+    clear: none !important;
 }
 
 .socialMediaIcons {
-    font-size: 1.3rem;
-    line-height: 1.3 !important;
-}
-.fa-instagram {
-    font-size: 1.45rem;
+
+    color: grey !important;
 }
 
+.socialMediaIcons:hover {
+
+    color: white !important;
+}
+
+/* --  */
 
 
-@media all and (max-width: 568px) {
-    ul {
-        padding-inline-start: initial;
-    }
+
+.footerBottom {
+
+    margin-bottom: 15px !important;
+
 }

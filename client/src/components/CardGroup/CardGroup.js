@@ -3,13 +3,14 @@ import { CardDeck, Card, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./CardGroup.css"
 
-
-const styles = {
-    color: {
-        backgroundColor: "#1E3932",
-        borderColor: "#1E3932"
-    }
-}
+// corresponding stylesheet takes 
+// care of this now as of 12.30
+// const styles = {
+//     color: {
+//         backgroundColor: "#1E3932",
+//         borderColor: "#1E3932"
+//     }
+// }
 
 function CardGroup() {
     return (
@@ -20,13 +21,16 @@ function CardGroup() {
                     <Card.Img variant="top" src="/imgs/prod_IXeeUDzn45Abgf.jpg" />
                     </Link>
                     <Card.Body>
-                        <Card.Title>16 oz. Kenyan Blend</Card.Title>
-                        <Card.Text>
-                            Kenyan blend sourced sustainably in Kenya
-                                    </Card.Text>
-
+                        <Card.Title><strong>16 oz. Kenyan Blend</strong></Card.Title>
+                        <hr/>
+                            <Card.Text>
+                                Kenyan blend.
+                                <br/>
+                                Sustainably sourced in Kenya.
+                            </Card.Text>
+                        <hr/>
                         <Link to="/products-16oz-Kenyan-bean">
-                            <Button className="groupCoffeeButtons">Shop Now</Button>
+                            <Button className="groupCoffeeButtons" size="sm">Shop Now</Button>
                         </Link>
                     </Card.Body>
                     <Card.Footer>
@@ -38,12 +42,16 @@ function CardGroup() {
                     <Card.Img variant="top" src="/imgs/prod_IXeeUDzn45Abgf.jpg" />
                     </Link>
                     <Card.Body>
-                        <Card.Title>16 oz. Mocha Blend</Card.Title>
-                        <Card.Text>
-                            Mocha blend sourced sustainably in Mexico
-                                    </Card.Text>
+                        <Card.Title><strong>16 oz. Mocha Blend</strong></Card.Title>
+                        <hr/>
+                            <Card.Text>
+                                Mocha blend.
+                                <br/>
+                                Sustainably sourced in Mexico.
+                            </Card.Text>
+                            <hr/>
                         <Link to="/products-16oz-mocha-blend">
-                            <Button className="groupCoffeeButtons" variant="success">
+                            <Button className="groupCoffeeButtons" variant="success" size="sm">
                                 Shop Now
                         </Button>
                         </Link>
@@ -57,12 +65,16 @@ function CardGroup() {
                     <Card.Img variant="top" src="/imgs/prod_IXeeUDzn45Abgf.jpg" />
                     </Link>
                     <Card.Body>
-                        <Card.Title>16 oz. Whole Bean Blend</Card.Title>
+                        <Card.Title><strong>16 oz. Whole Bean Blend</strong></Card.Title>
+                        <hr/>
                         <Card.Text>
-                            Whole bean blend sourced sustainably in Mexico
-                                    </Card.Text>
+                            Whole bean blend.
+                            <br/>
+                            Sustainably sourced in Mexico.
+                        </Card.Text>
+                        <hr/>
                         <Link to="/products-16oz-whole-bean-blend">
-                            <Button className="groupCoffeeButtons" style={styles.color}>
+                            <Button className="groupCoffeeButtons" size="sm">
                                 Shop Now
                         </Button>
                         </Link>
