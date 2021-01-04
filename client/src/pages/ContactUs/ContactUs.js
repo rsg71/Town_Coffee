@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import CoffeeBanner from "../../components/CoffeeBanner/CoffeeBanner"
 import ContactUsColumns from "../../components/ContactUsColumns/ContactUsColumns"
 import SubscribeMC from "../SubscribeMC/SubscribeMC";
+import "./ContactUs.css";
 const styles = {
     listStyle: {
         listStyleType: "none",
@@ -40,6 +41,20 @@ function ContacUs() {
         message: ""
     })
 
+    const CustomForm = () => (
+        <MailchimpSubscribe
+          url={process.env.REACT_APP_MAILCHIMP_URL}
+          render={({ subscribe, status, message }) => (
+            <div>
+              <SubscribeMC onSubmitted={formData => subscribe(formData)} />
+              {status === "sending" && <div style={{ color: "blue" }}>sending...</div>}
+              {status === "error" && <div style={{ color: "red" }} dangerouslySetInnerHTML={{__html: message}}/>}
+              {status === "success" && <div style={{ color: "green" }}>Subscribed !</div>}
+            </div>
+          )}
+        />
+      )
+
 
     useEffect(() => {
         document.title = "Contact Us | Town Coffee Company"
@@ -70,10 +85,14 @@ function ContacUs() {
                 <br />
                 <br />
             </Container>
-Subscribe 
-<MailchimpSubscribe url={process.env.REACT_APP_MAILCHIMP_URL}/>
+            
+            {/* <Container id="mailchimpSub">
+            Subscribe!
+            <MailchimpSubscribe url={process.env.REACT_APP_MAILCHIMP_URL}/>
+            </Container> */}
+            <CustomForm/>
 
-
+            {/* <SubscribeMC url={process.env.REACT_APP_MAILCHIMP_URL}/> */}
             <Container>
                 <br />
                 <br />

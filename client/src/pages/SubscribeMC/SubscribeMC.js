@@ -28,19 +28,9 @@ function SubscribeMC () {
           <Row>
             <Col>
 
-              <Form action="/signup" method="POST">
+              <Form>
                 <h3 className="newsletter"><i className="fas fa-newspaper fa-2x"></i></h3> <h2 className="newsletter">Subscribe!</h2>
                 <br />
-                <Form.Group controlId="firstName" name="firstName">
-                  <Form.Label>First Name</Form.Label>
-                  <Form.Control placeholder="Jane" name="firstName" />
-                </Form.Group>
-
-                <Form.Group controlId="lastName" name="lastName">
-                  <Form.Label>Last Name</Form.Label>
-                  <Form.Control placeholder="Smith" name="lastName" />
-                </Form.Group>
-
                 <Form.Group controlId="email" name="email" >
                   <Form.Label>Email</Form.Label>
                   <Form.Control
