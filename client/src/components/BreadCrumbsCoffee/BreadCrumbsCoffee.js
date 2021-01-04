@@ -1,12 +1,13 @@
 import React from 'react'
 import { Col, Row } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import "./BreadCrumbsCoffee.css"
 
 export default function BreadCrumbsCoffee(props) {
     return (
         <>
              <Row>
-                    <Col>
+                    <Col style={{fontSize: "14px"}}>
                     <span><Link className="breadcrumbLink" to="/">Home </Link>
                     <i className="fas fa-angle-right"></i>
                     <Link className="breadcrumbLink" to="/coffee"> Coffee </Link> 
@@ -15,6 +16,7 @@ export default function BreadCrumbsCoffee(props) {
                      </span>
                     </Col>
                 </Row>
+                <br/>
         </>
     )
 }
