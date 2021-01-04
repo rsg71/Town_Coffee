@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-
+import MailchimpSubscribe from "react-mailchimp-subscribe"
 import { Container, Row, Col, Button, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import CoffeeBanner from "../../components/CoffeeBanner/CoffeeBanner"
@@ -70,8 +70,8 @@ function ContacUs() {
                 <br />
                 <br />
             </Container>
-
-            <SubscribeMC />
+Subscribe 
+<MailchimpSubscribe url={process.env.REACT_APP_MAILCHIMP_URL}/>
 
 
             <Container>
