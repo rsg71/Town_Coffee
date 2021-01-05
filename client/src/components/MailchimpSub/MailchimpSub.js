@@ -1,29 +1,28 @@
 import React, { Component, useState } from "react";
-// import { render } from "react-dom";
 import { Form, Button, Container, Row, Col } from "react-bootstrap";
 import MailchimpSubscribe from "react-mailchimp-subscribe"
-// import SuccessModal from "../../components/SuccessModal/SuccessModal";
-// import Fail from "../../components/FailModal/FailModal";
+// import { render } from "react-dom";
 require("dotenv").config();
 
 
 
-
-// a basic form
 const MailchimpForm = ({ status, message, onValidated }) => {
+
+
     let email;
     
 
     const submit = () =>
 
         email &&
+
         email.value.indexOf("@") > -1 &&
         onValidated({
             EMAIL: email.value
         }
         );
         
-
+                     //**!! Need to add keypress ENTER to submit !!**// 
     return (
 
         <Container>

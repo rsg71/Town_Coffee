@@ -2,7 +2,7 @@ import React from "react";
 import { Button, Modal } from "react-bootstrap";
 import "./FailModal.css";
 
-
+                              // UNUSED AT THE MOMENT Keeping for a just in case //
 function Fail(props) {
   return (
     <>

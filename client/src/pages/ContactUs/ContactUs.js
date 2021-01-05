@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
-import MailchimpSubscribe from "react-mailchimp-subscribe"
 import { Container, Row, Col, Button, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import CoffeeBanner from "../../components/CoffeeBanner/CoffeeBanner"
 import ContactUsColumns from "../../components/ContactUsColumns/ContactUsColumns"
-import SubscribeMC from "../SubscribeMC/SubscribeMC";
 import "./ContactUs.css";
 import MailchimpSub from "../MailchimpSub/MailchimpSub";
 require("dotenv").config();
