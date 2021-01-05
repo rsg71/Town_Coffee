@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import CoffeeBanner from "../../components/CoffeeBanner/CoffeeBanner"
 import ContactUsColumns from "../../components/ContactUsColumns/ContactUsColumns"
 import "./ContactUs.css";
-import MailchimpSub from "../MailchimpSub/MailchimpSub";
+import MailchimpSub from "../../components/MailchimpSub/MailchimpSub";
 require("dotenv").config();
 
 const styles = {

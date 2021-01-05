@@ -2,6 +2,7 @@ import React, { Component, useState } from "react";
 import { Form, Button, Container, Row, Col } from "react-bootstrap";
 import MailchimpSubscribe from "react-mailchimp-subscribe"
 // import { render } from "react-dom";
+import "./MailchimpSub.css";
 require("dotenv").config();
 
 
@@ -28,14 +29,20 @@ const MailchimpForm = ({ status, message, onValidated }) => {
         <Container>
 
             <Form.Label>Email</Form.Label>
+
             <Form.Group>
-                {status === "sending" && <div style={{ color: "blue" }}>sending...</div>}
+                {status === "sending" && 
+                
+                    <div style={{ color: "blue" }}>sending...</div>}
+                
+
                 {status === "error" && (
                     <div
                         style={{ color: "red" }}
                         dangerouslySetInnerHTML={{ __html: message }}
                     />
                 )}
+                
                 {status === "success" && (
                     <div
                         style={{ color: "green" }}
@@ -51,14 +58,18 @@ const MailchimpForm = ({ status, message, onValidated }) => {
                     placeholder="coffee@email.com"
 
                 />
+
                 <br />
+
                 <Button variant="primary" onClick={submit}>
-                    Subscribe
-      </Button>
+
+                Subscribe
+
+                </Button>
+
             </Form.Group>
+
         </Container>
-
-
 
     );
 };
@@ -66,13 +77,15 @@ const MailchimpForm = ({ status, message, onValidated }) => {
 class MailchimpSub extends Component {
 
     render() {
-        const url =
-            process.env.REACT_APP_MAILCHIMP_URL;
+
+        const url = process.env.REACT_APP_MAILCHIMP_URL;
+
         return (
             <>
                 <Form>
 
-                    <h3 className="newsletter"><i className="fas fa-newspaper fa-2x"></i></h3> <h2 className="newsletter">Subscribe!</h2>
+                    <h3 className="newsletter"><i className="fas fa-newspaper fa-2x"></i></h3> 
+                    <h2 className="newsletter">Subscribe!</h2>
                     <br />
                     <MailchimpSubscribe
                         url={url}
