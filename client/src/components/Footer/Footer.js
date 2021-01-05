@@ -101,14 +101,7 @@ function Footer() {
             </Container>
 
 
-            <SuccessModal
-          show={successModalShow}
-          onHide={() => setSuccessModal(false)}
-        />
-        <Fail 
-          show={failModalShow} 
-          onHide={() => setFailModal(false)}
-        />
+           
         </>
     )
 }
