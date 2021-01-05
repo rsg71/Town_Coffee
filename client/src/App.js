@@ -26,9 +26,6 @@ import CanceledPayment from "./pages/CanceledPayment/CanceledPayment";
 import NavigationBar from "./components/NavigationBar/NavigationBar";
 import Footer from "./components/Footer/Footer";
 
-import Fail from "./pages/Fail/Fail";
-import SuccessMC from "./pages/SuccessMC/SuccessMC";
-
 
 
 function App() {
@@ -87,8 +84,6 @@ function App() {
           <Route exact path="/contactus" component={ContactUs} />
           <Route exact path="/givingback" component={GivingBack} />
           <Route exact path="/subscriptions" component={Subscriptions} />
-          <Route exact path="/fail" component={Fail} />
-          <Route exact path="/successMC" component={SuccessMC} />
           
           <Route exact path="/subscriptions/subscription-form" component={SubscriptionForm} />
 

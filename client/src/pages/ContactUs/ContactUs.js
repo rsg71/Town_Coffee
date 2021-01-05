@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
-import MailchimpSubscribe from "react-mailchimp-subscribe"
 import { Container, Row, Col, Button, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import CoffeeBanner from "../../components/CoffeeBanner/CoffeeBanner"
 import ContactUsColumns from "../../components/ContactUsColumns/ContactUsColumns"
-import SubscribeMC from "../SubscribeMC/SubscribeMC";
+import "./ContactUs.css";
+import MailchimpSub from "../MailchimpSub/MailchimpSub";
+require("dotenv").config();
+
 const styles = {
     listStyle: {
         listStyleType: "none",
@@ -41,6 +43,7 @@ function ContacUs() {
     })
 
 
+
     useEffect(() => {
         document.title = "Contact Us | Town Coffee Company"
     }, []);
@@ -56,8 +59,8 @@ function ContacUs() {
                 <br />
                 <Row>
                     <Col>
-                    <span><Link className="breadcrumbLink" to="/">Home </Link><i className="fas fa-angle-right"></i> <span style={{fontWeight: "bold"}}> Contact Us</span>
-                     </span>
+                        <span><Link className="breadcrumbLink" to="/">Home </Link><i className="fas fa-angle-right"></i> <span style={{ fontWeight: "bold" }}> Contact Us</span>
+                        </span>
                     </Col>
                 </Row>
                 <br />
@@ -70,10 +73,10 @@ function ContacUs() {
                 <br />
                 <br />
             </Container>
-Subscribe 
-<MailchimpSubscribe url={process.env.REACT_APP_MAILCHIMP_URL}/>
+              
+            <MailchimpSub/>
 
-
+            )
             <Container>
                 <br />
                 <br />

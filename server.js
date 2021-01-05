@@ -23,63 +23,6 @@ app.use(express.json());
 const Stripe = require('stripe');
 const stripe = Stripe(process.env.PRIVATE_KEY);
 
-// ---- MailChimp ---- //
-
-// Bodyparser Middleware
-// app.use(bodyParser.urlencoded({ extended: true }));
-
-// Signup Route
-// app.post('/signup', (req, res) => {
-//   const { firstName, lastName, email } = req.body
-  
-//   // Make sure fields are filled out
-//   if (!email) {
-//     console.log('fail');
-//     return;
-//   }
-
-  
-//   // constuct req data
-//   const data = {
-//     members: [
-//       {
-//         email_address: email,
-//         status: 'subscribed',
-//         merge_fields: {
-//           FNAME: firstName,
-//           LNAME: lastName
-          
-//         }
-//       }
-//     ]
-//   }
-
-//   const postData = JSON.stringify(data)
-
-//   const options = {
-//     url: 'https://us7.api.mailchimp.com/3.0/lists/' + process.env.MAILCHIMP_LISTS,
-//     method: 'POST',
-//     headers: {
-//       Authorization: 'auth ' + process.env.MAILCHIMP_KEY
-//     },
-//     body: postData
-//   }
-
-//   request(options, (err, response, body) => {
-//     if (err) {
-//       console.log("Fail");
-
-//     } else {
-//       if (response.statusCode === 200) {
-//         console.log("Success")
-//       } else {
-//         console.log("Fail");
-//       }
-//     }
-//   })
-// });
-
-// ----  End of MailChimp ---- //
 
 app.get("/apiCall", async (req, res) => {
   const productsList = await stripe.products.list();
@@ -134,8 +77,6 @@ app.post('/create-checkout-session', async (req, res) => {
 
   res.json({ id: session.id });
 });
-
-
 
 
 

@@ -4,6 +4,8 @@ import { Container, Row, Col, Form, Button, InputGroup, FormControl } from "reac
 import Fail from "../../components/FailModal/FailModal";
 import SuccessModal from "../../components/SuccessModal/SuccessModal";
 import "./Footer.css"
+import MailchimpSubscribe from "react-mailchimp-subscribe"
+require("dotenv").config();
 
 const styles = {
     listItems: {
@@ -18,19 +20,6 @@ const styles = {
 
 
 function Footer() {
-
-    const [successModalShow, setSuccessModal] = useState(false);
-    const [failModalShow, setFailModal] = useState(false);
-    const [email, setEmail] = useState()
-
-    const successOrFail = () => {
-      
-        if (!email) {
-          setFailModal(true)
-        } else {
-          setSuccessModal(true)
-        }
-      }
 
 
     return (
@@ -82,8 +71,6 @@ function Footer() {
                         
 
                     </Col>
-                      
-
                                         
                     <Col md={4} style={{ textAlign: "center"}} className="columnMargins">
                     <Container className="mailingListContainer">  
@@ -92,24 +79,8 @@ function Footer() {
                     <strong>Join Our Mailing List</strong>
                     </h5>
                     <hr className="footerHr" style={{maxWidth: "230px" }}></hr>
-                    
-                        <InputGroup inline action="/signup" method="POST" className="mb-2 mailingListFormWidth" style={{ marginTop: "25px" }} >
-                            <Form.Label htmlFor="inlineFormInputName2" srOnly>
-                                Name
-                            </Form.Label>
-                            <FormControl
-                                className="mb-2 formBackground"
-                                size="sm"
-                                id="inlineFormInputName2"
-                                placeholder="Email Address"
-                                name="email" 
-                                type="email"
-                                onChange={event => setEmail(event.target.value)}
-                                />
-                            <InputGroup.Append>
-                            <Button variant="outline-secondary" type="submit" className="mb-2" id="mailingListSubmitButton" size="sm" onClick={() => successOrFail()}>Submit</Button>
-                            </InputGroup.Append>
-                        </InputGroup>
+                    <MailchimpSubscribe url={process.env.REACT_APP_MAILCHIMP_URL}/>
+                        
                         </Container>
                     </Col>
 
