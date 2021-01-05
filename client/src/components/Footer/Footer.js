@@ -4,6 +4,8 @@ import { Container, Row, Col, Form, Button, InputGroup, FormControl } from "reac
 import Fail from "../../components/FailModal/FailModal";
 import SuccessModal from "../../components/SuccessModal/SuccessModal";
 import "./Footer.css"
+import MailchimpSubscribe from "react-mailchimp-subscribe"
+require("dotenv").config();
 
 const styles = {
     listItems: {
@@ -92,8 +94,8 @@ function Footer() {
                     <strong>Join Our Mailing List</strong>
                     </h5>
                     <hr className="footerHr" style={{maxWidth: "230px" }}></hr>
-                    
-                        <InputGroup inline action="/signup" method="POST" className="mb-2 mailingListFormWidth" style={{ marginTop: "25px" }} >
+                    <MailchimpSubscribe url={process.env.REACT_APP_MAILCHIMP_URL}/>
+                        {/* <InputGroup inline action="/signup" method="POST" className="mb-2 mailingListFormWidth" style={{ marginTop: "25px" }} >
                             <Form.Label htmlFor="inlineFormInputName2" srOnly>
                                 Name
                             </Form.Label>
@@ -104,12 +106,12 @@ function Footer() {
                                 placeholder="Email Address"
                                 name="email" 
                                 type="email"
-                                onChange={event => setEmail(event.target.value)}
+                                
                                 />
                             <InputGroup.Append>
                             <Button variant="outline-secondary" type="submit" className="mb-2" id="mailingListSubmitButton" size="sm" onClick={() => successOrFail()}>Submit</Button>
                             </InputGroup.Append>
-                        </InputGroup>
+                        </InputGroup> */}
                         </Container>
                     </Col>
 

@@ -3,6 +3,8 @@ import { Form, Button, Container, Row, Col } from "react-bootstrap";
 import "./style.css";
 import SuccessModal from "../../components/SuccessModal/SuccessModal";
 import Fail from "../../components/FailModal/FailModal";
+import MailchimpSubscribe from "react-mailchimp-subscribe"
+require("dotenv").config();
 
 
 function SubscribeMC () {
@@ -16,10 +18,13 @@ function SubscribeMC () {
     const successOrFail = () => {
       
       if (!email) {
-        setFailModal(true)
+        setFailModal(true);
+       
       } else {
+      
         setSuccessModal(true)
       }
+      
     }
 
     return (
@@ -28,9 +33,10 @@ function SubscribeMC () {
           <Row>
             <Col>
 
-              <Form>
+              <Form >
                 <h3 className="newsletter"><i className="fas fa-newspaper fa-2x"></i></h3> <h2 className="newsletter">Subscribe!</h2>
                 <br />
+
                 <Form.Group controlId="email" name="email" >
                   <Form.Label>Email</Form.Label>
                   <Form.Control
