@@ -22,14 +22,16 @@ const MailchimpForm = ({ status, message, onValidated }) => {
             EMAIL: email.value
         }
         );
+        const clearForm = () => {
+            email.value = ""
+        }
     
     //**!! Need to add keypress ENTER to submit !!**// 
     return (
 
         <Container>
 
-            <Form.Group className="mb-2 mailingListFormWidth" style={{ marginTop: "25px" }} onClick={e => { e.preventDefault();
-                        submit(e);}}>
+            <Form.Group className="mb-2 mailingListFormWidth" style={{ marginTop: "25px" }} onClick={e => {e.preventDefault(); submit(e); clearForm(e); }}>
                 {status === "sending" &&
 
                     <div style={{ color: "blue" }}>sending...</div>}
