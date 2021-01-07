@@ -5,6 +5,7 @@ import Fail from "../../components/FailModal/FailModal";
 import SuccessModal from "../../components/SuccessModal/SuccessModal";
 import "./Footer.css"
 import MailchimpSubscribe from "react-mailchimp-subscribe"
+import MailchimpFooter from "../MailchimpFooter/MailchimpFooter";
 require("dotenv").config();
 
 const styles = {
@@ -79,7 +80,7 @@ function Footer() {
                     <strong>Join Our Mailing List</strong>
                     </h5>
                     <hr className="footerHr" style={{maxWidth: "230px" }}></hr>
-                    <MailchimpSubscribe url={process.env.REACT_APP_MAILCHIMP_URL}/>
+                    <MailchimpFooter/>
                         
                         </Container>
                     </Col>

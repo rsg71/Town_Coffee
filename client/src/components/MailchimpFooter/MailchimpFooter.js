@@ -2,7 +2,7 @@ import React, { Component, useState } from "react";
 import { Form, Button, Container, Row, Col } from "react-bootstrap";
 import MailchimpSubscribe from "react-mailchimp-subscribe"
 // import { render } from "react-dom";
-import "./MailchimpSub.css";
+import "../Footer/Footer.css"
 require("dotenv").config();
 
 
@@ -28,9 +28,7 @@ const MailchimpForm = ({ status, message, onValidated }) => {
 
         <Container>
 
-            <Form.Label>Email</Form.Label>
-
-            <Form.Group>
+            <Form.Group className="mb-2 mailingListFormWidth" style={{ marginTop: "25px" }}>
                 {status === "sending" &&
 
                     <div style={{ color: "blue" }}>sending...</div>}
@@ -54,16 +52,20 @@ const MailchimpForm = ({ status, message, onValidated }) => {
 
                 <Form.Control
                     ref={node => (email = node)}
-                    type="email"
-                    placeholder="coffee@email.com"
+                    className="mb-2 formBackground"
+                                size="sm"
+                                id="inlineFormInputName2"
+                                placeholder="Email Address"
+                                name="email" 
+                                type="email"
 
                 />
 
                     <br />
 
-                    <Button variant="primary" type="submit" onClick={submit}>
+                    <Button variant="outline-secondary" type="submit" className="mb-2" id="mailingListSubmitButton" size="sm" onClick={submit}>
 
-                        Subscribe
+                        Submit
 
                 </Button>
 
@@ -76,7 +78,7 @@ const MailchimpForm = ({ status, message, onValidated }) => {
     );
 };
 
-class MailchimpSub extends Component {
+class MailchimpFooter extends Component {
 
     render() {
 
@@ -86,9 +88,6 @@ class MailchimpSub extends Component {
             <>
                 <Form>
 
-                    <h3 className="newsletter"><i className="fas fa-newspaper fa-2x"></i></h3>
-                    <h2 className="newsletter">Subscribe!</h2>
-                    <br />
                     <MailchimpSubscribe
                         url={url}
                         render={({ subscribe, status, message }) => (
@@ -106,4 +105,4 @@ class MailchimpSub extends Component {
     }
 }
 
-export default MailchimpSub;
+export default MailchimpFooter;
