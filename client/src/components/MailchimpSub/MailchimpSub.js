@@ -28,9 +28,9 @@ const MailchimpForm = ({ status, message, onValidated }) => {
 
         <Container>
 
-            <Form.Label>Email</Form.Label>
+            
 
-            <Form.Group>
+            <Form.Group onClick={e => { e.preventDefault(); submit(e);}}>
                 {status === "sending" &&
 
                     <div style={{ color: "blue" }}>sending...</div>}
@@ -55,13 +55,13 @@ const MailchimpForm = ({ status, message, onValidated }) => {
                 <Form.Control
                     ref={node => (email = node)}
                     type="email"
-                    placeholder="coffee@email.com"
+                    placeholder="Your Email"
 
                 />
 
                     <br />
 
-                    <Button variant="primary" onClick={submit}>
+                    <Button variant="primary" type="submit">
 
                         Subscribe
 
