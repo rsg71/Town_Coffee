@@ -11,18 +11,24 @@ const MailchimpForm = ({ status, message, onValidated }) => {
 
 
     let email;
-
-
+   
     const submit = () =>
     
-        email &&
 
+        email &&
+        
         email.value.indexOf("@") > -1 &&
         onValidated({
             EMAIL: email.value
         }
         );
 
+        const clearForm = () => {
+            email.value = ""
+        }
+       
+        
+        
     //**!! Need to add keypress ENTER to submit !!**// 
     return (
 
@@ -30,7 +36,7 @@ const MailchimpForm = ({ status, message, onValidated }) => {
 
             
 
-            <Form.Group onClick={e => { e.preventDefault(); submit(e);}}>
+            <Form.Group onClick={e => { e.preventDefault(); submit(e); clearForm(e);}}>
                 {status === "sending" &&
 
                     <div style={{ color: "blue" }}>sending...</div>}
@@ -61,7 +67,7 @@ const MailchimpForm = ({ status, message, onValidated }) => {
 
                     <br />
 
-                    <Button variant="primary" type="submit">
+                    <Button variant="primary" type="submit" onClick={submit}>
 
                         Subscribe
 
@@ -76,8 +82,9 @@ const MailchimpForm = ({ status, message, onValidated }) => {
     );
 };
 
-class MailchimpSub extends Component {
 
+
+class MailchimpSub extends Component {
     render() {
 
         const url = process.env.REACT_APP_MAILCHIMP_URL;
