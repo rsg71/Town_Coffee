@@ -1,5 +1,5 @@
 import React, { Component, useState } from "react";
-import { Form, Button, Container, Row, Col } from "react-bootstrap";
+import { Form, Button, Container, Row, Col, InputGroup } from "react-bootstrap";
 import MailchimpSubscribe from "react-mailchimp-subscribe"
 // import { render } from "react-dom";
 import "../Footer/Footer.css"
@@ -22,14 +22,16 @@ const MailchimpForm = ({ status, message, onValidated }) => {
             EMAIL: email.value
         }
         );
+        const clearForm = () => {
+            email.value = ""
+        }
     
     //**!! Need to add keypress ENTER to submit !!**// 
     return (
 
         <Container>
 
-            <Form.Group className="mb-2 mailingListFormWidth" style={{ marginTop: "25px" }} onClick={e => { e.preventDefault();
-                        submit(e);}}>
+            <InputGroup className="mb-2 mailingListFormWidth" style={{ marginTop: "25px" }} onClick={e => {e.preventDefault(); submit(e); clearForm(e); }}>
                 {status === "sending" &&
 
                     <div style={{ color: "blue" }}>sending...</div>}
@@ -49,8 +51,6 @@ const MailchimpForm = ({ status, message, onValidated }) => {
                     />
                 )}
 
-                <br />
-
                 <Form.Control
                     ref={node => (email = node)}
                     className="mb-2 formBackground"
@@ -61,18 +61,17 @@ const MailchimpForm = ({ status, message, onValidated }) => {
                                 type="email"
 
                 />
-
-                    <br />
-
+                    <InputGroup.Append>
                     <Button variant="outline-secondary" className="mb-2" id="mailingListSubmitButton" size="sm" type="submit" >
 
                         Submit
 
                 </Button>
+                </InputGroup.Append>
 
                 
 
-            </Form.Group>
+            </InputGroup>
 
         </Container>
 
