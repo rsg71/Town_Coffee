@@ -14,7 +14,7 @@ const MailchimpForm = ({ status, message, onValidated }) => {
 
 
     const submit = () =>
-
+    
         email &&
 
         email.value.indexOf("@") > -1 &&
@@ -63,7 +63,7 @@ const MailchimpForm = ({ status, message, onValidated }) => {
 
                     <br />
 
-                    <Button variant="outline-secondary" type="submit" className="mb-2" id="mailingListSubmitButton" size="sm" onClick={submit}>
+                    <Button variant="outline-secondary" className="mb-2" id="mailingListSubmitButton" size="sm" onClick={submit}>
 
                         Submit
 
