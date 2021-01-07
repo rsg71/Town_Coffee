@@ -13,7 +13,7 @@ const MailchimpForm = ({ status, message, onValidated }) => {
     let email;
 
 
-    const submit = () =>
+    const submit = () =>  
     
         email &&
 
@@ -22,13 +22,14 @@ const MailchimpForm = ({ status, message, onValidated }) => {
             EMAIL: email.value
         }
         );
-
+    
     //**!! Need to add keypress ENTER to submit !!**// 
     return (
 
         <Container>
 
-            <Form.Group className="mb-2 mailingListFormWidth" style={{ marginTop: "25px" }}>
+            <Form.Group className="mb-2 mailingListFormWidth" style={{ marginTop: "25px" }} onClick={e => { e.preventDefault();
+                        submit(e);}}>
                 {status === "sending" &&
 
                     <div style={{ color: "blue" }}>sending...</div>}
@@ -63,7 +64,7 @@ const MailchimpForm = ({ status, message, onValidated }) => {
 
                     <br />
 
-                    <Button variant="outline-secondary" className="mb-2" id="mailingListSubmitButton" size="sm" onClick={submit}>
+                    <Button variant="outline-secondary" className="mb-2" id="mailingListSubmitButton" size="sm" type="submit" >
 
                         Submit
 
