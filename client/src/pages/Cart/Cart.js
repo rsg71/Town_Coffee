@@ -148,7 +148,7 @@ function Cart(props) {
                                             <td>Grand Total</td>
                                             <td></td>
                                             <td></td>
-                                            <td></td>
+                                            <td>{(cartTotal + 850) / 100}</td>
                                         </tr>
 
 
