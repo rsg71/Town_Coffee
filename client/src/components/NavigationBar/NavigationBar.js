@@ -35,15 +35,14 @@ function NavigationBar() {
             <Link className={location.pathname==="/" ? "mr-2 navbarLink active": "mr-2 navbarLink"} to="/">Home</Link>
             <Link className={location.pathname==="/coffee" ? "mr-2 navbarLink active": "mr-2 navbarLink"} to="/coffee">Coffee</Link>
             <Link className={location.pathname==="/subscriptions" ? "mr-2 navbarLink active": "mr-2 navbarLink"} to="/subscriptions">Subscriptions</Link>
-            <Link className={location.pathname==="/aboutus" ? "mr-2 navbarLink active": "mr-2 navbarLink"} to="/aboutus">About</Link>
-            <Link className={location.pathname==="/givingback" ? "mr-2 navbarLink active": "mr-2 navbarLink"} to="/givingback">Giving Back</Link>
+            <Link className={location.pathname==="/about-us" ? "mr-2 navbarLink active": "mr-2 navbarLink"} to="/about-us">About</Link>
+            <Link className={location.pathname==="/giving-back" ? "mr-2 navbarLink active": "mr-2 navbarLink"} to="/giving-back">Giving Back</Link>
             <Link className={location.pathname==="/certifications" ? "mr-2 navbarLink active": "mr-2 navbarLink"} to="/certifications">Certifications</Link>
-            <Link className={location.pathname==="/contactus" ? "mr-2 navbarLink active": "mr-2 navbarLink"} to="/contactus">Contact</Link>
+            <Link className={location.pathname==="/contact-us" ? "mr-2 navbarLink active": "mr-2 navbarLink"} to="/contact-us">Contact</Link>
 
           </Nav>
 
 
-          <Link className="mr-2 navbarLink" to="/signin">Sign In</Link>
           <Link className="mr-2 navbarLink" to="/cart"><i className="fas fa-shopping-cart"></i> ({cartItemsQuantity})</Link>
         </Navbar.Collapse>
       </Navbar>

@@ -81,16 +81,16 @@ function App() {
           <NavigationBar />
           <Route exact path="/" component={Homepage} />
           <Route exact path="/coffee" component={Coffee} />
-          <Route exact path="/aboutus" component={AboutUs} />
+          <Route exact path="/about-us" component={AboutUs} />
           <Route exact path="/certifications" component={Certifications} />
-          <Route exact path="/contactus" component={ContactUs} />
-          <Route exact path="/givingback" component={GivingBack} />
+          <Route exact path="/contact-us" component={ContactUs} />
+          <Route exact path="/giving-back" component={GivingBack} />
           <Route exact path="/subscriptions" component={Subscriptions} />
 
           <Route exact path="/subscriptions/subscription-form" component={SubscriptionForm} />
 
-          <Route exact path="/terms_of_use" component={TermsOfUse} />
-          <Route exact path="/privacy_policy" component={PrivacyPolicy} />
+          <Route exact path="/terms-of-use" component={TermsOfUse} />
+          <Route exact path="/privacy-policy" component={PrivacyPolicy} />
 
           {/* <Route exact path="/privacy-policy" component={PrivacyPolicy} />
 
