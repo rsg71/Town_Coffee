@@ -10,12 +10,14 @@ import CartContext from "../../utils/CartContext"
 function NavigationBar() {
   const cartItems = useContext(CartContext);
 
+  console.log(`cartItems from navbar are: ${JSON.stringify(cartItems)}`)
+
     let cartItemsQuantity = 0;
     for (var i=0; i< cartItems.length; i++) {
         cartItemsQuantity += cartItems[i].quantity
     }
 
-  console.log(` navbar: ${cartItems.length}`)
+  console.log(` navbar # items: ${cartItems.length}`)
 
    const location = useLocation();
 
