@@ -155,7 +155,7 @@ function Homepage() {
 
                         <p>A startup does not often begin by committing to be a <a href="https://bcorporation.net/">Certified B Corporation&reg;</a>. We did. We believe in and are aligned with the values and principles of a B Corp and are willing to make that pledge publicly. And transparently. Every decision made will consider the impacts on our stakeholders. I have yet to see &quot;Big Coffee&quot; work to this extent to be a part of the paradigm change that consumers have asked for.</p>
 
-                        <a href="/givingback">Find out more...</a>
+                        <a href="/giving-back">Find out more...</a>
                     </Col>
                 </Row>
 
