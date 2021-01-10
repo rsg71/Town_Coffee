@@ -44,9 +44,28 @@ function IndividualCoffee({ addToCart }) {
 
    
 
+    //storing this function for potential later use in order to dynamically render coffee image & information
+    // const getProductsFromStripe = () => {
+    //     return axios.get("/apiCall")
+    //     .then((res) => console.log(res))
+    //      .catch(err => console.log(err))
+    //  }
+
+
     return (
         <>
             <Container>
+
+
+
+                {/* <Row>
+                    <Col>
+                        <button onClick={() => getProductsFromStripe()}>Click to test api call with axios</button>
+                    </Col>
+                </Row> */}
+
+
+
                 <br />
                 <BreadCrumbsCoffee name={coffeeItem}/>
                 <br />

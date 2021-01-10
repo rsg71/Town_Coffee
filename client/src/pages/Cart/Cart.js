@@ -61,11 +61,7 @@ function Cart(props) {
 
 
 
-     const getProductsFromStripe = () => {
-        return axios.get("/apiCall")
-        .then((res) => console.log(res))
-         .catch(err => console.log(err))
-     }
+    
 
 
 
@@ -85,12 +81,6 @@ function Cart(props) {
 
 
             
-                <Row>
-                    <Col>
-                        <button onClick={() => getProductsFromStripe()}>Click to test api call with axios</button>
-                    </Col>
-                </Row>
-
 
 
 
