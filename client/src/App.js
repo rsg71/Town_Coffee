@@ -29,12 +29,12 @@ import Footer from "./components/Footer/Footer";
 
 
 function App() {
-  
+
   const [cartItems, setCartItems] = useState([])
   const [cartTotal, setCartTotal] = useState(0)
 
   //updating the total anytime the cart is modified
-  useEffect(()=> {
+  useEffect(() => {
     total()
   }, [cartItems])
 
@@ -53,6 +53,8 @@ function App() {
     for (let i = 0; i < cartItems.length; i++) {
       if (cartItems[i].item === newItem) {
         cartItems[i].quantity += itemQuantity;
+        total()
+
         return
       }
     }
@@ -84,11 +86,11 @@ function App() {
           <Route exact path="/contactus" component={ContactUs} />
           <Route exact path="/givingback" component={GivingBack} />
           <Route exact path="/subscriptions" component={Subscriptions} />
-          
+
           <Route exact path="/subscriptions/subscription-form" component={SubscriptionForm} />
 
           <Route exact path="/terms_of_use" component={TermsOfUse} />
-          <Route exact path="/privacy_policy" component={PrivacyPolicy}/>
+          <Route exact path="/privacy_policy" component={PrivacyPolicy} />
 
           {/* <Route exact path="/privacy-policy" component={PrivacyPolicy} />
 
