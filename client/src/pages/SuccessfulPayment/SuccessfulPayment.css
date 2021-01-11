@@ -1,0 +1,55 @@
+#successfulPaymentContainer{
+    min-height: 75vh;
+    text-align:center
+
+}
+
+
+#successfulPaymentCol{
+    margin-top: 2rem;
+    margin-bottom:3rem;
+}
+
+#emailConfirmation{
+    color:#878e95;
+}
+
+.successContact{
+    font-size: 2.8rem;
+    margin-left: 7px;
+    margin-right: 7px;
+    color:#178017;
+}
+
+#thankYouForOrder{
+    font-size:1.1rem;
+}
+
+
+#SuccessfulPaymentContinueShopping{
+    margin-top:2rem;
+    font-size:1.3rem;
+}
+
+#successfulPaymentReturnHomepageButton{
+    border-radius:20px;
+    border-width:medium;
+    background-color:transparent;
+    color:#178017;
+    border-color:#178017;
+
+}
+
+#successfulPaymentReturnHomepageButton:hover{
+    background-color:#178017;
+    color:white;
+    border-color:#178017 !important;
+
+}
+
+@media screen and (max-width: 768px) {
+
+    #successfulPaymentCol{
+        text-align:center
+    }
+}

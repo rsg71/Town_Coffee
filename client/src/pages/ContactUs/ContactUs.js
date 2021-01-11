@@ -76,7 +76,6 @@ function ContacUs() {
               
             <MailchimpSub/>
 
-            )
             <Container>
                 <br />
                 <br />
