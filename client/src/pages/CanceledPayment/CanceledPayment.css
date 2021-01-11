@@ -1,0 +1,17 @@
+#canceledPaymentContainer{
+    min-height: 75vh;
+    text-align: center;
+}
+
+#canceledPaymentCol{
+    margin-top:5rem;
+    border: 3px solid #d1cecebe;
+    padding:50px
+}
+
+
+@media screen and (max-width:768px) {
+    #canceledPaymentCol {
+        margin:20px
+    }
+}
