@@ -36,6 +36,7 @@
     "react-github-corner": "^2.5.0",
     "react-mailchimp-subscribe": "^2.1.0",
     "request": "^2.88.2",
-    "stripe": "^8.129.0"
+    "stripe": "^8.129.0",
+    "webpack": "^4.28.3"
   }
 }
