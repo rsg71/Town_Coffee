@@ -12,14 +12,14 @@ function NavigationBar() {
 
   console.log(`cartItems from navbar are: ${JSON.stringify(cartItems)}`)
 
-    let cartItemsQuantity = 0;
-    for (var i=0; i< cartItems.length; i++) {
-        cartItemsQuantity += cartItems[i].quantity
-    }
+  let cartItemsQuantity = 0;
+  for (var i = 0; i < cartItems.length; i++) {
+    cartItemsQuantity += cartItems[i].quantity
+  }
 
   console.log(` navbar # items: ${cartItems.length}`)
 
-   const location = useLocation();
+  const location = useLocation();
 
   return (
     <>
@@ -27,23 +27,34 @@ function NavigationBar() {
       <Navbar bg="light" expand="lg" sticky="top" >
         <Navbar.Brand href="/">
           <img src="/imgs/green_logo_beans.png" id="logo" alt="green logo beans" />
-
         </Navbar.Brand>
+        
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
-            <Link className={location.pathname==="/" ? "mr-2 navbarLink active": "mr-2 navbarLink"} to="/">Home</Link>
-            <Link className={location.pathname==="/coffee" ? "mr-2 navbarLink active": "mr-2 navbarLink"} to="/coffee">Coffee</Link>
-            <Link className={location.pathname==="/subscriptions" ? "mr-2 navbarLink active": "mr-2 navbarLink"} to="/subscriptions">Subscriptions</Link>
-            <Link className={location.pathname==="/about-us" ? "mr-2 navbarLink active": "mr-2 navbarLink"} to="/about-us">About</Link>
-            <Link className={location.pathname==="/giving-back" ? "mr-2 navbarLink active": "mr-2 navbarLink"} to="/giving-back">Giving Back</Link>
-            <Link className={location.pathname==="/certifications" ? "mr-2 navbarLink active": "mr-2 navbarLink"} to="/certifications">Certifications</Link>
-            <Link className={location.pathname==="/contact-us" ? "mr-2 navbarLink active": "mr-2 navbarLink"} to="/contact-us">Contact</Link>
-
+            <Link className={location.pathname === "/" ? "mr-2 navbarLink active" : "mr-2 navbarLink"} to="/">Home</Link>
+            <Link className={location.pathname === "/coffee" ? "mr-2 navbarLink active" : "mr-2 navbarLink"} to="/coffee">Coffee</Link>
+            <Link className={location.pathname === "/subscriptions" ? "mr-2 navbarLink active" : "mr-2 navbarLink"} to="/subscriptions">Subscriptions</Link>
+            <Link className={location.pathname === "/about-us" ? "mr-2 navbarLink active" : "mr-2 navbarLink"} to="/about-us">About</Link>
+            <Link className={location.pathname === "/giving-back" ? "mr-2 navbarLink active" : "mr-2 navbarLink"} to="/giving-back">Giving Back</Link>
+            <Link className={location.pathname === "/certifications" ? "mr-2 navbarLink active" : "mr-2 navbarLink"} to="/certifications">Certifications</Link>
+            <Link className={location.pathname === "/contact-us" ? "mr-2 navbarLink active" : "mr-2 navbarLink"} to="/contact-us">Contact</Link>
           </Nav>
 
-
-          <Link className="mr-2 navbarLink" to="/cart"><i className="fas fa-shopping-cart"></i> ({cartItemsQuantity})</Link>
+          <Nav>
+            <Nav.Link>
+              <a href="https://www.instagram.com/towncoffeecompany" className="navSocialMediaIcon" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a>
+            </Nav.Link>
+            <Nav.Link>
+              <a href="https://www.facebook.com/towncoffeecompany" className="navSocialMediaIcon" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook"></i></a>
+            </Nav.Link>
+            <Nav.Link>
+              <a href="https://wwww.twitter.com" className="navSocialMediaIcon" target="_blank" rel="noopener noreferrer"><i className="fab fa-twitter"></i></a>
+            </Nav.Link>
+            <Nav.Link id="navCartIcon">
+              <Link className="mr-2 navbarLink"  to="/cart"><i className="fas fa-shopping-cart"></i> ({cartItemsQuantity})</Link>
+            </Nav.Link>
+          </Nav>
         </Navbar.Collapse>
       </Navbar>
 
