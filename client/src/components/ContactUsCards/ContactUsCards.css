@@ -1,0 +1,56 @@
+
+#contactUsFollowUs{
+    list-style-type: none;
+    padding-left:0;
+    text-align: center
+}
+
+#contactUsFollowUs li {
+    display:inline;
+    margin:1rem;
+
+}
+
+/* follow us -> social media colors */
+#contactUsFollowUs a {
+    color:#ffffff !important;
+    font-size:2rem !important;
+}
+
+#contactUsFollowUs a:hover {
+    color:grey !important;
+}
+
+
+
+#contactUsCardsRow{ 
+    text-align: center;
+}
+
+#contactUsCardsRow a{
+    color:#ffffff;
+}
+
+
+#contactUsCardsRow a:hover{
+    color:grey;
+}
+
+#contactUsCardsRow .card{
+    background-color: #1E3932;
+    color: #ffffff;
+    height:280px
+
+}
+#contactUsCardsRow h2 {
+    margin-top:15px;
+}
+
+
+
+
+
+#phoneEmail, #contactUsAddress, #contactUsFollowUs {
+    margin-top:35px;
+}
+
