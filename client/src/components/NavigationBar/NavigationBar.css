@@ -14,3 +14,17 @@
 #logo {
     height:4rem;
 }
+
+#navCartIcon{
+    margin-top:4px;
+}
+
+.navSocialMediaIcon {
+    font-size:1.3rem;
+    color:grey;
+    margin-bottom:.4rem;
+}
+
+.navSocialMediaIcon:hover {
+    color:#008000;
+}
