@@ -1,0 +1,116 @@
+
+#onePercentImage{
+    max-width:90%;
+    margin-top:20px;
+    margin-left:15px;
+}
+
+#bCertifiedDescription{
+    max-width:90%;
+    margin-left:15px;
+}
+
+.bigRow{
+    background-color: #1e3932;
+    min-height:40rem;
+    display:flex;
+    align-items: center;
+    text-align: center;
+    color:#ffffff;
+    font-size:1.3rem;
+    margin-bottom:4rem;
+}
+
+.bigRow h2 {
+    font-size: 4rem;
+    margin-bottom:4rem;
+    font-style: italic;
+}
+
+.bigRow p {
+    margin-left:15vw;
+    margin-right:15vw;
+    text-align: center;
+    line-height: 3rem;
+    color:grey;
+}
+
+.bigRow p strong {
+    color:#ffffff;
+}
+
+
+
+.backgroundStyleLight {
+    background-color: whitesmoke;
+    padding: 20px;
+    border-radius:10px;
+
+}
+.backgroundStyleLight h2 {
+    margin-bottom:2rem;
+}
+
+.backgroundStyleLight p {
+    margin-bottom:2rem;
+}
+
+.darkGreenButton {
+    background-color: #1e3932;
+    color:#ffffff;
+    border-color:#1e3932;
+}
+.darkGreenButton:hover {
+    background-color: #ffffff;
+    color:#1e3932;
+}
+
+#aboutUsThreeItems h3{
+   margin: 8rem 0;
+   color:#1e3932;
+
+}
+
+
+
+.largerFont{
+    font-size:larger;
+}
+
+
+.giantBackgroundImage {
+    background-image: url("/imgs/dirt_trail.jpg");
+    height: 900px;
+    object-fit: "cover";
+}
+
+
+@media all and (min-width:1200px) {
+    
+    #bCertifiedImage{
+    margin-left:8rem;   
+    }
+}
+
+
+@media all and (max-width: 567px) {
+    #aboutUsThreeItems h3 {
+        text-align:center;
+        margin: 1rem 0;
+    }
+
+    .darkGreenButton {
+        text-align:center;
+    }
+
+    .bigRow {
+        font-size:90%;
+    }
+    .bigRow h2 {
+        font-size:3rem;
+        margin-top:3rem;
+    }
+    .bigRow p {
+        margin: 0 4vw
+    }
+}
