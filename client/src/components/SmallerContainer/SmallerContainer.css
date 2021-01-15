@@ -1,0 +1,21 @@
+
+
+
+
+
+
+
+@media all and (min-width: 992px) {
+    #smallerContainer{
+        max-width: 800px;
+
+    }
+}
+
+@media all and (min-width: 1200px) {
+    #smallerContainer{
+        max-width: 900px;
+
+    }
+}
+
