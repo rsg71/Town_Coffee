@@ -1,0 +1,32 @@
+
+#givingBackBCorpLogo {
+    height:240px;
+}
+
+
+.givingBackRow {
+    margin-bottom:7rem;
+}
+
+.givingBackRow h2 {
+    font-size: 2rem;
+    font-weight:bolder;
+}
+
+.givingBackRow p {
+    font-size: 1.2rem;
+}
+
+.givingBackRow img {
+    text-align:center;
+    max-width: 100%;
+}
+
+
+#givingBackBottomRow{
+    min-height:40vh;
+    background-color:whitesmoke;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}

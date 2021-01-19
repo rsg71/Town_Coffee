@@ -19,3 +19,10 @@
     }
 }
 
+@media all and (min-width: 1600px) {
+    #smallerContainer{
+        max-width: 70vw;
+
+    }
+}
+
