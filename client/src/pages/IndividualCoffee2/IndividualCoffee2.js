@@ -18,17 +18,17 @@ function IndividualCoffee2({ addToCart }) {
     const [bagQuantity, setBagQuantity] = useState(1)
     const [coffeeItem, setCoffeeItem] = useState("16 oz Mocha blend")
     const [itemPrice, setPrice] = useState(1699)
-    const [status, setStatus] = useState("")
+    const [status, setStatus] = useState("Sold Out")
 
-    useEffect(() => {
-       axios.get("/apiCall")
-       .then(res=> {
+    // useEffect(() => {
+    //    axios.get("/apiCall")
+    //    .then(res=> {
 
-        console.log(res)
+    //     console.log(res)
         
-        setStatus(res.data.data[1].metadata.Status)})
-       .catch(err=>console.log(err))
-    }, [])
+    //     setStatus(res.data.data[1].metadata.Status)})
+    //    .catch(err=>console.log(err))
+    // }, [])
 
 
 
