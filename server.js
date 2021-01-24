@@ -71,7 +71,7 @@ app.post('/create-checkout-session', async (req, res) => {
     lineItems
     ,
     mode: 'payment',
-    success_url: 'http://localhost:3000/success',
+    success_url: 'https://town-coffee-co5562315676t5r4.herokuapp.com/success',
     cancel_url: 'http://localhost:3000/cancel',
   });
 
