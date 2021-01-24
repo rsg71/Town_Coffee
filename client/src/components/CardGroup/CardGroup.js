@@ -30,7 +30,7 @@ function CardGroup() {
                             </Card.Text>
                         <hr/>
                         <Link to="/products-16oz-Kenyan-bean">
-                            <Button className="groupCoffeeButtons" size="sm">Shop Now</Button>
+                            <Button className="groupCoffeeButtons" size="sm">Order Now</Button>
                         </Link>
                     </Card.Body>
                     <Card.Footer>
@@ -52,7 +52,7 @@ function CardGroup() {
                             <hr/>
                         <Link to="/products-16oz-mocha-blend">
                             <Button className="groupCoffeeButtons" variant="success" size="sm">
-                                Shop Now
+                                Order Now
                         </Button>
                         </Link>
                     </Card.Body>
@@ -75,7 +75,7 @@ function CardGroup() {
                         <hr/>
                         <Link to="/products-16oz-whole-bean-blend">
                             <Button className="groupCoffeeButtons" size="sm">
-                                Shop Now
+                                Order Now
                         </Button>
                         </Link>
                     </Card.Body>
