@@ -72,7 +72,7 @@ app.post('/create-checkout-session', async (req, res) => {
     ,
     mode: 'payment',
     success_url: 'https://town-coffee-co5562315676t5r4.herokuapp.com/success',
-    cancel_url: 'http://localhost:3000/cancel',
+    cancel_url: 'https://town-coffee-co5562315676t5r4.herokuapp.com/cancel',
   });
 
   res.json({ id: session.id });
