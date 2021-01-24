@@ -15,69 +15,66 @@ import "./CardGroup.css"
 function CardGroup() {
     return (
         <>
-            <CardDeck md={1}>
+            <CardDeck md={1} id="coffeeCards">
                 <Card>
-                    <Link to="/products-16oz-Kenyan-bean">
+                    <a href="/products-16oz-Kenyan-bean">
                     <Card.Img variant="top" src="/imgs/prod_IXeeUDzn45Abgf.jpg" />
-                    </Link>
-                    <Card.Body>
-                        <Card.Title><strong>16 oz. Kenyan Blend</strong></Card.Title>
+                    </a>
+                    <Card.Body className="shorterDescriptionText">
+                        <Card.Title><strong>People</strong></Card.Title>
                         <hr/>
                             <Card.Text>
-                                Kenyan blend.
-                                <br/>
-                                Sustainably sourced in Kenya.
+                                Medium Roast - 16 oz <br/>
+                                Sustainably sourced in Mexico
                             </Card.Text>
                         <hr/>
-                        <Link to="/products-16oz-Kenyan-bean">
-                            <Button className="groupCoffeeButtons" size="sm">Order Now</Button>
-                        </Link>
+                        <a href="/products-16oz-Kenyan-bean">
+                            <Button className="groupCoffeeButtons" size="md">Order Now</Button>
+                        </a>
                     </Card.Body>
                     <Card.Footer>
                         <small className="text-muted"><strong>$13.99</strong></small>
                     </Card.Footer>
                 </Card>
                 <Card>
-                    <Link to="/products-16oz-mocha-blend">
+                    <a href="/products-16oz-mocha-blend">
                     <Card.Img variant="top" src="/imgs/prod_IXeeUDzn45Abgf.jpg" />
-                    </Link>
-                    <Card.Body>
-                        <Card.Title><strong>16 oz. Mocha Blend</strong></Card.Title>
+                    </a>
+                    <Card.Body className="shorterDescriptionText">
+                        <Card.Title><strong>Planet</strong></Card.Title>
                         <hr/>
                             <Card.Text>
-                                Mocha blend.
-                                <br/>
-                                Sustainably sourced in Mexico.
+                                Dark Roast - 16 oz.<br/>
+                                Sustainably sourced in Mexico
                             </Card.Text>
-                            <hr/>
-                        <Link to="/products-16oz-mocha-blend">
-                            <Button className="groupCoffeeButtons" variant="success" size="sm">
+                        <hr/>
+                        <a href="/products-16oz-mocha-blend">
+                            <Button className="groupCoffeeButtons" variant="success" size="md">
                                 Order Now
                         </Button>
-                        </Link>
+                        </a>
                     </Card.Body>
                     <Card.Footer>
                         <small className="text-muted"><strong>$16.99</strong></small>
                     </Card.Footer>
                 </Card>
                 <Card>
-                    <Link to="/products-16oz-whole-bean-blend">
+                    <a href="/products-16oz-whole-bean-blend">
                     <Card.Img variant="top" src="/imgs/prod_IXeeUDzn45Abgf.jpg" />
-                    </Link>
+                    </a>
                     <Card.Body>
-                        <Card.Title><strong>16 oz. Whole Bean Blend</strong></Card.Title>
+                        <Card.Title><strong>Purpose</strong></Card.Title>
                         <hr/>
                         <Card.Text>
-                            Whole bean blend.
-                            <br/>
-                            Sustainably sourced in Mexico.
+                            Organic Single Origin Medium Roast - 16 oz.<br/>
+                                Sustainably sourced in Mexico
                         </Card.Text>
                         <hr/>
-                        <Link to="/products-16oz-whole-bean-blend">
-                            <Button className="groupCoffeeButtons" size="sm">
+                        <a href="/products-16oz-whole-bean-blend">
+                            <Button className="groupCoffeeButtons" size="md">
                                 Order Now
                         </Button>
-                        </Link>
+                        </a>
                     </Card.Body>
                     <Card.Footer>
                         <small className="text-muted"><strong>$12.99</strong></small>
