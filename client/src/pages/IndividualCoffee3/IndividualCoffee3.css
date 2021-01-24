@@ -1,7 +1,69 @@
 .coffeeStatusAvail{
-    color: green;
+    color: #008000;
 }
 
 .coffeeStatusUnavail{
-    color: red;
+    color: #ff0505;
+}
+
+.quantityFormWidth {
+
+    max-width: 95px !important;
+    /* align-items: center !important;
+    text-align: center !important;
+    
+    margin-left: auto !important;
+    margin-right: auto !important;
+     */
+}
+
+
+
+.quantityInputForm {
+
+    border-color: black !important;
+}
+
+.quantityInputForm:hover {
+
+    border-color: black !important;
+}
+
+/* button styling  */
+
+
+.cartButton {
+
+    margin-right: 5px !important;
+
+}
+
+.individualCoffeeButtons {
+    background-color: #018037 !important;
+    border-color: #018037 !important
+}
+
+.individualCoffeeButtons:hover {
+
+    background: #ffffff !important;
+    transition: all 0.35s ease-in-out !important;
+    color: #018037!important;
+    border-color: #018037 !important;
+}
+
+
+.addSubtractButtons {
+    background-color: #000000 !important;
+    color: rgb(221, 221, 221) !important;
+    border-color: rgb(161, 160, 160) !important;
+    border-top-color: black !important;
+    border-bottom-color: black !important;
+}
+
+.addSubtractButtons:hover {
+
+    background: #ffffff !important;
+    transition: all 0.35s ease-in-out !important;
+    color: #000000!important;
+    border-color: #000000 !important;
 }

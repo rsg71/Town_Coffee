@@ -18,7 +18,7 @@ function IndividualCoffee({ addToCart }) {
    
    
     const [bagQuantity, setBagQuantity] = useState(1)
-    const [coffeeItem, setCoffeeItem] = useState("12 oz Kenyan Blend")
+    const [coffeeItem, setCoffeeItem] = useState("People")
     const [itemPrice, setPrice] = useState(1299)
     const [status, setStatus] = useState("Available")
 
@@ -75,11 +75,11 @@ function IndividualCoffee({ addToCart }) {
                     </Col>
                     
                     <Col lg={6} sm={12}>
-                        <h2><strong>16 oz Kenyan Blend</strong></h2>
+                        <h2><strong>People, 16 oz.</strong></h2>
                         <h4>${itemPrice/100}</h4>
                         <h6><span className={status==="Available"? "coffeeStatusAvail" : "coffeeStatusUnavail"}>{status}</span></h6>
                         <br/>
-                        <p>Good for the planet and good for your body. Get a taste of this full-bodied Kenyan bean. We're so confident in our coffee that if you aren't fully satisfied, keep the bag and we'll refund your purchase. Yep. It's that good.</p>
+                        <p>Good for the planet and good for your body. Get a taste of this medium roast Mexican bean. We're so confident in our coffee that if you aren't fully satisfied, keep the bag and we'll refund your purchase. Yep. It's that good.</p>
                         <br/>
                         
                         <h6># <strong>Quantity</strong></h6>
@@ -148,13 +148,13 @@ function IndividualCoffee({ addToCart }) {
                             <Col>
                                 <label><strong>+ Details</strong></label>
                                     <ul>
-                                    <li>This coffee is a full-bodied, smooth, and strong blend.</li>
+                                    <li>Medium roast blend</li>
                                     </ul>
 
                                 <label><strong>+ Flavor Profile</strong></label>
                                 <ul>
                                     <li>Extra flavor</li>
-                                    <li>Our boldest, darkest roast</li>
+                                    <li>Our smoothest roast</li>
                                     <li>20 mg caffeine per cup</li>
                                 </ul>
                             </Col>
