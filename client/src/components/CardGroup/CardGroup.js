@@ -17,7 +17,7 @@ function CardGroup() {
         <>
             <CardDeck md={1} id="coffeeCards">
                 <Card>
-                    <Link to="/products-16oz-Kenyan-bean">
+                    <Link to="/products/coffee/people-16oz">
                     <Card.Img variant="top" src="/imgs/prod_IXeeUDzn45Abgf.jpg" />
                     </Link>
                     <Card.Body className="shorterDescriptionText">
@@ -28,7 +28,7 @@ function CardGroup() {
                                 Sustainably sourced in Mexico
                             </Card.Text>
                         <hr/>
-                        <Link to="/products-16oz-Kenyan-bean">
+                        <Link to="/products/coffee/people-16oz">
                             <Button className="groupCoffeeButtons" size="md">Order Now</Button>
                         </Link>
                     </Card.Body>
@@ -37,7 +37,7 @@ function CardGroup() {
                     </Card.Footer>
                 </Card>
                 <Card>
-                    <Link to="/products-16oz-mocha-blend">
+                    <Link to="/products/coffee/planet-16oz">
                     <Card.Img variant="top" src="/imgs/prod_IXeeUDzn45Abgf.jpg" />
                     </Link>
                     <Card.Body className="shorterDescriptionText">
@@ -48,7 +48,7 @@ function CardGroup() {
                                 Sustainably sourced in Mexico
                             </Card.Text>
                         <hr/>
-                        <Link to="/products-16oz-mocha-blend">
+                        <Link to="/products/coffee/planet-16oz">
                             <Button className="groupCoffeeButtons" variant="success" size="md">
                                 Order Now
                         </Button>
@@ -59,7 +59,7 @@ function CardGroup() {
                     </Card.Footer>
                 </Card>
                 <Card>
-                    <Link to="/products-16oz-whole-bean-blend">
+                    <Link to="/products/coffee/purpose-16oz">
                     <Card.Img variant="top" src="/imgs/prod_IXeeUDzn45Abgf.jpg" />
                     </Link>
                     <Card.Body>
@@ -70,7 +70,7 @@ function CardGroup() {
                                 Sustainably sourced in Mexico
                         </Card.Text>
                         <hr/>
-                        <Link to="/products-16oz-whole-bean-blend">
+                        <Link to="/products/coffee/purpose-16oz">
                             <Button className="groupCoffeeButtons" size="md">
                                 Order Now
                         </Button>

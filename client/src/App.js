@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import AboutUs from "./pages/AboutUs/AboutUs";
 import Coffee from "./pages/Coffee/Coffee";
@@ -21,6 +21,7 @@ import CartContext from "./utils/CartContext";
 
 import SuccessfulPayment from "./pages/SuccessfulPayment/SuccessfulPayment";
 import CanceledPayment from "./pages/CanceledPayment/CanceledPayment";
+import NoMatch from "./pages/NoMatch/NoMatch";
 
 
 import NavigationBar from "./components/NavigationBar/NavigationBar";
@@ -79,6 +80,8 @@ function App() {
         <CartContext.Provider value={cartItems}>
 
           <NavigationBar />
+
+          <Switch>
           <Route exact path="/" component={Homepage} />
           <Route exact path="/coffee" component={Coffee} />
           <Route exact path="/about-us" component={AboutUs} />
@@ -96,13 +99,13 @@ function App() {
 
           <Route path="/:id" component={ContactUs}></Route> */}
 
-          <Route exact path="/products-16oz-Kenyan-bean" render={
+          <Route exact path="/products/coffee/people-16oz" render={
             (props) => <IndividualCoffee addToCart={addToCart} />
           } />
-          <Route exact path="/products-16oz-Mocha-blend" render={
+          <Route exact path="/products/coffee/planet-16oz" render={
             (props) => <IndividualCoffee2 addToCart={addToCart} />
           } />
-          <Route exact path="/products-16oz-Whole-Bean-blend" render={
+          <Route exact path="/products/coffee/purpose-16oz" render={
             (props) => <IndividualCoffee3 addToCart={addToCart} />
           } />
 
@@ -118,6 +121,13 @@ function App() {
           <Route exact path="/success" component={SuccessfulPayment} />
           <Route exact path="/cancel" component={CanceledPayment} />
 
+
+          {/* 404 page */}
+          <Route>
+            <NoMatch/>
+          </Route>
+
+          </Switch>
 
           <Footer />
 
