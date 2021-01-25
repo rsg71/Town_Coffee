@@ -45,7 +45,11 @@ app.post('/create-checkout-session', async (req, res) => {
         },
         unit_amount: element.price,
       },
-      quantity: element.quantity
+      quantity: element.quantity,
+      dynamic_tax_rates: [
+        "txr_1I0GAvEepCRzNwguQMc5Iwyi",
+        "txr_1I0G5yEepCRzNwgum0OmpbQi"
+      ]
     }
   ))
 
