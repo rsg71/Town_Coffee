@@ -1,0 +1,48 @@
+#NoMatchPageRow {
+    margin-top:20vh;
+    margin-bottom:10vh;
+}
+
+
+#NoMatchContainer{
+    height: calc(100vh - 321px);
+    text-align:center;
+}
+
+
+#NoMatchReturnHome{
+    font-size:20px;
+    margin-top:40px;
+}
+
+
+@media all and (max-width:576px) {
+    #NoMatchContainer{
+        /* margin-top:10vh; */
+        height: calc(100vh - 60vh);
+    }
+
+    #NoMatchPageRow {
+        margin-top:10vh;
+
+    }
+}
+
+@media all and (max-width:768px) {
+    #NoMatchContainer{
+        /* margin-top:10vh; */
+        height: calc(100vh - 50vh);
+    }
+
+    #NoMatchPageRow {
+        margin-top:10vh;
+
+    }
+}
+
+
+@media all and (min-width:1400px) {
+    #NoMatchContainer{
+        height: calc(100vh - 500px)
+    }
+}
