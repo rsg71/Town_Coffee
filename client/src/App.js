@@ -26,6 +26,7 @@ import NoMatch from "./pages/NoMatch/NoMatch";
 
 import NavigationBar from "./components/NavigationBar/NavigationBar";
 import Footer from "./components/Footer/Footer";
+import ScrollToTop from "./components/ScrollToTop";
 
 
 
@@ -76,8 +77,8 @@ function App() {
   return (
     <>
       <Router>
-
-        <CartContext.Provider value={cartItems}>
+        <ScrollToTop/>
+          <CartContext.Provider value={cartItems}>
 
           <NavigationBar />
 
